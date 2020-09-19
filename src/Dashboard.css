@@ -30,7 +30,7 @@
 }
 
 .motion-div-line {
-  background-color: lightblue;
+  background-color: rgb(255, 255, 255);
   position: absolute;
   top: 0;
   z-index: 100;
@@ -135,6 +135,46 @@
 
 }
 
+.slide-container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  /* align-items: center; */
+
+}
+
+
+
+.slide-filter {
+  position: absolute;
+  top: 52%;
+  margin-top: -5vh;
+  z-index: 9999;
+  height: 10vh;
+  width: 100vw;
+  text-align: center;
+  animation-name: appearFilter;
+  animation-duration: 5s;
+  font-family: 'Teko', sans-serif;
+  font-size: 50px;
+}
+
+.slide-container {
+  font-size: 30px;
+}
+
+@keyframes appearFilter {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
 .slide-bar {
   position: absolute;
   top: 0;
@@ -142,7 +182,8 @@
   width: 100%;
   background-color: #222;
   animation-name: slideLeft;
-  animation-duration: 1s;
+  animation-duration: .6s;
+  z-index: 150;
 }
 
 
@@ -152,10 +193,10 @@
   bottom: 0;
   height: 50vh;
   width: 100%;
-  background-color: #222;
+  background-color: rgb(42, 41, 41);
   animation-name: slideRight;
-  animation-duration: .8s;
-
+  animation-duration: .6s;
+  z-index: 150;
 }
 
 @keyframes slideLeft {

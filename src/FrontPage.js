@@ -13,16 +13,16 @@ const FrontPage = () => {
 
   const variantsContainer = {
     hidden: {
-      opacity: .3
+      opacity: 1
     },
     visible: {
       opacity: 1,
       transition: {
-        delay: .1, duration: 1
+        delay: .1, duration: .1
       }
     },
     exit: {
-      opacity: .5
+      opacity: .8
 
       
     }

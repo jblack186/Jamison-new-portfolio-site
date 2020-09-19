@@ -28,6 +28,11 @@ const Dashboard = () => {
     setFront(false);
     setBack(false);
     setNode(false);
+    setSlide(true)
+    setTimeout(() => {
+     setSlide(false);
+    }, 1500);
+
   }
 
   const toggleMongo = e => {
@@ -39,6 +44,10 @@ const Dashboard = () => {
     setFront(false);
     setBack(false);
     setNode(false);
+    setSlide(true)
+    setTimeout(() => {
+     setSlide(false);
+    }, 1500);
 
   }
 
@@ -67,6 +76,11 @@ const Dashboard = () => {
     setFront(false);
     setBack(false);
     setNode(false);
+    setSlide(true)
+    setTimeout(() => {
+     setSlide(false);
+    }, 1500);
+
   }
 
   const toggleReact = e => {
@@ -77,6 +91,10 @@ const Dashboard = () => {
     setHtml(false)
     setFront(false);
     setBack(false);
+    setSlide(true)
+    setTimeout(() => {
+     setSlide(false);
+    }, 1500);
 
   }
 
@@ -89,6 +107,11 @@ const Dashboard = () => {
     setHtml(true);
     setReact(true);
     setBack(true);
+    setSlide(true)
+    setTimeout(() => {
+     setSlide(false);
+    }, 1500);
+
 
   }
   const toggleBack = e => {
@@ -99,6 +122,11 @@ const Dashboard = () => {
     setShowAll(false);
     setHtml(false);
     setFront(false);
+    setSlide(true)
+    setTimeout(() => {
+     setSlide(false);
+    }, 1500);
+
   }
 
   const toggleNode = e => {
@@ -110,6 +138,10 @@ const Dashboard = () => {
     setHtml(false);
     setFront(false);
     setNode(true);
+    setSlide(true)
+    setTimeout(() => {
+     setSlide(false);
+    }, 1500);
 
   }
 
@@ -163,8 +195,11 @@ const Dashboard = () => {
           </ul>
           <p className='filter'>Showing all projects. Use the filter to list them by skill or technology.</p>
         </motion.div>
+        <div className={slide ? 'slide-container' : 'dont-show'}>
         <div className={slide ? 'slide-bar' : 'dont-show'}></div>
+        <p className='slide-filter'>Filtering ...</p>
         <div className={slide ? 'slide-bar-bott' : 'dont-show'}></div>
+        </div>
 
           <motion.div className='project'
                    
