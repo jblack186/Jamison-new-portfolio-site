@@ -6,7 +6,7 @@
   justify-content: flex-start;
   align-items: center;
   flex-direction: column;
-  padding-top: 40px;
+  padding-top: 20px;
   height: 100%;
 }
 
@@ -29,6 +29,12 @@
   overflow: none;
 }
 
+.motion-div-line {
+  background-color: lightblue;
+  position: absolute;
+  top: 0;
+  z-index: 100;
+}
 
 .dash {
   width: 75%;
@@ -50,7 +56,6 @@
 .dash p {
   font-size: 1.15em;
     color: rgb(255, 255, 255);
-
     line-height: 30px;
 }
 
@@ -92,6 +97,8 @@
 
 .dont-show {
   display: none;
+  transition: display 2s;
+  
 }
 
 .project {
@@ -105,6 +112,18 @@
   display: flex;
   padding-bottom: 50px;
   cursor: pointer;
+  transition: display 2s;
+  animation-name: appear;
+  animation-duration: 1s;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .project img {
@@ -116,3 +135,44 @@
 
 }
 
+.slide-bar {
+  position: absolute;
+  top: 0;
+  height: 50vh;
+  width: 100%;
+  background-color: #222;
+  animation-name: slideLeft;
+  animation-duration: 1s;
+}
+
+
+
+.slide-bar-bott {
+  position: absolute;
+  bottom: 0;
+  height: 50vh;
+  width: 100%;
+  background-color: #222;
+  animation-name: slideRight;
+  animation-duration: .8s;
+
+}
+
+@keyframes slideLeft {
+  from {
+    left: -1300px;
+  }
+  to {
+    left: 0px;
+  }
+}
+
+@keyframes slideRight {
+    from {
+      left: 1300px;
+    }
+    to {
+      left: 0px;
+    }
+  }
+  

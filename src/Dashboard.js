@@ -5,7 +5,7 @@ import Revtown from './img/rev-frame_generic_light.png';
 import Wowzers from './img/wow-frame_generic_light.png';
 import Email from './img/rec-frame_generic_light.png';
 import Receipt from './img/wow-rec-frame_generic_light.png';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const Dashboard = () => {
   const [showAll, setShowAll] = useState(true);
@@ -16,9 +16,8 @@ const Dashboard = () => {
   const [back, setBack] = useState(true);
   const [react, setReact] = useState(true);
   const [node, setNode] = useState(true);
+  const [slide, setSlide] = useState(false)
 
-
-  
 
   const toggleSql = e => {
     setSql(true);
@@ -51,7 +50,12 @@ const Dashboard = () => {
     setReact(true);
     setFront(true);
     setBack(true);
-
+    setSlide(true)
+    setTimeout(() => {
+     setSlide(false);
+    }, 1500);
+    
+  
   }
 
   const toggleHTML = e => {
@@ -112,6 +116,13 @@ const Dashboard = () => {
 
   return (
     <div className='dash-container'>
+      
+      <motion.div
+      className='motion-div-line'
+      initial={{height: '2px', width: '100%'}}
+      animate={{height: '2px', width: '0%'}}
+      transition={{ delay: .1, duration: 1, type: 'tween'}}
+      ></motion.div>
       <motion.div
       className='motion-div'
       initial={{height: '50vw'}}
@@ -138,30 +149,38 @@ const Dashboard = () => {
          
         className='button-container'>
           <ul className='list-container'>
-            <motion.li whileHover={{scale: 1.1, textShadow: "0px 0px 8px rgb(255, 255, 255)"}} onClick={toggleShowAll}>Show All</motion.li>
-            <motion.li whileHover={{scale: 1.1, textShadow: "0px 0px 8px rgb(255, 255, 255)"}}onClick={toggleReact}>React</motion.li>
-            <motion.li whileHover={{scale: 1.1, textShadow: "0px 0px 8px rgb(255, 255, 255)"}} onClick={toggleMongo}>MongoDB</motion.li>
-            <motion.li whileHover={{scale: 1.1, textShadow: "0px 0px 8px rgb(255, 255, 255)"}} onClick={toggleSql}>SQLite3</motion.li>
-            <motion.li whileHover={{scale: 1.1, textShadow: "0px 0px 8px rgb(255, 255, 255)"}} onClick={toggleNode}>NodeJS</motion.li>
-            <motion.li whileHover={{scale: 1.1, textShadow: "0px 0px 8px rgb(255, 255, 255)"}} onClick={toggleHTML}>HTML5</motion.li>
-            <motion.li whileHover={{scale: 1.1, textShadow: "0px 0px 8px rgb(255, 255, 255)" }} onClick={toggleFront}>Front-end</motion.li>
-            <motion.li whileHover={{  scale: 1.1, textShadow: "0px 0px 8px rgb(255, 255, 255)"}} onClick={toggleBack}>Back-end</motion.li>
+            <motion.li whileHover={{scale: 1.1, textShadow: "0px 0px 8px rgb(255, 255, 255)", transition: {yoyo: 10}}} onClick={toggleShowAll}>Show All</motion.li>
+            <motion.li whileHover={{scale: 1.1, textShadow: "0px 0px 8px rgb(255, 255, 255)", transition: {yoyo: 10}}}onClick={toggleReact}>React</motion.li>
+            <motion.li whileHover={{scale: 1.1, textShadow: "0px 0px 8px rgb(255, 255, 255)", transition: {yoyo: 10}}} onClick={toggleMongo}>MongoDB</motion.li>
+            <motion.li whileHover={{scale: 1.1, textShadow: "0px 0px 8px rgb(255, 255, 255)", transition: {yoyo: 10}}} onClick={toggleSql}>SQLite3</motion.li>
+            <motion.li whileHover={{scale: 1.1, textShadow: "0px 0px 8px rgb(255, 255, 255)", transition: {yoyo: 10}}} onClick={toggleNode}>NodeJS</motion.li>
+            <motion.li whileHover={{scale: 1.1, textShadow: "0px 0px 8px rgb(255, 255, 255)", transition: {yoyo: 10}}} onClick={toggleHTML}>HTML5</motion.li>
+            <motion.li whileHover={{scale: 1.1, textShadow: "0px 0px 8px rgb(255, 255, 255)", transition: {yoyo: 10} }} onClick={toggleFront}>Front-end</motion.li>
+            <motion.li whileHover={{  scale: 1.1, textShadow: "0px 0px 8px rgb(255, 255, 255)", transition: {yoyo: 10}}} onClick={toggleBack}>Back-end</motion.li>
 
-            <motion.li whileHover={{  scale: 1.1, textShadow: "0px 0px 8px rgb(255, 255, 255)"}} onClick={toggleBack}>WordPress</motion.li>
+            <motion.li whileHover={{  scale: 1.1, textShadow: "0px 0px 8px rgb(255, 255, 255)", transition: {yoyo: 10}}} onClick={toggleBack}>WordPress</motion.li>
 
           </ul>
           <p className='filter'>Showing all projects. Use the filter to list them by skill or technology.</p>
         </motion.div>
+        <div className={slide ? 'slide-bar' : 'dont-show'}></div>
+        <div className={slide ? 'slide-bar-bott' : 'dont-show'}></div>
+
           <motion.div className='project'
                    
                    initial={{y: 400  }}
                    animate={{y: 0 }}
-                   transition={{ delay: 1.5, duration: .5}}
+                   transition={{ delay: 1.8, duration: .5}}
           >
-            <div className={mongo || node || back === true ? 'project-item' : 'dont-show'}>
-              <motion.img whileHover={{  scale: 1.1}} src={Rentlords} />
-            </div>
-            <div className={sql  || node || back === true ? 'project-item' : 'dont-show'}>
+            <motion.div 
+            initial={{y: 400  }}
+            animate={{y: 0 }}
+            transition={{ delay: 1.8, duration: .5}}
+            className={mongo || node || back || react === true ? 'project-item' : 'dont-show'}>
+              <motion.img 
+              whileHover={{  scale: 1.1}} src={Rentlords} />
+            </motion.div>
+            <div className={sql  || node || back || react === true ? 'project-item' : 'dont-show'}>
               <img src={Revtown} />
             </div>
             <div className={ react === true ? 'project-item' : 'dont-show'}>
