@@ -6,6 +6,9 @@ import Wowzers from './img/wow-frame_generic_light.png';
 import Email from './img/rec-frame_generic_light.png';
 import Receipt from './img/wow-rec-frame_generic_light.png';
 import { motion, AnimatePresence } from 'framer-motion';
+import {FontAwesomeIcon} from'@fortawesome/react-fontawesome';
+import { faChevronLeft } from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-router-dom';
 
 const Dashboard = () => {
   const [showAll, setShowAll] = useState(true);
@@ -286,6 +289,9 @@ const Dashboard = () => {
       animate={{height: '0vw'}}
       transition={{ delay: 1, duration: .8, type: 'tween'}}
       ></motion.div>
+    <Link style={{ textDecoration: 'none' }}  to='/' > <div >
+    {<FontAwesomeIcon className='arrow-left' icon={faChevronLeft}/> }
+    </div></Link>
 
     </motion.div>
   )

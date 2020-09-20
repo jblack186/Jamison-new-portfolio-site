@@ -9,9 +9,90 @@
   font-size: 50px;
   color: rgb(255, 255, 255);
   cursor: pointer;
+  animation-name: spinaroonie;
+  animation-duration: .5s;
+  z-index: 999;
 }
 
-.barSpin {
-  transform: rotateX(180deg);
-  display: block;
+.closeIcon {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  font-size: 50px;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  animation-name: spinaroonie;
+  animation-duration: .5s;
+  z-index: 999999;
+}
+
+
+
+.barsIconA {
+display: none;
+z-index: 999999;
+
+}
+
+
+
+
+@keyframes spinaroonie {
+  from {
+    
+    transform:rotate(0deg);
+  }
+  to {
+    transform:rotate(360deg);
+  }
+}
+
+.drop-menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: 9999;
+  background-color: darkgray;
+  animation-name: slideDown;
+  animation-duration: .6s;
+
+}
+
+@keyframes slideDown {
+  from {
+    top: -1300px;
+  }
+  to {
+    top: 0px;
+  }
+}
+
+
+.drop-menu ul {
+  background-color: gray;
+  margin: 0 auto;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 0;
+}
+
+.drop-menu ul li {
+  height: 200px;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Teko', sans-serif;
+  font-size: 40px;
+  width: 100%;
+}
+
+.drop-menu ul li:hover {
+  background-color: lightgray;
 }
