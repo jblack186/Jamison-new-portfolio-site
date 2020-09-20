@@ -9,6 +9,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 import {FontAwesomeIcon} from'@fortawesome/react-fontawesome';
 import { faChevronLeft } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
+import {faFacebookSquare, faGithubSquare, faLinkedin, faTwitterSquare} from '@fortawesome/free-brands-svg-icons';
+
 
 const Dashboard = () => {
   const [showAll, setShowAll] = useState(true);
@@ -196,7 +198,24 @@ const Dashboard = () => {
     exit='exit'
 
     className='dash-container'>
-      
+            <div>
+        <div className='faIcons-dash'>
+          
+          {<FontAwesomeIcon className='list-icon-dash' icon={faFacebookSquare}/> }
+          
+          
+          {<FontAwesomeIcon className='list-icon-dash' icon={faTwitterSquare}/> }
+          
+          
+          {<FontAwesomeIcon className='list-icon-dash' icon={faGithubSquare}/> }
+          
+          
+          {<FontAwesomeIcon className='list-icon-dash' icon={faLinkedin}/> }
+          
+
+        </div>
+      </div>
+
       <motion.div
       variants={variantsContainer}
       className='motion-div-line'

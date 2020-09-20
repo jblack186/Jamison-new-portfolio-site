@@ -10,7 +10,7 @@ import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 
 function App() {
   const location = useLocation();
-  const [menu, setMenu] = useState(false);
+  const [menu, setMenu] = useState();
 
   const clickMenu = e => {
     setMenu(true);
@@ -19,8 +19,11 @@ function App() {
 
   const closeMenu = e => {
     setMenu(false);
-  }
-
+    setTimeout(() => {
+      setMenu();
+     }, 500);
+   }
+console.log(menu)
   return (
     
     
@@ -34,12 +37,10 @@ function App() {
       {<FontAwesomeIcon onClick={closeMenu} className={menu ? 'closeIcon': !menu ? 'barsIconA': null} icon={faTimes}/> }
 
       </motion.div>
-      <motion.div className={menu ? 'drop-menu' : 'barsIconA'}
-            initial={{y: 0  }}
-            animate={{y: 100 }}
+
+      <motion.div className={menu === false ? 'drop-closed' : menu === true ? 'drop-menu' : 'drop-none'}     
             transition={{ delay: 1.8, duration: .5}}
       >
-      
         <ul>
           <li>
             about

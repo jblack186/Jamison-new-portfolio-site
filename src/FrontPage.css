@@ -86,7 +86,7 @@
   padding-left: 20px;
   animation-name: flip;
   animation-duration: 1s;
-  animation-delay: 1s;
+  animation-delay: .8s;
   animation-fill-mode: forwards;
   left: -200px;
  }

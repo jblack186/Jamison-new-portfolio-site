@@ -8,7 +8,44 @@
   flex-direction: column;
   padding-top: 20px;
   height: 100%;
+  min-height: 100vh;
 }
+
+.faIcons-dash {
+  position: fixed;
+  top: 0;
+  left: 60%;
+  display: flex;
+  width: 150px;
+  justify-content: space-evenly;
+  background-color: #171a21;
+  border-radius: 0px 0px 10px 10px;
+  animation-name: iconSlide;
+ animation-duration: .8s;
+ animation-delay: 1.4s;
+}
+
+@media screen and (max-width: 500px) {
+  .faIcons-dash {
+    left: 50%;
+  }
+}
+
+.list-icon-dash {
+  font-size: 28px;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+}
+
+@keyframes iconSlide {
+  from {
+    top: -50px;
+  }
+  to {
+    top: 0;
+  }
+}
+
 
 .motion-div {
   position: absolute;
@@ -18,6 +55,7 @@
   background-color: #171a21;
   z-index: 99;
 }
+
 
 .motion-div-two {
   position: absolute;
