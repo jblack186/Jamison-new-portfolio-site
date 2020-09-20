@@ -2,3 +2,16 @@
   background:#252934;
 } */
 
+.barsIcon {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  font-size: 50px;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+}
+
+.barSpin {
+  transform: rotateX(180deg);
+  display: block;
+}

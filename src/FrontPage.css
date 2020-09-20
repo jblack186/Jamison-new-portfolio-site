@@ -65,17 +65,60 @@
    color: rgb(255, 255, 255);
  }
 
- .arrow {
-   transition: color 1s;
-   color: white;
- }
-
- .arrow:hover {
- }
 
  .hoverArrow {
   color: #252934;
   transform: rotate(90deg);
   transition-duration: .8s;
 
+ }
+
+ .faIcons {
+   position: absolute;
+   top: 50%;
+   margin-top: -135px;
+   text-shadow: rgb(255, 255, 255);
+   box-shadow: rgb(255, 255, 255);
+   height: 280px;
+   display: flex;
+   flex-direction: column;
+  justify-content: space-between;
+  padding-left: 20px;
+  animation-name: flip;
+  animation-duration: 1s;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+  left: -200px;
+ }
+
+ .list-icon {
+   list-style: none;
+   font-size: 60px;
+   color: rgb(255, 255, 255);
+  cursor: pointer;
+ }
+
+
+ @keyframes flip {
+   from {
+    left: -200px;
+   }
+   to {
+    left: 0;
+   }
+ }
+
+ .arrow {
+   position: absolute;
+   top: 50%;
+   left: 95%;
+   font-size: 60px;
+   font-weight: 200;
+   cursor: pointer;
+   color: rgb(255, 255, 255);
+   text-decoration: none;
+ }
+
+ .arrow:hover {
+   color: lightblue;
  }

@@ -3,7 +3,8 @@ import ScriptTag from 'react-script-tag';
 import './FrontPage.css';
 import { motion, AnimatePresence } from 'framer-motion';
 import {FontAwesomeIcon} from'@fortawesome/react-fontawesome';
-import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
+import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
+import {faFacebookSquare, faGithubSquare, faLinkedin, faTwitterSquare} from '@fortawesome/free-brands-svg-icons';
 import { Link } from 'react-router-dom';
 
 
@@ -49,6 +50,23 @@ const FrontPage = () => {
       <ScriptTag type="text/javascript" src="https://scriptonofficial.github.io/particle-js-background/app.js" />
 
       <div id="particles-js"></div>
+      <div>
+        <div className='faIcons'>
+          
+          {<FontAwesomeIcon className='list-icon' icon={faFacebookSquare}/> }
+          
+          
+          {<FontAwesomeIcon className='list-icon' icon={faTwitterSquare}/> }
+          
+          
+          {<FontAwesomeIcon className='list-icon' icon={faGithubSquare}/> }
+          
+          
+          {<FontAwesomeIcon className='list-icon' icon={faLinkedin}/> }
+          
+
+        </div>
+      </div>
       <div className='home-content'>
         <h1>Hello, I'm <span class="name">Jamison Blackwell.</span> <p>I am a full-stack web developer.</p></h1>
         <Link style={{ textDecoration: 'none' }}  to='dashboard' ><motion.div 
@@ -57,6 +75,9 @@ const FrontPage = () => {
       whileHover={{scale: 1.1, textShadow: "0px 0px 8px rgb(255, 255, 255)", boxShadow: "0px 0px 8px rgb(255, 255, 255)"}}
       class="button-link">View my work </motion.div></Link>
     </div>
+    <Link style={{ textDecoration: 'none' }}  to='dashboard' > <div >
+    {<FontAwesomeIcon className='arrow' icon={faChevronRight}/> }
+    </div></Link>
 
     </motion.div>
   )

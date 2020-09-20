@@ -145,15 +145,61 @@ const Dashboard = () => {
 
   }
 
+  const variantsContainer = {
+    hidden: {
+      height: '2px', 
+      width: '100%'
+    },
+    visible: {
+      height: '2px', 
+      width: '0%'
+    },
+    exit: {
+      opacity: .8
+
+      
+    }
+
+  }
+
+  const variantsContainerFirst = {
+    hidden: {
+      opacity: 1
+    },
+    visible: {
+      opacity: 1,
+      transition: {
+        delay: .1, duration: .1
+      }
+    },
+    exit: {
+      opacity: .8
+
+      
+    }
+
+  }
+
+
+
 
   return (
-    <div className='dash-container'>
+    <motion.div 
+    variants={variantsContainerFirst}
+    initial='hidden'
+    animate='visible'
+    transition={{ delay: .1, duration: .7, type: 'tween'}}
+
+    exit='exit'
+
+    className='dash-container'>
       
       <motion.div
+      variants={variantsContainer}
       className='motion-div-line'
-      initial={{height: '2px', width: '100%'}}
-      animate={{height: '2px', width: '0%'}}
-      transition={{ delay: .1, duration: 1, type: 'tween'}}
+      initial='hidden'
+      animate='visible'
+      transition={{ delay: .1, duration: .7, type: 'tween'}}
       ></motion.div>
       <motion.div
       className='motion-div'
@@ -167,6 +213,9 @@ const Dashboard = () => {
             transition={{ delay: 1.5, duration: .8, type: 'tween'}}    
             initial={{y: -250}}
             animate={{y: 0}}
+            exit='exit'
+         
+
           >web developer portfoio</motion.h2>
           <motion.p 
           transition={{ delay: 1.5, duration: .8, type: 'tween'}}    
@@ -238,7 +287,7 @@ const Dashboard = () => {
       transition={{ delay: 1, duration: .8, type: 'tween'}}
       ></motion.div>
 
-    </div>
+    </motion.div>
   )
 }
 
