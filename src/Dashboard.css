@@ -153,6 +153,7 @@
   transition: display 2s;
   animation-name: appear;
   animation-duration: 1s;
+  position: relative;
 }
 
 @keyframes appear {
@@ -169,10 +170,63 @@
   height: 270px;
   object-fit: cover;
   box-shadow: 3px 10px 10px 3px #222;
-  
 
 }
 
+.proj-hover {
+    position: absolute;
+    width: 440px;
+    height: 270px;  
+    background-color: rgba(17, 20, 27, 0.8);
+    color: white;
+    top: 0;
+    opacity: 0;
+  
+}
+
+
+/* @keyframes expand {
+  from {
+    height: 0px;
+  }
+  to {
+    height: 270px;  
+  }
+} */
+
+
+
+
+.proj-list-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.proj-list-buttons ul{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 270px;
+  height: 150px;
+  padding: 0;
+  margin: 0;
+}
+
+.proj-list-buttons ul li {
+  list-style: none;
+  width: 110px;
+  height: 30px;
+  background-color: #313131;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  color: lightgray;
+}
 .slide-container {
   height: 100vh;
   width: 100vw;
@@ -256,7 +310,7 @@
   }
   
   .arrow-left {
-    position: absolute;
+    position: fixed;
     top: 50%;
     right: 95%;
     font-size: 60px;
@@ -268,4 +322,11 @@
  
   .arrow-left:hover {
     color: lightblue;
+  }
+
+
+  .modal-para {
+    padding-bottom: 10px;
+    font-family: 'Teko', sans-serif;
+
   }

@@ -7,9 +7,19 @@ import Email from './img/rec-frame_generic_light.png';
 import Receipt from './img/wow-rec-frame_generic_light.png';
 import { motion, AnimatePresence } from 'framer-motion';
 import {FontAwesomeIcon} from'@fortawesome/react-fontawesome';
-import { faChevronLeft } from '@fortawesome/free-solid-svg-icons';
+import { faChevronLeft, faTimes } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
 import {faFacebookSquare, faGithubSquare, faLinkedin, faTwitterSquare} from '@fortawesome/free-brands-svg-icons';
+import {Button, Modal} from 'react-bootstrap';
+import ModalTitle from 'react-bootstrap/ModalTitle'
+import ModalFooter from 'react-bootstrap/ModalFooter'
+import ModalBody from 'react-bootstrap/ModalBody'
+import RentVid from './img/rent-recording.mov';
+import Rev from './img/rev-rec.mov';
+import Wow from './img/wow-rec.mov';
+import Pups from './img/pups-pic.png';
+import ReceiptPic from './img/receipt-pic.png';
+
 
 
 const Dashboard = () => {
@@ -22,6 +32,34 @@ const Dashboard = () => {
   const [react, setReact] = useState(true);
   const [node, setNode] = useState(true);
   const [slide, setSlide] = useState(false)
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
+  const [slide2, setSlide2] = useState(false)
+  const [show2, setShow2] = useState(false);
+
+  const handleClose2 = () => setShow2(false);
+  const handleShow2 = () => setShow2(true);
+
+  const [slide3, setSlide3] = useState(false)
+  const [show3, setShow3] = useState(false);
+
+  const handleClose3 = () => setShow3(false);
+  const handleShow3 = () => setShow3(true);
+
+  const [slide4, setSlide4] = useState(false)
+  const [show4, setShow4] = useState(false);
+
+  const handleClose4 = () => setShow4(false);
+  const handleShow4 = () => setShow4(true);
+
+  const [slide5, setSlide5] = useState(false)
+  const [show5, setShow5] = useState(false);
+
+  const handleClose5 = () => setShow5(false);
+  const handleShow5 = () => setShow5(true);
 
 
   const toggleSql = e => {
@@ -37,6 +75,7 @@ const Dashboard = () => {
     setTimeout(() => {
      setSlide(false);
     }, 1500);
+    window.scrollTo({top: 0, behavior: 'smooth'});
 
   }
 
@@ -53,6 +92,7 @@ const Dashboard = () => {
     setTimeout(() => {
      setSlide(false);
     }, 1500);
+    window.scrollTo({top: 0, behavior: 'smooth'});
 
   }
 
@@ -68,7 +108,8 @@ const Dashboard = () => {
     setTimeout(() => {
      setSlide(false);
     }, 1500);
-    
+    window.scrollTo({top: 0, behavior: 'smooth'});
+
   
   }
 
@@ -85,6 +126,7 @@ const Dashboard = () => {
     setTimeout(() => {
      setSlide(false);
     }, 1500);
+    window.scrollTo({top: 0, behavior: 'smooth'});
 
   }
 
@@ -100,7 +142,7 @@ const Dashboard = () => {
     setTimeout(() => {
      setSlide(false);
     }, 1500);
-
+    window.scrollTo({top: 0, behavior: 'smooth'});
   }
 
   const toggleFront = e => {
@@ -116,6 +158,7 @@ const Dashboard = () => {
     setTimeout(() => {
      setSlide(false);
     }, 1500);
+    window.scrollTo({top: 0, behavior: 'smooth'});
 
 
   }
@@ -131,6 +174,7 @@ const Dashboard = () => {
     setTimeout(() => {
      setSlide(false);
     }, 1500);
+    window.scrollTo({top: 0, behavior: 'smooth'});
 
   }
 
@@ -147,6 +191,7 @@ const Dashboard = () => {
     setTimeout(() => {
      setSlide(false);
     }, 1500);
+    window.scrollTo({top: 0, behavior: 'smooth'});
 
   }
 
@@ -278,25 +323,226 @@ const Dashboard = () => {
                    animate={{y: 0 }}
                    transition={{ delay: 1.8, duration: .5}}
           >
-            <motion.div 
-            initial={{y: 400  }}
-            animate={{y: 0 }}
-            transition={{ delay: 1.8, duration: .5}}
+            <div 
             className={mongo || node || back || react === true ? 'project-item' : 'dont-show'}>
               <motion.img 
-              whileHover={{  scale: 1.1}} src={Rentlords} />
-            </motion.div>
+               src={Rentlords} />
+              <motion.div className='proj-hover' 
+                                whileHover={{ opacity: 1}}
+                                transition={{ delay: .2, duration: .5}}
+
+              >              
+              <div className='proj-list-buttons'>
+              <ul>
+                <li>React</li>
+                <li>CSS3</li>
+                <li>Node</li>
+                <li>MongoDB</li>
+                <li>Google Auth</li>
+                <Button data-target="#myModal1" size='md' variant="info" onClick={handleShow}>
+        Click for more
+      </Button>
+
+              </ul>
+            </div>
+
+</motion.div>
+
+      <Modal id="myModal1" show={show} onHide={handleClose} animation={false}>
+        <Modal.Header closeButton>
+          <Modal.Title id="myModal1" >Rentlords</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+        <p className='moadal-para'>In this application, I used React on the frontend and Node on the backend. I used MongoDB to manage users and their issues. Google authentication was used for registering and logging in users. Landlords and tenants connect to discuss any issues with the property. Landlords can easily stay on top of problems and notify their tenants once they recieved the complaint and when it is completed.</p>
+        <video autoPlay loop muted 
+        style={{
+                         
+                          width: "100%",
+                          
+                          height: "100%",
+                          objectFit: "cover",
+                         
+        }}>
+          <source src={RentVid} type="video/mp4" />
+        </video>
+
+        </Modal.Body>
+        <Modal.Footer>
+        <a href="https://floating-lake-21994.herokuapp.com/login"><button class="live">View Live Version</button></a>
+
+          <Button  variant="secondary" onClick={handleClose}>
+            <FontAwesomeIcon icon={faTimes}></FontAwesomeIcon>
+          </Button>
+        </Modal.Footer>
+      </Modal>            
+      
+            </div>
             <div className={sql  || node || back || react === true ? 'project-item' : 'dont-show'}>
               <img src={Revtown} />
+              <motion.div className='proj-hover' whileHover={{opacity: 1}}
+              >              
+              <div className='proj-list-buttons'>
+              <ul>
+                <li>React</li>
+                <li>CSS3</li>
+                <li>Sqlite3</li>
+                <li>Node</li>
+                <Button  size='md' variant="info" onClick={handleShow2}>
+        Click for more
+      </Button>
+
+              </ul>
+            </div>
+</motion.div>
+<Modal show={show2} onHide={handleClose2} animation={false}>
+        <Modal.Header closeButton>
+          <Modal.Title>RevTown</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+        <p className='moadal-para'>This eccommerce site was built with React on the front end and Node on the backend. I used an SQL database to manage the items in the store.</p>
+        <video autoPlay loop muted 
+        style={{
+                         
+                          width: "100%",
+                          
+                          height: "100%",
+                          objectFit: "cover",
+                         
+        }}>
+          <source src={Rev} type="video/mp4" />
+        </video>
+
+        </Modal.Body>
+        <Modal.Footer>
+        <a href="https://unruffled-mclean-d98c5a.netlify.app/"><button class="live">View Lives Version</button></a>
+
+          <Button variant="secondary" onClick={handleClose2}>
+            <FontAwesomeIcon icon={faTimes}></FontAwesomeIcon>
+          </Button>
+        </Modal.Footer>
+      </Modal>            
+
             </div>
             <div className={ react === true ? 'project-item' : 'dont-show'}>
               <img src={Wowzers} />
+              <motion.div className='proj-hover' whileHover={{opacity: 1}}
+              >              
+              <div className='proj-list-buttons'>
+              <ul>
+                <li>React</li>
+                <li>CSS3</li>
+                <li>Rest Api</li>
+                <Button data-target="#myModal1" size='md' variant="info" onClick={handleShow3}>
+        Click for more
+      </Button>
+
+              </ul>
+            </div>
+</motion.div>
+<Modal show={show3} onHide={handleClose3} animation={false}>
+        <Modal.Header closeButton>
+          <Modal.Title>Wowzers</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+        <p className='moadal-para'>This site is still under construction. I am building it with React. I am using a 3rd party api to allow users to obtain recipes for their chosen diets.</p>
+        <video autoPlay loop muted 
+        style={{
+                         
+                          width: "100%",
+                          
+                          height: "100%",
+                          objectFit: "cover",
+                         
+        }}>
+          <source src={Wow} type="video/mp4" />
+        </video>
+
+        </Modal.Body>
+        <Modal.Footer>
+        <a href="https://pedantic-swirles-0f5272.netlify.app/home/"><button class="live">View Live Version</button></a>
+
+          <Button variant="secondary" onClick={handleClose3}>
+            <FontAwesomeIcon icon={faTimes}></FontAwesomeIcon>
+          </Button>
+        </Modal.Footer>
+      </Modal>            
+
             </div>
             <div className={html === true ? 'project-item' : 'dont-show'}>
               <img src={Email} />
+              <motion.div className='proj-hover' whileHover={{opacity: 1}}
+              >              
+              <div className='proj-list-buttons'>
+              <ul>
+                <li>HTML5</li>
+                <li>CSS3</li>
+                <Button data-target="#myModal1" size='md' variant="info" onClick={handleShow4}>
+        Click for more
+      </Button>
+
+              </ul>
+            </div>
+</motion.div>
+<Modal show={show4} onHide={handleClose4} animation={false}>
+        <Modal.Header closeButton>
+          <Modal.Title>HTML Email</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+        <p className='moadal-para'>An HTML email that I made that shows off a clean design.</p>
+        
+                         
+      
+          <img src={Pups} style={{width: '100%', height: '400px', objectFit: 'contain'}} />
+       
+
+        </Modal.Body>
+        <Modal.Footer>
+        
+
+          <Button variant="secondary" onClick={handleClose4}>
+            <FontAwesomeIcon icon={faTimes}></FontAwesomeIcon>
+          </Button>
+        </Modal.Footer>
+      </Modal>            
+
             </div>
             <div className={html === true ? 'project-item' : 'dont-show'}>
               <img src={Receipt} />
+              <motion.div className='proj-hover' whileHover={{opacity: 1}}
+              >              
+              <div className='proj-list-buttons'>
+              <ul>
+              <li>HTML5</li>
+                <li>CSS3</li>
+                <Button data-target="#myModal1" size='md' variant="info" onClick={handleShow5}>
+        Click for more
+      </Button>
+
+              </ul>
+            </div>
+</motion.div>
+<Modal show={show5} onHide={handleClose5} animation={false}>
+        <Modal.Header closeButton>
+          <Modal.Title>HTML Email</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+        <p className='moadal-para'>An HTML email receipt that I made that shows off a clean design.</p>
+        
+                         
+      
+          <img src={ReceiptPic} style={{width: '100%', height: '400px', objectFit: 'contain'}} />
+       
+
+        </Modal.Body>
+        <Modal.Footer>
+        
+
+          <Button variant="secondary" onClick={handleClose5}>
+            <FontAwesomeIcon icon={faTimes}></FontAwesomeIcon>
+          </Button>
+        </Modal.Footer>
+      </Modal>            
+
             </div>
 
 
