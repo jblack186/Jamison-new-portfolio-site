@@ -7,10 +7,26 @@ import FrontPage from './FrontPage';
 import { motion, AnimatePresence } from 'framer-motion';
 import {FontAwesomeIcon} from'@fortawesome/react-fontawesome';
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
+import { Link, useHistory } from 'react-router-dom';
+
 
 function App() {
   const location = useLocation();
-  const [menu, setMenu] = useState();
+  const [menu, setMenu] = useState('');
+  const history = useHistory();
+
+  const handleHistory = (e) => {
+    e.preventDefault();
+    history.push('/')
+    window.location.reload();
+  }
+
+  const toWork = (e) => {
+    e.preventDefault();
+    history.push('/dashboard')
+    window.location.reload();
+  }
+
 
   const clickMenu = e => {
     setMenu(true);
@@ -19,11 +35,9 @@ function App() {
 
   const closeMenu = e => {
     setMenu(false);
-    setTimeout(() => {
-      setMenu();
-     }, 500);
+    console.log('up')
    }
-console.log(menu)
+console.log('menu',menu)
   return (
     
     
@@ -34,7 +48,8 @@ console.log(menu)
                className={menu ? 'barSpin' : null}>
       
       {<FontAwesomeIcon onClick={clickMenu} className={menu ? 'barsIconA': 'barsIcon'} icon={faBars}/> }
-      {<FontAwesomeIcon onClick={closeMenu} className={menu ? 'closeIcon': !menu ? 'barsIconA': null} icon={faTimes}/> }
+      
+      {<FontAwesomeIcon  onClick={closeMenu} className={menu === true ? 'closeIcon'  : 'barsIconA'} icon={faTimes}/> }
 
       </motion.div>
 
@@ -42,10 +57,12 @@ console.log(menu)
             transition={{ delay: 1.8, duration: .5}}
       >
         <ul>
-          <li>
-            about
-          </li>
-          <li>
+         
+            <li onClick={handleHistory}>
+              about
+           </li>
+         
+          <li onClick={toWork}>
             work
           </li>
           <li>
