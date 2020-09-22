@@ -1,8 +1,10 @@
 import React, {useState} from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import LambdaPic from './img/new-lambda-pic.jpg';
 import Frame from './img/framemotion-pic.jpg';
+import Script from './img/script-tag.jpg';
+
 import './Blog.css';
 import { faChevronLeft, faTimes, faChevronRight } from '@fortawesome/free-solid-svg-icons';
 import {FontAwesomeIcon} from'@fortawesome/react-fontawesome';
@@ -45,6 +47,20 @@ const Blog = () => {
 
   }
 
+  const history = useHistory();
+
+
+  const toWork = (e) => {
+    e.preventDefault();
+    history.push('/dashboard')
+    window.location.reload();
+  }
+
+  const toBlog = (e) => {
+    e.preventDefault();
+    history.push('/blog')
+    window.location.reload();
+  }
 
 
 
@@ -95,7 +111,7 @@ Framermotion has excellent documentation https://www.framer.com/api/motion/. The
           <p className='blog-about'>By Jamison Blackwell</p>
           <a href='https://medium.com/@blackwellj1040/script-tags-inside-a-react-component-5ec686ae5064' className='blog-medium'>Published here on Medium</a>
         </div>
-        <img className='blog-img' src={Frame} />
+        <img className='blog-img' src={Script} />
         <p className='blog-body'>I ran into this problem when I was trying to use some vanilla javascript code I found on codepen in a react project. I didn’t want to refactor it and wanted to just plop it right into my component. Luckily react has a ScriptTag feature that solves this.
 All you need to do is type npm install react-script-tag into the terminal.
 Then type — import ScriptTag from ‘react-script-tag’ — on the top of the component.
@@ -103,10 +119,10 @@ Slap it in your code. Just use ScriptTag in place for script and for type put it
 And you’re ready to go. It’s that easy.</p>
       </div>
 
-      <Link style={{ textDecoration: 'none' }}  to='/dashboard' > <div >
+      <div onClick={toWork} >
     {<FontAwesomeIcon className='arrow-left' icon={faChevronLeft}/> }
 
-    </div></Link>
+    </div>
 
     </motion.div>
   )

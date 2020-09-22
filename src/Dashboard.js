@@ -8,7 +8,7 @@ import Receipt from './img/wow-rec-frame_generic_light.png';
 import { motion, AnimatePresence } from 'framer-motion';
 import {FontAwesomeIcon} from'@fortawesome/react-fontawesome';
 import { faChevronLeft, faTimes, faChevronRight } from '@fortawesome/free-solid-svg-icons';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import {faFacebookSquare, faGithubSquare, faLinkedin, faTwitterSquare} from '@fortawesome/free-brands-svg-icons';
 import {Button, Modal} from 'react-bootstrap';
 import ModalTitle from 'react-bootstrap/ModalTitle'
@@ -19,6 +19,8 @@ import Rev from './img/rev-rec.mov';
 import Wow from './img/wow-rec.mov';
 import Pups from './img/pups-pic.png';
 import ReceiptPic from './img/receipt-pic.png';
+
+
 
 
 
@@ -61,6 +63,20 @@ const Dashboard = () => {
   const handleClose5 = () => setShow5(false);
   const handleShow5 = () => setShow5(true);
 
+  const history = useHistory();
+
+  const toHome = (e) => {
+    e.preventDefault();
+    history.push('/')
+    window.location.reload();
+  }
+  
+  const toBlog = (e) => {
+    e.preventDefault();
+    history.push('/blog')
+    window.location.reload();
+  }
+  
 
   const toggleSql = e => {
     setSql(true);
@@ -547,12 +563,13 @@ const Dashboard = () => {
       animate={{height: '0vw'}}
       transition={{ delay: 1, duration: .8, type: 'tween'}}
       ></motion.div>
-    <Link style={{ textDecoration: 'none' }}  to='/' > <div >
+    <div onClick={toHome}>
     {<FontAwesomeIcon className='arrow-left' icon={faChevronLeft}/> }
 
-    </div></Link>
-    <Link style={{ textDecoration: 'none' }}  to='blog' >{<FontAwesomeIcon className='arrow-right' icon={faChevronRight}/> }</Link>
-
+    </div>
+    <div onClick={toBlog}>
+    {<FontAwesomeIcon className='arrow-right' icon={faChevronRight}/> }
+    </div>
     </motion.div>
   )
 }
