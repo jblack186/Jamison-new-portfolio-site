@@ -10,13 +10,21 @@
   letter-spacing: 0.003em;
 }
 
+.blog-name {
+  padding-bottom: 25px;
+  color: rgb(255, 255, 255);
+
+}
+
 .post-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: 150px;
-  border-bottom: solid lightblue 20px;
+  margin-top: 50px;
+  padding-bottom: 80px;
+  border-bottom: solid lightblue 5px;
+
 }
 
 .blog-header {
@@ -45,4 +53,14 @@
 .blog-body {
   font-size: 21px;
   width: 55%;
+  
+}
+
+.article-list {
+  left: 15px;
+  top: 20px;
+
+  position: fixed;
+  cursor: pointer;
+  list-style: none;
 }

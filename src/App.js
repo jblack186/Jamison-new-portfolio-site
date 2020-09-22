@@ -98,7 +98,7 @@ function App() {
     <motion.div
     className='motion-div'
     initial={{height: '100vh'}}
-    animate={{height: '0vw'}}
+    animate={{height: '0vh'}}
     transition={{ delay: 1, duration: .8, type: 'tween'}}
     ></motion.div>
 

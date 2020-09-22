@@ -1,16 +1,29 @@
-import React, {useState} from 'react';
-import { Link, useHistory } from 'react-router-dom';
+import React, {useState, useEffect} from 'react';
+import {  useHistory } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import LambdaPic from './img/new-lambda-pic.jpg';
 import Frame from './img/framemotion-pic.jpg';
 import Script from './img/script-tag.jpg';
+import Sick from './img/sick.jpg';
+import {Link} from 'react-scroll';
+
 
 import './Blog.css';
 import { faChevronLeft, faTimes, faChevronRight } from '@fortawesome/free-solid-svg-icons';
 import {FontAwesomeIcon} from'@fortawesome/react-fontawesome';
+import { scrollToTop } from 'react-scroll/modules/mixins/animate-scroll';
+import scrollElement from 'react-scroll/modules/mixins/scroll-element';
+
 
 
 const Blog = () => {
+  const [apple] = useState(false);
+
+  useEffect(() => {
+    window.scrollTo({top: 0, behavior: 'smooth'});
+
+  }, [])
+
 
   const variantsContainerFirst = {
     hidden: {
@@ -53,14 +66,11 @@ const Blog = () => {
   const toWork = (e) => {
     e.preventDefault();
     history.push('/dashboard')
-    window.location.reload();
+    window.scrollTo({top: 0, behavior: 'smooth'});
+
+
   }
 
-  const toBlog = (e) => {
-    e.preventDefault();
-    history.push('/blog')
-    window.location.reload();
-  }
 
 
 
@@ -75,7 +85,52 @@ const Blog = () => {
     exit='exit'
     className='blog-container'
     >
-      <div className='post-container'>
+      <div className='article-list'>
+            <div>
+        <Link
+        activeClass="active"
+        to="lambda"
+        spy={true}
+        smooth={true}
+        offset={-70}
+        duration={500}
+        >Is Lamba School any good?</Link>
+      </div>
+
+      <div>
+        <Link
+        activeClass="active"
+        to="beware"
+        spy={true}
+        smooth={true}
+        offset={-70}
+        duration={500}
+        >Beware of the code</Link>
+      </div>
+      <div>
+        <Link
+        activeClass="active"
+        to="frame"
+        spy={true}
+        smooth={true}
+        offset={-70}
+        duration={500}
+        >Need help animating elements in react?</Link>
+      </div>
+      <div>
+        <Link
+        activeClass="active"
+        to="scripts"
+        spy={true}
+        smooth={true}
+        offset={-70}
+        duration={500}
+        >Script tags inside a react component</Link>
+      </div>
+      </div>
+
+      <div id='lambda' className='post-container'>
+        <h1 className='blog-name'>THE CODE POST</h1>
         <h1 className='blog-header'>Is Lambda School any good?</h1>
         <div className='medium-about'>
           <p className='blog-about'>By Jamison Blackwell</p>
@@ -87,7 +142,23 @@ The part-time cohorts consist of two 2–3-hour lectures a week and in between t
 
 <p className='blog-body'>Before you hop in, try learning to code yourself. At least for a short time so you can see if this path is right for you and because the information they teach is out there but it may take a while to get it all in. Although, the quality at which you get that information will not match up to Lambda in the least. They have a strong community and there is always someone to help. From students to instructors. If you post something in most of their Slack channels it’ll be answered within 30 minutes. The structure of the curriculum and beyond is amazing, especially for being a relatively new organization. If you’re sociable you will make friends and it only makes sense that networking in Lambda may even help you find your first web dev job. This school is great and I think the pay when you get a job approach gives them the incentive to teach you employable skills.</p>
       </div>
-      <div className='post-container'>
+      <div id="beware" className='post-container'>
+        <h1 className='blog-header'>BEWARE OF THE CODE</h1>
+        <div className='medium-about'>
+          <p className='blog-about'>By Jamison Blackwell</p>
+          <a href='https://medium.com/@blackwellj1040/beware-of-the-code-faec56d2ed53' className='blog-medium'>Published here on Medium</a>
+        </div>
+        <img className='blog-img' src={Sick} />
+        <p className='blog-body'>Whether you are new to coding or you are working on a project that interests you, the excitement of coding can wreak havoc on your health. Unfortunately, I know this from personal experience. When I started coding, I was obsessed. About seven months in and I was in the worst shape of my life and became ill. I was not able to code for over a month. Up until that point, there had not been a day where I did not mess around with code. I have never been sicker in my life, and I believe this was from my lifestyle at the time. Fast food, energy drinks, no exercise, and less than 4 hours of sleep a day took me away from my passion for a time. The only good thing about getting sick was that I lost a bunch of weight. Which gave me a little head start with my health journey. Before being sick, and up until now, I have managed to lose around 60 pounds. I did this with a relatively small amount of exercise and a lot of healthy eating. Surprisingly this included pizza almost every day. I will give out the recipe in a later post. It is not as good as the real thing, but darn close. I also turned into a baker while on quarantine from COVID. I make cookies, brownies, and cake out of healthy low carb ingredients.</p>
+
+<p className="blog-body">I can ramble on forever about things related to health thanks to that bout. You probably have been told this before, but it is paramount to take some time to give your body the attention it needs. If you choose not to, you may be face regret down the line. I think many developers get away with being obsessed with code because they are young. I was fortunate that I was not so lucky because this health journey has got me feeling great.
+Excitement is not the only thing you have to keep on a checklist. Frustration from an unsolved problem can leave you hemmed up as well. The truth be told, you can feel like life can not continue until the issue is solved, but I cannot tell you how many times I have been working on a problem and merely took a short break and when I have gotten back to the issue, I find the solution in front of my face. Strategic breaks will be instrumental in your success as a developer. There are methods out there for handling this, but when I run into a problem, I refuse to let myself get frustrated and keep a positive, and sometimes comical mindset. “Here, we go again.”Once I feel I’ve been staring at the screen too long, I get up and do something that I enjoy or exercise to relax my mind. A short jog always does the trick. When I get back to the problem, I have an easier time than when I left. You’re going to run into many roadblocks as a developer, but don’t let that stop you from making your next meal, spending time with family and friends, and getting some exercise. The bottom line is, don’t let excitement or frustration get the better of your coding experience.
+
+
+</p>
+      </div>
+
+      <div id="frame" className='post-container'>
         <h1 className='blog-header'>Need help animating elements in react?</h1>
         <div className='medium-about'>
           <p className='blog-about'>By Jamison Blackwell</p>
@@ -105,7 +176,7 @@ Two other properties that you’ll be using quite frequently are initial and tra
 If “initial” is not set elements will automatically jump to the values set in “animate”. If you want them to start at some other value than use initial to do so. You can also use “transition” to delay animations and specify the duration.
 Framermotion has excellent documentation https://www.framer.com/api/motion/. There is so much you can do with this tool. From cleaning up the code to animating an entire page when a component loads. We’ve barely scratched the surface here. Utilize this in your next project!</p>
       </div>
-      <div className='post-container'>
+      <div id='scripts' className='post-container'>
         <h1 className='blog-header'>Script tags inside a react component</h1>
         <div className='medium-about'>
           <p className='blog-about'>By Jamison Blackwell</p>
@@ -118,6 +189,7 @@ Then type — import ScriptTag from ‘react-script-tag’ — on the top of the
 Slap it in your code. Just use ScriptTag in place for script and for type put it equal to text/javascript
 And you’re ready to go. It’s that easy.</p>
       </div>
+
 
       <div onClick={toWork} >
     {<FontAwesomeIcon className='arrow-left' icon={faChevronLeft}/> }

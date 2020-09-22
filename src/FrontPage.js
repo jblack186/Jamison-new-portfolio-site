@@ -40,6 +40,7 @@ const FrontPage = () => {
 
   return (
     <motion.div
+    className='home-container'
     variants={variantsContainer}
     initial='hidden'
     animate='visible'

@@ -63,6 +63,13 @@ const Dashboard = () => {
   const handleClose5 = () => setShow5(false);
   const handleShow5 = () => setShow5(true);
 
+  useEffect(() => {
+    window.scrollTo({top: 0, behavior: 'smooth'});
+
+  }, [])
+
+
+
   const history = useHistory();
 
   const toHome = (e) => {
@@ -75,8 +82,8 @@ const Dashboard = () => {
     e.preventDefault();
     history.push('/blog')
     window.location.reload();
+    
   }
-  
 
   const toggleSql = e => {
     setSql(true);
@@ -228,6 +235,8 @@ const Dashboard = () => {
 
   }
 
+
+
   const variantsContainerFirst = {
     hidden: {
       opacity: 1
@@ -279,8 +288,8 @@ const Dashboard = () => {
 
       <motion.div
       className='motion-div'
-      initial={{height: '50vw'}}
-      animate={{height: '0vw'}}
+      initial={{height: '50vh'}}
+      animate={{height: '0vh'}}
       transition={{ delay: 1, duration: .8, type: 'tween'}}
       ></motion.div>
       <div className='dash'>
@@ -328,9 +337,9 @@ const Dashboard = () => {
 
           <motion.div className='project'
                    
-                   initial={{y: 400  }}
-                   animate={{y: 0 }}
-                   transition={{ delay: 1.8, duration: .5}}
+                  //  initial={{y: 400 }}
+                  //  animate={{y: 0 }}
+                  //  transition={{ delay: 1.8, duration: .5}}
           >
             <div 
             className={mongo || node || back || react === true ? 'project-item' : 'dont-show'}>
@@ -559,8 +568,8 @@ const Dashboard = () => {
         </div>
         <motion.div
       className='motion-div-two'
-      initial={{height: '50vw'}}
-      animate={{height: '0vw'}}
+      initial={{height: '50vh'}}
+      animate={{height: '0vh'}}
       transition={{ delay: 1, duration: .8, type: 'tween'}}
       ></motion.div>
     <div onClick={toHome}>
