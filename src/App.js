@@ -132,13 +132,13 @@ function App() {
 
         </ul>
       </motion.div>
-      
+      <Switch location={location} key={location.key}>
       <Route exact path='/' render= {(props) => { return <FrontPage  {...props}  />}} />
 
       <Route exact path='/dashboard' render= {(props) => { return <DashBoard  {...props}  />}} />
       <Route exact path='/blog' render= {(props) => { return <Blog  {...props}  />}} />
 
-     
+      </Switch>
       </AnimatePresence>
     </div>
   );
