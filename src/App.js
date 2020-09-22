@@ -4,6 +4,7 @@ import './App.css';
 import DashBoard from './Dashboard';
 import { Route, Switch, useLocation } from 'react-router-dom';
 import FrontPage from './FrontPage';
+import Blog from './Blog';
 import { motion, AnimatePresence } from 'framer-motion';
 import {FontAwesomeIcon} from'@fortawesome/react-fontawesome';
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
@@ -27,6 +28,13 @@ function App() {
     window.location.reload();
   }
 
+  const toBlog = (e) => {
+    e.preventDefault();
+    history.push('/blog')
+    window.location.reload();
+  }
+
+
 
   const clickMenu = e => {
     setMenu(true);
@@ -37,13 +45,63 @@ function App() {
     setMenu(false);
     console.log('up')
    }
-console.log('menu',menu)
+
+   const variantsContainerFirst = {
+    hidden: {
+      opacity: 1
+    },
+    visible: {
+      opacity: 1,
+      transition: {
+        delay: .1, duration: .1
+      }
+    },
+    exit: {
+      opacity: .8
+
+      
+    }
+
+  }
+
+  const variantsContainer = {
+    hidden: {
+      height: '2px', 
+      width: '100%'
+    },
+    visible: {
+      height: '2px', 
+      width: '0%'
+    },
+    exit: {
+      opacity: .8
+
+      
+    }
+
+  }
+
+
   return (
     
     
     <div className="App">
 
       <AnimatePresence exitBeforeEnter>
+      <motion.div
+    variants={variantsContainer}
+    className='motion-div-line'
+    initial='hidden'
+    animate='visible'
+    transition={{ delay: .1, duration: .7, type: 'tween'}}
+    ></motion.div>
+    <motion.div
+    className='motion-div'
+    initial={{height: '100vh'}}
+    animate={{height: '0vw'}}
+    transition={{ delay: 1, duration: .8, type: 'tween'}}
+    ></motion.div>
+
       <motion.div 
                className={menu ? 'barSpin' : null}>
       
@@ -65,7 +123,7 @@ console.log('menu',menu)
           <li onClick={toWork}>
             work
           </li>
-          <li>
+          <li onClick={toBlog}>
             blog
           </li>
           <li>
@@ -78,6 +136,7 @@ console.log('menu',menu)
       <Route exact path='/' render= {(props) => { return <FrontPage  {...props}  />}} />
 
       <Route exact path='/dashboard' render= {(props) => { return <DashBoard  {...props}  />}} />
+      <Route exact path='/blog' render= {(props) => { return <Blog  {...props}  />}} />
 
       </Switch>
       </AnimatePresence>

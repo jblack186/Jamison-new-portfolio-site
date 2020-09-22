@@ -7,7 +7,7 @@ import Email from './img/rec-frame_generic_light.png';
 import Receipt from './img/wow-rec-frame_generic_light.png';
 import { motion, AnimatePresence } from 'framer-motion';
 import {FontAwesomeIcon} from'@fortawesome/react-fontawesome';
-import { faChevronLeft, faTimes } from '@fortawesome/free-solid-svg-icons';
+import { faChevronLeft, faTimes, faChevronRight } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
 import {faFacebookSquare, faGithubSquare, faLinkedin, faTwitterSquare} from '@fortawesome/free-brands-svg-icons';
 import {Button, Modal} from 'react-bootstrap';
@@ -238,7 +238,7 @@ const Dashboard = () => {
     variants={variantsContainerFirst}
     initial='hidden'
     animate='visible'
-    transition={{ delay: .1, duration: .7, type: 'tween'}}
+    transition={{ delay: .1, duration: .1, type: 'tween'}}
 
     exit='exit'
 
@@ -261,13 +261,6 @@ const Dashboard = () => {
         </div>
       </div>
 
-      <motion.div
-      variants={variantsContainer}
-      className='motion-div-line'
-      initial='hidden'
-      animate='visible'
-      transition={{ delay: .1, duration: .7, type: 'tween'}}
-      ></motion.div>
       <motion.div
       className='motion-div'
       initial={{height: '50vw'}}
@@ -340,7 +333,7 @@ const Dashboard = () => {
                 <li>MongoDB</li>
                 <li>Google Auth</li>
                 <Button data-target="#myModal1" size='md' variant="info" onClick={handleShow}>
-        Click for more
+        CLICK HERE FOR MORE
       </Button>
 
               </ul>
@@ -388,7 +381,7 @@ const Dashboard = () => {
                 <li>Sqlite3</li>
                 <li>Node</li>
                 <Button  size='md' variant="info" onClick={handleShow2}>
-        Click for more
+        CLICK HERE FOR MORE
       </Button>
 
               </ul>
@@ -433,7 +426,7 @@ const Dashboard = () => {
                 <li>CSS3</li>
                 <li>Rest Api</li>
                 <Button data-target="#myModal1" size='md' variant="info" onClick={handleShow3}>
-        Click for more
+        CLICK HERE FOR MORE
       </Button>
 
               </ul>
@@ -477,7 +470,7 @@ const Dashboard = () => {
                 <li>HTML5</li>
                 <li>CSS3</li>
                 <Button data-target="#myModal1" size='md' variant="info" onClick={handleShow4}>
-        Click for more
+        CLICK HERE FOR MORE
       </Button>
 
               </ul>
@@ -515,7 +508,7 @@ const Dashboard = () => {
               <li>HTML5</li>
                 <li>CSS3</li>
                 <Button data-target="#myModal1" size='md' variant="info" onClick={handleShow5}>
-        Click for more
+        CLICK HERE FOR MORE
       </Button>
 
               </ul>
@@ -556,7 +549,9 @@ const Dashboard = () => {
       ></motion.div>
     <Link style={{ textDecoration: 'none' }}  to='/' > <div >
     {<FontAwesomeIcon className='arrow-left' icon={faChevronLeft}/> }
+
     </div></Link>
+    <Link style={{ textDecoration: 'none' }}  to='blog' >{<FontAwesomeIcon className='arrow-right' icon={faChevronRight}/> }</Link>
 
     </motion.div>
   )

@@ -1,0 +1,48 @@
+.blog-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: medium-content-serif-font, Georgia, Cambria, "Times New Roman", Times, serif;
+  background-color: #252934;
+  color: darkgray;
+  line-height: 32px;
+  letter-spacing: 0.003em;
+}
+
+.post-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 150px;
+  border-bottom: solid lightblue 20px;
+}
+
+.blog-header {
+  width: 55%;
+  
+}
+
+.medium-about {
+  width: 55%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.blog-img {
+  height: 450px;
+  width: 55%;
+  margin-top: 25px;
+  margin-bottom: 30px;
+  object-fit: cover;
+}
+
+.medium {
+  font-style: italic;
+}
+
+.blog-body {
+  font-size: 21px;
+  width: 55%;
+}

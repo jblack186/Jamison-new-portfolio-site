@@ -92,9 +92,12 @@
 }
 
 .dash p {
-  font-size: 1.15em;
+  padding-top: 10px;
+  font-size: 1.30em;
     color: rgb(255, 255, 255);
-    line-height: 30px;
+    line-height: 40px;
+    word-spacing: 2px;
+    letter-spacing: .5px;
 }
 
 .list-container {
@@ -323,6 +326,22 @@
   .arrow-left:hover {
     color: lightblue;
   }
+
+  .arrow-right {
+    position: fixed;
+    top: 50%;
+    left: 95%;
+    font-size: 60px;
+    font-weight: 200;
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+  }
+ 
+  .arrow-right:hover {
+    color: lightblue;
+  }
+
 
 
   .modal-para {
