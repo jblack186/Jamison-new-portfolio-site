@@ -337,9 +337,9 @@ const Dashboard = () => {
 
           <motion.div className='project'
                    
-                  //  initial={{y: 400 }}
-                  //  animate={{y: 0 }}
-                  //  transition={{ delay: 1.8, duration: .5}}
+                   initial={{y: 400 }}
+                   animate={{y: 0 }}
+                   transition={{ delay: 1.8, duration: .5}}
           >
             <div 
             className={mongo || node || back || react === true ? 'project-item' : 'dont-show'}>
