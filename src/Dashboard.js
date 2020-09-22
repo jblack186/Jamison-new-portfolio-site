@@ -80,7 +80,7 @@ const Dashboard = () => {
   
   const toBlog = (e) => {
     e.preventDefault();
-    history.push('/blog')
+    history.push('blog')
     window.location.reload();
     
   }
