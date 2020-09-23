@@ -62,7 +62,7 @@ const FrontPage = () => {
 
         <Modal show={show} onHide={handleClose}>
           <Modal.Header closeButton>
-            <Modal.Title>My email: blackwellj1040@gmail.com</Modal.Title>
+            <Modal.Title>My Email: blackwellj1040@gmail.com</Modal.Title>
           </Modal.Header>
           <Modal.Body><img className='resume' src={Resume} /></Modal.Body>
           <Modal.Footer>
@@ -103,9 +103,12 @@ const FrontPage = () => {
       whileHover={{scale: 1.1, textShadow: "0px 0px 8px rgb(255, 255, 255)", boxShadow: "0px 0px 8px rgb(255, 255, 255)"}}
       class="button-link">View my work </motion.div></Link>
     </div>
+    <div className='arrow'>
+      <p>To Work</p>
     <Link style={{ textDecoration: 'none' }}  to='dashboard' > <div >
-    {<FontAwesomeIcon className='arrow' icon={faChevronRight}/> }
+    {<FontAwesomeIcon className='font-icon' icon={faChevronRight}/> }
     </div></Link>
+    </div>
 
     </motion.div>
   )

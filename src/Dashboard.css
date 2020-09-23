@@ -314,6 +314,8 @@
   
   .arrow-left {
     position: fixed;
+    font-family: 'Raleway', sans-serif;
+
     top: 50%;
     right: 95%;
     font-size: 60px;
@@ -328,8 +330,10 @@
   }
 
   .arrow-right {
+    font-family: 'Raleway', sans-serif;
+
     position: fixed;
-    top: 50%;
+    top: 40%;
     left: 95%;
     font-size: 60px;
     font-weight: 200;
@@ -343,6 +347,12 @@
   }
 
 
+  .arrow p {
+    font-size: 1rem;
+  }
+
+
+
 
   .modal-para {
     padding-bottom: 10px;
@@ -353,4 +363,17 @@
   .video {
     width: 100%;
    
+  }
+
+  .toAbout {
+    color: white;
+    font-size: 1rem;
+  }
+
+  .font-icon {
+    color: white
+  }
+
+  .font:hover {
+    color: lightblue;
   }

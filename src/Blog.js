@@ -7,8 +7,6 @@ import Script from './img/script-tag.jpg';
 import Sick from './img/sick.jpg';
 import {Link} from 'react-scroll';
 import {faFacebookSquare, faGithubSquare, faLinkedin, faTwitterSquare} from '@fortawesome/free-brands-svg-icons';
-
-
 import './Blog.css';
 import { faChevronLeft, faTimes, faChevronRight } from '@fortawesome/free-solid-svg-icons';
 import {FontAwesomeIcon} from'@fortawesome/react-fontawesome';
@@ -24,6 +22,14 @@ const Blog = () => {
     window.scrollTo({top: 0, behavior: 'smooth'});
 
   }, [])
+
+
+  const toContact = (e) => {
+    e.preventDefault();
+    history.push('/contact')
+    window.location.reload();
+    
+  }
 
 
   const variantsContainerFirst = {
@@ -209,9 +215,17 @@ And you’re ready to go. It’s that easy.</p>
       </div>
 
 
-      <div onClick={toWork} >
-    {<FontAwesomeIcon className='arrow-left' icon={faChevronLeft}/> }
+      <div className='arrow-left' onClick={toWork} >
+        <p>Work</p>
+    {<FontAwesomeIcon  icon={faChevronLeft}/> }
+   
 
+
+    </div>
+    <div className='arrow-right' onClick={toContact}>
+      <p className='toAbout'>Contact</p>
+    {<FontAwesomeIcon  icon={faChevronRight}/> }
+    
     </div>
 
     </motion.div>

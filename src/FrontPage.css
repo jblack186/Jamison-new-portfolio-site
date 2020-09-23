@@ -50,7 +50,7 @@
  }
  
  .home-content h1 span.name {
-   color: #4d3587;
+   color: blue;
    font-weight: 1000;
  
  }
@@ -123,15 +123,29 @@
 
  .arrow {
    position: absolute;
-   top: 50%;
+   top: 40%;
    left: 95%;
    font-size: 60px;
    font-weight: 200;
    cursor: pointer;
    color: rgb(255, 255, 255);
    text-decoration: none;
+   font-family: 'Raleway', sans-serif;
+
  }
 
  .arrow:hover {
    color: lightblue;
  }
+
+ .btn.btn-secondary {
+   background-color: blue;
+   border-radius: 0;
+   border: 0;
+ }
+
+   .btn.btn-secondary:hover {
+    background-color: blue;
+
+   }
+ 

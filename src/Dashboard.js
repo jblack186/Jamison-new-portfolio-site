@@ -7,7 +7,7 @@ import Email from './img/rec-frame_generic_light.png';
 import Receipt from './img/wow-rec-frame_generic_light.png';
 import { motion, AnimatePresence } from 'framer-motion';
 import {FontAwesomeIcon} from'@fortawesome/react-fontawesome';
-import { faChevronLeft, faTimes, faChevronRight } from '@fortawesome/free-solid-svg-icons';
+import { faChevronLeft, faTimes, faChevronRight, faAngleDoubleRight } from '@fortawesome/free-solid-svg-icons';
 import { Link, useHistory } from 'react-router-dom';
 import {faFacebookSquare, faGithubSquare, faLinkedin, faTwitterSquare} from '@fortawesome/free-brands-svg-icons';
 import {Button, Modal} from 'react-bootstrap';
@@ -546,12 +546,16 @@ const Dashboard = () => {
       animate={{height: '0vh'}}
       transition={{ delay: 1, duration: .8, type: 'tween'}}
       ></motion.div>
-    <div onClick={toHome}>
-    {<FontAwesomeIcon className='arrow-left' icon={faChevronLeft}/> }
+    <div className='arrow-left' onClick={toHome}>
+    <p className='toAbout'>About</p>
+
+    {<FontAwesomeIcon  icon={faChevronLeft}/> }
 
     </div>
-    <div onClick={toBlog}>
-    {<FontAwesomeIcon className='arrow-right' icon={faChevronRight}/> }
+    <div className='arrow-right' onClick={toBlog}>
+      <p className='toAbout'>Blog</p>
+    {<FontAwesomeIcon  icon={faChevronRight}/> }
+    
     </div>
     </motion.div>
   )
