@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import ScriptTag from 'react-script-tag';
 import './FrontPage.css';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -20,6 +20,9 @@ const FrontPage = () => {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
+  useEffect(() => {
+    console.log('yep')
+  }, 2)
 
   const variantsContainer = {
     hidden: {

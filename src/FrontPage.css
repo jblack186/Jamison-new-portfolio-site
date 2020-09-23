@@ -155,4 +155,31 @@
     background-color: blue;
 
    }
+
+   body{
+    margin: 0;
+    padding: 0;
+}
+section{
+    font-size:3rem;
+    position:relative;
+    height:100vh;
+  }
+    section h1{
+        position:absolute;
+        top:40%;
+        left:50%;
+        transform:translate(-50%,-50%);
+    }
+
+
+
+
+
+section:nth-child(odd){
+ 
+    color:white;
+      background-color: #b61924;
+
+}
  

@@ -336,7 +336,7 @@ const Dashboard = () => {
 
 
           </ul>
-          <p className='filter'>Showing all projects. Use the filter to list them by skill or technology.</p>
+          <p className='filter'>Use the filter to list projects by technology.</p>
         </motion.div>
         <div className={slide ? 'slide-container' : 'dont-show'}>
         <div className={slide ? 'slide-bar' : 'dont-show'}></div>
