@@ -10,7 +10,8 @@ import {Button, Modal} from 'react-bootstrap';
 import Resume from './img/resume.png';
 import Download from './img/resume.docx';
 
-
+const Part1 = "https://scriptonofficial.github.io/particle-js-background/particles.js";
+const Part2 = "https://scriptonofficial.github.io/particle-js-background/app.js";
 
 const FrontPage = () => {
   const [hover, setHover] = useState(false);
@@ -59,8 +60,8 @@ const FrontPage = () => {
     type='tween'
     exit='exit'
     >
-            <ScriptTag type="text/javascript" src="https://scriptonofficial.github.io/particle-js-background/particles.js" />
-      <ScriptTag type="text/javascript" src="https://scriptonofficial.github.io/particle-js-background/app.js" />
+            <ScriptTag type="text/javascript" src={Part1}/>
+      <ScriptTag type="text/javascript" src={Part2} />
 
       <div className='resume-email'>
         <Button variant="secondary" onClick={handleShow}>
