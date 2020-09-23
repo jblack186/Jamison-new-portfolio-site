@@ -25,7 +25,8 @@ const Contact = () => {
               name="name"
               value={inputs.name} 
               onChange={e=>handleInputChange(e)} 
-              type="text" name="name" 
+              type="text" 
+              name="name" 
               placeholder="name" 
               title="Your name" 
               maxLength="50" 
