@@ -31,6 +31,12 @@ function App() {
     window.location.reload();
   }
 
+  const toContact = (e) => {
+    history.push('/contact')
+    window.location.reload();
+  }
+
+
 
 
   const clickMenu = e => {
@@ -123,7 +129,7 @@ function App() {
           <li onClick={toBlog}>
             blog
           </li>
-          <li>
+          <li onClick={toContact}>
             contact
           </li>
 

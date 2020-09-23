@@ -18,9 +18,11 @@ const Contact = () => {
         <h1>React    hooks Contact Form</h1>
         <form 
           name="contact"
+          action="/contact"
           method="post"
-           
+          
           className="contact__form">
+            <input tyep='hidden' name='form-name' value="conatct" />
             <input 
               name="name"
               value={inputs.name} 

@@ -4,12 +4,6 @@ HTML CSS BabelResult
   text-align: center;
   transform: translateY(10%);
 }
-h1{
-  font-family: 'Pacifico', cursive;
-  font-size: 56px;
-  margin-bottom: 50px;
-  color: #631ebc;
-}
 .contact__form{
     display: flex;
     flex-direction: column;
