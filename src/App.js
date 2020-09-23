@@ -14,22 +14,6 @@ import { Link, useHistory } from 'react-router-dom';
 function App() {
   const location = useLocation();
   const [menu, setMenu] = useState('');
-  const history = useHistory();
-
-  const handleHistory = (e) => {
-    history.push('/')
-    window.location.reload();
-  }
-
-  const toWork = (e) => {
-    history.push('/dashboard')
-    window.location.reload();
-  }
-
-  const toBlog = (e) => {
-    history.push('/blog')
-    window.location.reload();
-  }
 
 
 
