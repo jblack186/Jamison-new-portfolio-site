@@ -191,10 +191,10 @@ And you’re ready to go. It’s that easy.</p>
       </div>
 
 
-      <div onClick={toWork} >
+      <Link to='/dashaboard'><div >
     {<FontAwesomeIcon className='arrow-left' icon={faChevronLeft}/> }
 
-    </div>
+    </div></Link> 
 
     </motion.div>
   )

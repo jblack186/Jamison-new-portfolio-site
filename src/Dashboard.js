@@ -572,11 +572,11 @@ const Dashboard = () => {
       animate={{height: '0vh'}}
       transition={{ delay: 1, duration: .8, type: 'tween'}}
       ></motion.div>
-    <div onClick={toHome}>
+     <Link to='/'><div>
     {<FontAwesomeIcon className='arrow-left' icon={faChevronLeft}/> }
 
-    </div>
-    <Link to='blog'><div>
+    </div></Link>
+    <Link to='/blog'><div>
     {<FontAwesomeIcon className='arrow-right' icon={faChevronRight}/> }
     </div></Link>
     </motion.div>

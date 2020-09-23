@@ -113,16 +113,16 @@ function App() {
       >
         <ul>
          
-            <li onClick={handleHistory}>
+            <Link to='/'><li>
               about
-           </li>
+           </li></Link>
          
-          <li onClick={toWork}>
+           <Link to='/dashboard'> <li >
             work
-          </li>
-          <li onClick={toBlog}>
+          </li></Link>
+          <Link to='/blog'><li>
             blog
-          </li>
+          </li></Link>
           <li>
             contact
           </li>
