@@ -16,11 +16,7 @@ const Contact = () => {
     
 <div className="contact__wrap">
         <h1>React    hooks Contact Form</h1>
-        <form 
-           method="post"
-           netlify
-          className="contact__form">
-      
+        <form method="post" netlify className="contact__form">
             <input 
               name="name"
               value={inputs.name} 
@@ -49,9 +45,10 @@ const Contact = () => {
               title="Your message" 
               maxLength="550" 
               required/>
-            <input 
-              type="submit" 
-              value="send message"/>
+            <button type="submit" 
+              value="send message">
+            Send Message
+              </button>
         </form> 
       </div>  );
 }
