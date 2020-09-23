@@ -11,9 +11,6 @@ import { faChevronLeft, faTimes, faChevronRight } from '@fortawesome/free-solid-
 import { Link, useHistory } from 'react-router-dom';
 import {faFacebookSquare, faGithubSquare, faLinkedin, faTwitterSquare} from '@fortawesome/free-brands-svg-icons';
 import {Button, Modal} from 'react-bootstrap';
-import ModalTitle from 'react-bootstrap/ModalTitle'
-import ModalFooter from 'react-bootstrap/ModalFooter'
-import ModalBody from 'react-bootstrap/ModalBody'
 import RentVid from './img/rent-recording.mov';
 import Rev from './img/rev-rec.mov';
 import Wow from './img/wow-rec.mov';
