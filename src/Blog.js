@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import {  useHistory } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import LambdaPic from './img/new-lambda-pic.jpg';
@@ -18,6 +18,11 @@ import scrollElement from 'react-scroll/modules/mixins/scroll-element';
 
 const Blog = () => {
   const [apple] = useState(false);
+
+  useEffect(() => {
+    window.scrollTo({top: 0, behavior: 'smooth'});
+
+  }, [])
 
 
   const variantsContainerFirst = {
@@ -186,10 +191,10 @@ And you’re ready to go. It’s that easy.</p>
       </div>
 
 
-      <Link to='/dashaboard'><div >
+      <div onClick={toWork} >
     {<FontAwesomeIcon className='arrow-left' icon={faChevronLeft}/> }
 
-    </div></Link> 
+    </div>
 
     </motion.div>
   )

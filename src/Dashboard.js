@@ -63,10 +63,27 @@ const Dashboard = () => {
   const handleClose5 = () => setShow5(false);
   const handleShow5 = () => setShow5(true);
 
+  useEffect(() => {
+    window.scrollTo({top: 0, behavior: 'smooth'});
+
+  }, [])
 
 
 
+  const history = useHistory();
 
+  const toHome = (e) => {
+    e.preventDefault();
+    history.push('/')
+    window.location.reload();
+  }
+  
+  const toBlog = (e) => {
+    e.preventDefault();
+    history.push('/blog')
+    window.location.reload();
+    
+  }
 
   const toggleSql = e => {
     setSql(true);
@@ -555,13 +572,13 @@ const Dashboard = () => {
       animate={{height: '0vh'}}
       transition={{ delay: 1, duration: .8, type: 'tween'}}
       ></motion.div>
-     <Link to='/'><div>
+    <div onClick={toHome}>
     {<FontAwesomeIcon className='arrow-left' icon={faChevronLeft}/> }
 
-    </div></Link>
-    <Link to='/blog'><div>
+    </div>
+    <div onClick={toBlog}>
     {<FontAwesomeIcon className='arrow-right' icon={faChevronRight}/> }
-    </div></Link>
+    </div>
     </motion.div>
   )
 }

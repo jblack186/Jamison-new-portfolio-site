@@ -14,6 +14,22 @@ import { Link, useHistory } from 'react-router-dom';
 function App() {
   const location = useLocation();
   const [menu, setMenu] = useState('');
+  const history = useHistory();
+
+  const handleHistory = (e) => {
+    history.push('/')
+    window.location.reload();
+  }
+
+  const toWork = (e) => {
+    history.push('/dashboard')
+    window.location.reload();
+  }
+
+  const toBlog = (e) => {
+    history.push('/blog')
+    window.location.reload();
+  }
 
 
 
@@ -97,16 +113,16 @@ function App() {
       >
         <ul>
          
-            <Link to='/'><li>
+            <li onClick={handleHistory}>
               about
-           </li></Link>
+           </li>
          
-           <Link to='/dashboard'> <li >
+          <li onClick={toWork}>
             work
-          </li></Link>
-          <Link to='/blog'><li>
+          </li>
+          <li onClick={toBlog}>
             blog
-          </li></Link>
+          </li>
           <li>
             contact
           </li>
