@@ -17,19 +17,16 @@ function App() {
   const history = useHistory();
 
   const handleHistory = (e) => {
-    e.preventDefault();
     history.push('/')
     window.location.reload();
   }
 
   const toWork = (e) => {
-    e.preventDefault();
     history.push('/dashboard')
     window.location.reload();
   }
 
   const toBlog = (e) => {
-    e.preventDefault();
     history.push('/blog')
     window.location.reload();
   }

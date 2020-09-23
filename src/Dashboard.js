@@ -576,9 +576,9 @@ const Dashboard = () => {
     {<FontAwesomeIcon className='arrow-left' icon={faChevronLeft}/> }
 
     </div>
-    <div onClick={toBlog}>
+    <Link to='blog'><div>
     {<FontAwesomeIcon className='arrow-right' icon={faChevronRight}/> }
-    </div>
+    </div></Link>
     </motion.div>
   )
 }
