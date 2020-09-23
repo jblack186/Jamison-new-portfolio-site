@@ -17,8 +17,8 @@ const Contact = () => {
 <div className="contact__wrap">
         <h1>React    hooks Contact Form</h1>
         <form 
-          name="contact"
-          netlify 
+           method="POST"
+           data-netlify="true"
           className="contact__form">
       
             <input 
