@@ -369,21 +369,13 @@ const Dashboard = () => {
         </Modal.Header>
         <Modal.Body>
         <p className='moadal-para'>In this application, I used React on the frontend and Node on the backend. I used MongoDB to manage users and their issues. Google authentication was used for registering and logging in users. Landlords and tenants connect to discuss any issues with the property. Landlords can easily stay on top of problems and notify their tenants once they recieved the complaint and when it is completed.</p>
-        <video autoPlay loop muted 
-        style={{
-                         
-                          width: "100%",
-                          
-                          height: "100%",
-                          objectFit: "cover",
-                         
-        }}>
+        <video autoPlay loop muted  className="video">
           <source src={RentVid} type="video/mp4" />
         </video>
 
         </Modal.Body>
         <Modal.Footer>
-        <a href="https://floating-lake-21994.herokuapp.com/login"><button class="live">View Live Version</button></a>
+        <a href="https://floating-lake-21994.herokuapp.com/login"><button className="live">View Live Version</button></a>
 
           <Button  variant="secondary" onClick={handleClose}>
             <FontAwesomeIcon icon={faTimes}></FontAwesomeIcon>
@@ -415,15 +407,7 @@ const Dashboard = () => {
         </Modal.Header>
         <Modal.Body>
         <p className='moadal-para'>This eccommerce site was built with React on the front end and Node on the backend. I used an SQL database to manage the items in the store.</p>
-        <video autoPlay loop muted 
-        style={{
-                         
-                          width: "100%",
-                          
-                          height: "100%",
-                          objectFit: "cover",
-                         
-        }}>
+        <video autoPlay loop muted className="video">
           <source src={Rev} type="video/mp4" />
         </video>
 
@@ -460,15 +444,8 @@ const Dashboard = () => {
         </Modal.Header>
         <Modal.Body>
         <p className='moadal-para'>This site is still under construction. I am building it with React. I am using a 3rd party api to allow users to obtain recipes for their chosen diets.</p>
-        <video autoPlay loop muted 
-        style={{
-                         
-                          width: "100%",
-                          
-                          height: "100%",
-                          objectFit: "cover",
-                         
-        }}>
+        <video autoPlay loop muted className="video"
+        >
           <source src={Wow} type="video/mp4" />
         </video>
 
