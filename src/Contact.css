@@ -1,4 +1,4 @@
-HTML CSS BabelResult
+
 
 .contact__wrap{
   text-align: center;
@@ -58,13 +58,6 @@ HTML CSS BabelResult
   outline: #ff8080 auto 1px;
 }
 
-body{
-  background-color: #f7f5ff;
-  background-position: 10vw 35vh;
-  height: 100vh;
-  width: 100vw;
-  overflow: hidden;
-}
 
 .fa-instagram{
   position: absolute;
