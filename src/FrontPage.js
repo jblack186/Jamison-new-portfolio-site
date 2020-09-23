@@ -8,7 +8,7 @@ import {faFacebookSquare, faGithubSquare, faLinkedin, faTwitterSquare} from '@fo
 import { Link } from 'react-router-dom';
 import {Button, Modal} from 'react-bootstrap';
 import Resume from './img/resume.png';
-
+import Download from './img/resume.docx';
 
 
 const FrontPage = () => {
@@ -62,16 +62,15 @@ const FrontPage = () => {
 
         <Modal show={show} onHide={handleClose}>
           <Modal.Header closeButton>
-            <Modal.Title>blackwellj1040@gmail.com</Modal.Title>
+            <Modal.Title>My email: blackwellj1040@gmail.com</Modal.Title>
           </Modal.Header>
           <Modal.Body><img className='resume' src={Resume} /></Modal.Body>
           <Modal.Footer>
+            <a href={Download} download>Click to download</a>
             <Button variant="secondary" onClick={handleClose}>
               Close
             </Button>
-            <Button variant="primary" onClick={handleClose}>
-              Save Changes
-            </Button>
+
           </Modal.Footer>
         </Modal>
       </div>
