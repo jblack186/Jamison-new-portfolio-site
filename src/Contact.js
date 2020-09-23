@@ -3,50 +3,30 @@ import './Contact.css';
 
 
 const Contact = () => {
-  const [inputs, setInputs] = useState({name: '', email: '', message: ''});
-
-  const handleInputChange = (e) => {
-    e.persist();
-    setInputs(inputs => ({...inputs, [e.target.name]: e.target.value}));
-}
-
 
   return (
     
     
-<div className="contact__wrap">
+<div className="contact-container">
         <h1>React    hooks Contact Form</h1>
-        <form method="post" netlify className="contact__form">
-            <input 
-              name="name"
-              value={inputs.name} 
-              onChange={e=>handleInputChange(e)} 
-              type="text" 
-              name="name" 
-              placeholder="name" 
-              title="Your name" 
-              maxLength="50" 
-              required/>
-            <input 
-              name="email"
-              value={inputs.email} 
-              onChange={e=>handleInputChange(e)} 
-              type="email" name="email" 
-              placeholder="email" 
-              title="Your email" 
-              maxLength="50" 
-              required/>
-            <textarea 
-              name="message"
-              value={inputs.message} 
-              onChange={e=>handleInputChange(e)} 
-              type="text" name="message" 
-              placeholder="message" 
-              title="Your message" 
-              maxLength="550" 
-              required/>
-            <button type="submit">Send Message</button>
-        </form> 
+        <form method="post" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSc1O_aafayH8TkV7cUR33qJAbMLueK415ZWtjKv2Ozp7TqthQ/formResponse">
+						<div className="info-contain">
+							<div className="contact-info">
+								<input type="text" name="entry.1881916804" placeholder="Name" required/>
+							</div>
+							<div className="contact-info">
+								<input type="email" name="entry.461559864" placeholder="Email" required/>
+							</div>
+							<div className="textarea">
+								<textarea name="entry.2091216599" placeholder="Message" rows="6" required></textarea>
+							</div>
+							<div className="button">
+								<ul className="actions special">
+									<input type="submit" value="Send A Message"/> 
+								</ul>
+							</div>
+						</div>
+					</form>
       </div>  );
 }
 
