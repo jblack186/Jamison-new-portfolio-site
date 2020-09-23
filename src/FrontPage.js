@@ -54,16 +54,16 @@ const FrontPage = () => {
       <div>
         <div className='faIcons'>
           
-          {<FontAwesomeIcon className='list-icon' icon={faFacebookSquare}/> }
+          <a href='https://www.facebook.com/jamison.blackwell.3/'>{<FontAwesomeIcon className='list-icon' icon={faFacebookSquare}/> }</a>
           
           
-          {<FontAwesomeIcon className='list-icon' icon={faTwitterSquare}/> }
+          <a href='https://twitter.com/JamisonBlackw10'>{<FontAwesomeIcon className='list-icon' icon={faTwitterSquare}/> }</a>
           
           
-          {<FontAwesomeIcon className='list-icon' icon={faGithubSquare}/> }
+          <a href='https://github.com/jblack186'>{<FontAwesomeIcon className='list-icon' icon={faGithubSquare}/> }</a>
           
           
-          {<FontAwesomeIcon className='list-icon' icon={faLinkedin}/> }
+          <a href='https://www.linkedin.com/in/jamison-blackwell/'>{<FontAwesomeIcon className='list-icon' icon={faLinkedin}/> }</a>
           
 
         </div>

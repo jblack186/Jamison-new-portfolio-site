@@ -271,16 +271,16 @@ const Dashboard = () => {
             <div>
         <div className='faIcons-dash'>
           
-          {<FontAwesomeIcon className='list-icon-dash' icon={faFacebookSquare}/> }
+        <a href='https://www.facebook.com/jamison.blackwell.3/'>{<FontAwesomeIcon className='list-icon-dash' icon={faFacebookSquare}/> }</a>
           
           
-          {<FontAwesomeIcon className='list-icon-dash' icon={faTwitterSquare}/> }
+        <a href='https://twitter.com/JamisonBlackw10'>{<FontAwesomeIcon className='list-icon-dash' icon={faTwitterSquare}/> }</a>
           
           
-          {<FontAwesomeIcon className='list-icon-dash' icon={faGithubSquare}/> }
+        <a href='https://github.com/jblack186'>{<FontAwesomeIcon className='list-icon-dash' icon={faGithubSquare}/> }</a>
           
           
-          {<FontAwesomeIcon className='list-icon-dash' icon={faLinkedin}/> }
+        <a href='https://www.linkedin.com/in/jamison-blackwell/'>{<FontAwesomeIcon className='list-icon-dash' icon={faLinkedin}/> }</a>
           
 
         </div>

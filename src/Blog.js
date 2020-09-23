@@ -6,6 +6,7 @@ import Frame from './img/framemotion-pic.jpg';
 import Script from './img/script-tag.jpg';
 import Sick from './img/sick.jpg';
 import {Link} from 'react-scroll';
+import {faFacebookSquare, faGithubSquare, faLinkedin, faTwitterSquare} from '@fortawesome/free-brands-svg-icons';
 
 
 import './Blog.css';
@@ -85,6 +86,22 @@ const Blog = () => {
     exit='exit'
     className='blog-container'
     >
+              <div className='faIcons-dash'>
+          
+          <a href='https://www.facebook.com/jamison.blackwell.3/'>{<FontAwesomeIcon className='list-icon-dash' icon={faFacebookSquare}/> }</a>
+            
+            
+          <a href='https://twitter.com/JamisonBlackw10'>{<FontAwesomeIcon className='list-icon-dash' icon={faTwitterSquare}/> }</a>
+            
+            
+          <a href='https://github.com/jblack186'>{<FontAwesomeIcon className='list-icon-dash' icon={faGithubSquare}/> }</a>
+            
+            
+          <a href='https://www.linkedin.com/in/jamison-blackwell/'>{<FontAwesomeIcon className='list-icon-dash' icon={faLinkedin}/> }</a>
+            
+  
+          </div>
+  
       <div className='article-list'>
             <div>
         <Link
