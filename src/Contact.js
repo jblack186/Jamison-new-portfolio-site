@@ -22,7 +22,7 @@ const Contact = () => {
           method="post"
           
           className="contact__form">
-            <input tyep='hidden' name='form-name' value="conatct" />
+            <input tyep='hidden' name='form-name' value="contact" />
             <input 
               name="name"
               value={inputs.name} 
