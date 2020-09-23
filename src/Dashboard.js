@@ -63,27 +63,10 @@ const Dashboard = () => {
   const handleClose5 = () => setShow5(false);
   const handleShow5 = () => setShow5(true);
 
-  useEffect(() => {
-    window.scrollTo({top: 0, behavior: 'smooth'});
-
-  }, [])
 
 
 
-  const history = useHistory();
 
-  const toHome = (e) => {
-    e.preventDefault();
-    history.push('/')
-    window.location.reload();
-  }
-  
-  const toBlog = (e) => {
-    e.preventDefault();
-    history.push('blog')
-    window.location.reload();
-    
-  }
 
   const toggleSql = e => {
     setSql(true);
