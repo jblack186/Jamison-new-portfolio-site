@@ -8,6 +8,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import {FontAwesomeIcon} from'@fortawesome/react-fontawesome';
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 import { Link, useHistory } from 'react-router-dom';
+import Contact from './Contact';
 
 
 function App() {
@@ -133,6 +134,7 @@ function App() {
 
       <Route exact path='/dashboard' render= {(props) => { return <DashBoard  {...props}  />}} />
       <Route exact path='/blog' render= {(props) => { return <Blog  {...props}  />}} />
+      <Route exact path='/contact' render= {(props) => { return <Contact  {...props}  />}} />
 
       </Switch>
       </AnimatePresence>
