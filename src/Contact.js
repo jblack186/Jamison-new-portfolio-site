@@ -20,7 +20,7 @@ const Contact = () => {
           name="contact"
           action="/contact"
           method="post"
-          
+          netlify 
           className="contact__form">
             <input tyep='hidden' name='form-name' value="contact" />
             <input 
