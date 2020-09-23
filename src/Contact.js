@@ -45,10 +45,7 @@ const Contact = () => {
               title="Your message" 
               maxLength="550" 
               required/>
-            <button type="submit" 
-              value="send message">
-            Send Message
-              </button>
+            <button type="submit">Send Message</button>
         </form> 
       </div>  );
 }
