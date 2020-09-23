@@ -16,8 +16,8 @@ import Rev from './img/rev-rec.mov';
 import Wow from './img/wow-rec.mov';
 import Pups from './img/pups-pic.png';
 import ReceiptPic from './img/receipt-pic.png';
-
-
+import Hair from './img/hair.png';
+import Rolly from './img/rolly.png';
 
 
 
@@ -59,6 +59,19 @@ const Dashboard = () => {
 
   const handleClose5 = () => setShow5(false);
   const handleShow5 = () => setShow5(true);
+
+  const [slide6, setSlide6] = useState(false)
+  const [show6, setShow6] = useState(false);
+
+  const handleClose6 = () => setShow6(false);
+  const handleShow6 = () => setShow6(true);
+
+  const [slide7, setSlide7] = useState(false)
+  const [show7, setShow7] = useState(false);
+
+  const handleClose7 = () => setShow7(false);
+  const handleShow7 = () => setShow7(true);
+
 
   useEffect(() => {
     window.scrollTo({top: 0, behavior: 'smooth'});
@@ -321,7 +334,6 @@ const Dashboard = () => {
             <motion.li whileHover={{scale: 1.1, textShadow: "0px 0px 8px rgb(255, 255, 255)", transition: {yoyo: 10} }} onClick={toggleFront}>Front-end</motion.li>
             <motion.li whileHover={{  scale: 1.1, textShadow: "0px 0px 8px rgb(255, 255, 255)", transition: {yoyo: 10}}} onClick={toggleBack}>Back-end</motion.li>
 
-            <motion.li whileHover={{  scale: 1.1, textShadow: "0px 0px 8px rgb(255, 255, 255)", transition: {yoyo: 10}}} onClick={toggleBack}>WordPress</motion.li>
 
           </ul>
           <p className='filter'>Showing all projects. Use the filter to list them by skill or technology.</p>
@@ -338,6 +350,85 @@ const Dashboard = () => {
                    animate={{y: 0 }}
                    transition={{ delay: 1.8, duration: .5}}
           >
+                        <div className={html === true ? 'project-item' : 'dont-show'}>
+              <img src={Rolly} />
+              <motion.div className='proj-hover' whileHover={{opacity: 1}}
+              >              
+              <div className='proj-list-buttons'>
+              <ul>
+                <li>HTML5</li>
+                <li>CSS3</li>
+                <Button data-target="#myModal1" size='md' variant="info" onClick={handleShow6}>
+        CLICK HERE FOR MORE
+      </Button>
+
+              </ul>
+            </div>
+</motion.div>
+<Modal show={show6} onHide={handleClose6} animation={false}>
+        <Modal.Header closeButton>
+          <Modal.Title>JRolly</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+        <p className='moadal-para'>An ecommerce site with a sharp design. It is responsive and user friendly.</p>
+        
+                         
+      
+          <img src={Rolly} style={{width: '100%', height: '400px', objectFit: 'contain'}} />
+       
+
+        </Modal.Body>
+        <Modal.Footer>
+        
+        <a href="https://famisonsrollyshop.com/"><button className="live">View Live Version</button></a>
+
+          <Button variant="secondary" onClick={handleClose6}>
+            <FontAwesomeIcon icon={faTimes}></FontAwesomeIcon>
+          </Button>
+        </Modal.Footer>
+      </Modal>            
+
+            </div>
+            <div className={html === true ? 'project-item' : 'dont-show'}>
+              <img src={Hair} />
+              <motion.div className='proj-hover' whileHover={{opacity: 1}}
+              >              
+              <div className='proj-list-buttons'>
+              <ul>
+                <li>HTML5</li>
+                <li>CSS3</li>
+                <Button data-target="#myModal1" size='md' variant="info" onClick={handleShow7}>
+        CLICK HERE FOR MORE
+      </Button>
+
+              </ul>
+            </div>
+</motion.div>
+<Modal show={show7} onHide={handleClose7} animation={false}>
+        <Modal.Header closeButton>
+          <Modal.Title>Zaire's Hair Salon</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+        <p className='moadal-para'>An hair store with a smooth design. It is responsive and user friendly.</p>
+        
+                         
+      
+          <img src={Hair} style={{width: '100%', height: '400px', objectFit: 'contain'}} />
+       
+
+        </Modal.Body>
+        <Modal.Footer>
+        
+        <a href="https://zaireshairsalons.com/"><button className="live">View Live Version</button></a>
+
+          <Button variant="secondary" onClick={handleClose7}>
+            <FontAwesomeIcon icon={faTimes}></FontAwesomeIcon>
+          </Button>
+        </Modal.Footer>
+      </Modal>            
+
+            </div>
+
             <div 
             className={mongo || node || back || react === true ? 'project-item' : 'dont-show'}>
               <motion.img 

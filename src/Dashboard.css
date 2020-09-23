@@ -377,3 +377,16 @@
   .font:hover {
     color: lightblue;
   }
+
+  .btn.btn-info {
+    background-color: blue;
+    border-radius: 0;
+    border: 0;
+  }
+ 
+    .btn.btn-secondary:hover {
+     background-color: blue;
+ 
+    }
+  
+ 
