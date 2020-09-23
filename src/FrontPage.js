@@ -11,6 +11,7 @@ import Resume from './img/resume.png';
 import Download from './img/resume.docx';
 
 
+
 const FrontPage = () => {
   const [hover, setHover] = useState(false);
 
@@ -55,6 +56,9 @@ const FrontPage = () => {
     type='tween'
     exit='exit'
     >
+            <ScriptTag type="text/javascript" src="https://scriptonofficial.github.io/particle-js-background/particles.js" />
+      <ScriptTag type="text/javascript" src="https://scriptonofficial.github.io/particle-js-background/app.js" />
+
       <div className='resume-email'>
         <Button variant="secondary" onClick={handleShow}>
           Click for resume and email
@@ -74,8 +78,6 @@ const FrontPage = () => {
           </Modal.Footer>
         </Modal>
       </div>
-      <ScriptTag type="text/javascript" src="https://scriptonofficial.github.io/particle-js-background/particles.js" />
-      <ScriptTag type="text/javascript" src="https://scriptonofficial.github.io/particle-js-background/app.js" />
 
       <div id="particles-js"></div>
       <div>
