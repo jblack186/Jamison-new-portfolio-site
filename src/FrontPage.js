@@ -6,11 +6,19 @@ import {FontAwesomeIcon} from'@fortawesome/react-fontawesome';
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
 import {faFacebookSquare, faGithubSquare, faLinkedin, faTwitterSquare} from '@fortawesome/free-brands-svg-icons';
 import { Link } from 'react-router-dom';
+import {Button, Modal} from 'react-bootstrap';
+import Resume from './img/resume.png';
 
 
 
 const FrontPage = () => {
   const [hover, setHover] = useState(false);
+
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
 
   const variantsContainer = {
     hidden: {
@@ -47,6 +55,26 @@ const FrontPage = () => {
     type='tween'
     exit='exit'
     >
+      <div className='resume-email'>
+        <Button variant="secondary" onClick={handleShow}>
+          Click for resume and email
+        </Button>
+
+        <Modal show={show} onHide={handleClose}>
+          <Modal.Header closeButton>
+            <Modal.Title>blackwellj1040@gmail.com</Modal.Title>
+          </Modal.Header>
+          <Modal.Body><img className='resume' src={Resume} /></Modal.Body>
+          <Modal.Footer>
+            <Button variant="secondary" onClick={handleClose}>
+              Close
+            </Button>
+            <Button variant="primary" onClick={handleClose}>
+              Save Changes
+            </Button>
+          </Modal.Footer>
+        </Modal>
+      </div>
       <ScriptTag type="text/javascript" src="https://scriptonofficial.github.io/particle-js-background/particles.js" />
       <ScriptTag type="text/javascript" src="https://scriptonofficial.github.io/particle-js-background/app.js" />
 

@@ -1,4 +1,19 @@
 
+.resume-email {
+  position: absolute;
+  
+}
+
+.modal-content {
+  width: 80%;
+}
+
+.resume {
+  width: 450px;
+  height: 580px;
+  
+}
+
  #particles-js {
    width: 100%;
    height: 100vh;
