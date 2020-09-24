@@ -315,7 +315,7 @@ const Dashboard = () => {
           <motion.p 
           transition={{ delay: 1.5, duration: .8, type: 'tween'}}    
           initial={{x: -1250}}
-          animate={{x: 0}}>From Web Components and UI/UX animations to React.JS, Redux, MongoDb, and Node.JS. Check out my latest web software development portfolio projects.</motion.p>
+          animate={{x: 0}}>A collection of my latest work, from Web Components and UI/UX animations to React.JS, Redux, MongoDb, and Node.JS.</motion.p>
         </div>
         <motion.div
          className='motion-div'
@@ -336,7 +336,7 @@ const Dashboard = () => {
 
 
           </ul>
-          <p className='filter'>Use the filter to list projects by technology.</p>
+          <p className='filter'>Use the filter above to list projects by technology.</p>
         </motion.div>
         <div className={slide ? 'slide-container' : 'dont-show'}>
         <div className={slide ? 'slide-bar' : 'dont-show'}></div>
