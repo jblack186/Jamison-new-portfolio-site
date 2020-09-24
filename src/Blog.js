@@ -153,13 +153,13 @@ const Blog = () => {
       </div>
 
       <div id='lambda' className='post-container'>
-        <h1 className='blog-name'>THE CODE POST</h1>
-        <h1 className='blog-header'>Is Lambda School any good?</h1>
+        <h2 className='blog-name'>THE CODE POST</h2>
+        <h2 className='blog-header'>Is Lambda School any good?</h2>
         <div className='medium-about'>
           <p className='blog-about'>By Jamison Blackwell</p>
-          <a href='https://medium.com/@blackwellj1040/is-lambda-school-any-good-3fb6395cacf2' className='blog-medium'>Published here on Medium</a>
+          <a href='https://medium.com/@blackwellj1040/is-lambda-school-any-good-3fb6395cacf2' target="https://medium.com/@blackwellj1040/is-lambda-school-any-good-3fb6395cacf2" className='blog-medium'>Published here on Medium</a>
         </div>
-        <img className='blog-img' src={LambdaPic} />
+        <img className='blog-img' src={LambdaPic} alt='computer screen' />
         <p className='blog-body'>I started part-time at Lambda School in March of 2019. I was excited and skeptical before beginning. However, I felt safe in my decision because I did not have to pay a dime until I found a job in tech. The loss of time would have been the most risk, but for a chance to get into web development, I felt like it was worth it at the time. I was surprised at the class size, and it seems that most people can get through the enrollment process. It makes sense, I guess, because there is little difference in teaching an online class to 10 people as opposed to 100. You will only simply get more questions. After a few months, I noticed that students pretty much weed out themselves. Most likely, they find that this is not the career path for them or the tasks seem too daunting. Either way, I saw a significant decline in my class size in a matter of a few months. They also allow students to attend a class that started shortly after theirs if they fall behind. And from the looks of it, they do everything to get you up to speed. The part-time cohorts consist of two 2–3-hour lectures a week, and in between those lectures, you will be working on your projects. Here is where I implemented what I learned in the class. At the end of every other week, I had to take some nerve-racking sprint-challenges. At least they were in the beginning. They time the assessments, and if you can’t pass, you may have to go back to a later class. Passing these sprint challenges gave me a huge sigh of relief but also a sense of accomplishment, which helped to motivate me along. I always found myself going through the lessons at the beginning of the week and feeling overwhelmed. The code would always look so foreign. Having a no-quitting attitude has been essential in my coding journey. I learned that if I devote the time to the lesson, I would eventually understand the material, and after a few months of this, I felt more confident at the start of each week and knew beforehand that I would get the work done. This confidence spilled over to my life in general and changed the way I approach tasks.</p>
 <p className='blog-body'>If your choosing to join a boot camp, first try learning to code by yourself. At least for a short time so you can see if this path is right for you and because the information they teach is out there, but it may take a while to get it all in. Although, I feel confident in saying that the quality at which you get that information will not match up to Lambda in the least. They have a strong community, and there is always someone to help. This support comes from both students to instructors. If you post something in most of their Slack channels, you will get an answer within 30 minutes. The structure of the curriculum and beyond is advanced, especially for being a relatively new organization. And if you are an extrovert, you will make friends, and it only makes sense that networking in Lambda may even help you find your first web dev job. I have no regrets in attending Lamba, and their pay when you get a job approach gives them the incentive to teach you employable skills.</p>
 
@@ -167,12 +167,12 @@ const Blog = () => {
 
       </div>
       <div id="beware" className='post-container'>
-        <h1 className='blog-header'>BEWARE OF THE CODE</h1>
+        <h2 className='blog-header'>BEWARE OF THE CODE</h2>
         <div className='medium-about'>
           <p className='blog-about'>By Jamison Blackwell</p>
-          <a href='https://medium.com/@blackwellj1040/beware-of-the-code-faec56d2ed53' className='blog-medium'>Published here on Medium</a>
+          <a href='https://medium.com/@blackwellj1040/beware-of-the-code-faec56d2ed53' target='https://medium.com/@blackwellj1040/beware-of-the-code-faec56d2ed53' className='blog-medium'>Published here on Medium</a>
         </div>
-        <img className='blog-img' src={Sick} />
+        <img className='blog-img' src={Sick} alt='sick man'/>
         <p className='blog-body'>Whether you are new to coding or you are working on a project that interests you, the excitement of coding can wreak havoc on your health. Unfortunately, I know this from personal experience. When I started coding, I was obsessed. About seven months in and I was in the worst shape of my life and became ill. I was not able to code for over a month. Up until that point, there had not been a day where I did not mess around with code. I have never been sicker in my life, and I believe this was from my lifestyle at the time. Fast food, energy drinks, no exercise, and less than 4 hours of sleep a day took me away from my passion for a time. The only good thing about getting sick was that I lost a bunch of weight. Which gave me a little head start with my health journey. Before being sick, and up until now, I have managed to lose around 60 pounds. I did this with a relatively small amount of exercise and a lot of healthy eating. Surprisingly this included pizza almost every day. I will give out the recipe in a later post. It is not as good as the real thing, but darn close. I also turned into a baker while on quarantine from COVID. I make cookies, brownies, and cake out of healthy low carb ingredients.</p>
 
 <p className="blog-body">I can ramble on forever about things related to health thanks to that bout. You probably have been told this before, but it is paramount to take some time to give your body the attention it needs. If you choose not to, you may be face regret down the line. I think many developers get away with being obsessed with code because they are young. I was fortunate that I was not so lucky because this health journey has got me feeling great.
@@ -183,12 +183,12 @@ Excitement is not the only thing you have to keep on a checklist. Frustration fr
       </div>
 
       <div id="frame" className='post-container'>
-        <h1 className='blog-header'>Need help animating elements in react?</h1>
+        <h2 className='blog-header'>Need help animating elements in react?</h2>
         <div className='medium-about'>
           <p className='blog-about'>By Jamison Blackwell</p>
-          <a href='https://medium.com/@blackwellj1040/need-help-animating-elements-in-react-f8263b0428f0' className='blog-medium'>Published here on Medium</a>
+          <a href='https://medium.com/@blackwellj1040/need-help-animating-elements-in-react-f8263b0428f0' target='https://medium.com/@blackwellj1040/need-help-animating-elements-in-react-f8263b0428f0' className='blog-medium'>Published here on Medium</a>
         </div>
-        <img className='blog-img' src={Frame} />
+        <img className='blog-img' src={Frame} alt='coding' />
         <p className='blog-body'>A powerful library that allows you to have control the way your element behaves.
 First, open your terminal, and in your project folder type npm install framer-motion. Then in the component file that you want to implement animations import motion from ‘framer-motion’ on top.
 Time to plug it in! Simply add ‘motion’ in front of the element’s table like so.
@@ -201,12 +201,12 @@ If “initial” is not set elements will automatically jump to the values set i
 Framermotion has excellent documentation https://www.framer.com/api/motion/. There is so much you can do with this tool. From cleaning up the code to animating an entire page when a component loads. We’ve barely scratched the surface here. Utilize this in your next project!</p>
       </div>
       <div id='scripts' className='post-container'>
-        <h1 className='blog-header'>Script tags inside a react component</h1>
+        <h2 className='blog-header'>Script tags inside a react component</h2>
         <div className='medium-about'>
           <p className='blog-about'>By Jamison Blackwell</p>
-          <a href='https://medium.com/@blackwellj1040/script-tags-inside-a-react-component-5ec686ae5064' className='blog-medium'>Published here on Medium</a>
+          <a href='https://medium.com/@blackwellj1040/script-tags-inside-a-react-component-5ec686ae5064' target='https://medium.com/@blackwellj1040/script-tags-inside-a-react-component-5ec686ae5064' className='blog-medium'>Published here on Medium</a>
         </div>
-        <img className='blog-img' src={Script} />
+        <img className='blog-img' src={Script} alt='women sitting coding'/>
         <p className='blog-body'>I ran into this problem when I was trying to use some vanilla javascript code I found on codepen in a react project. I didn’t want to refactor it and wanted to just plop it right into my component. Luckily react has a ScriptTag feature that solves this.
 All you need to do is type npm install react-script-tag into the terminal.
 Then type — import ScriptTag from ‘react-script-tag’ — on the top of the component.

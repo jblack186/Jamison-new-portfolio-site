@@ -281,16 +281,16 @@ const Dashboard = () => {
             <div>
         <div className='faIcons-dash'>
           
-        <a href='https://www.facebook.com/jamison.blackwell.3/'>{<FontAwesomeIcon className='list-icon-dash' icon={faFacebookSquare}/> }</a>
+        <a href='https://www.facebook.com/jamison.blackwell.3/' target='https://www.facebook.com/jamison.blackwell.3/' >{<FontAwesomeIcon className='list-icon-dash' icon={faFacebookSquare}/> }</a>
           
           
-        <a href='https://twitter.com/JamisonBlackw10'>{<FontAwesomeIcon className='list-icon-dash' icon={faTwitterSquare}/> }</a>
+        <a href='https://twitter.com/JamisonBlackw10' target='https://twitter.com/JamisonBlackw10'>{<FontAwesomeIcon className='list-icon-dash' icon={faTwitterSquare}/> }</a>
           
           
-        <a href='https://github.com/jblack186'>{<FontAwesomeIcon className='list-icon-dash' icon={faGithubSquare}/> }</a>
+        <a href='https://github.com/jblack186' target='https://github.com/jblack186'>{<FontAwesomeIcon className='list-icon-dash' icon={faGithubSquare}/> }</a>
           
           
-        <a href='https://www.linkedin.com/in/jamison-blackwell/'>{<FontAwesomeIcon className='list-icon-dash' icon={faLinkedin}/> }</a>
+        <a href='https://www.linkedin.com/in/jamison-blackwell/' target='https://www.linkedin.com/in/jamison-blackwell/'>{<FontAwesomeIcon className='list-icon-dash' icon={faLinkedin}/> }</a>
           
 
         </div>
@@ -374,13 +374,13 @@ const Dashboard = () => {
         
                          
       
-          <img src={Rolly} style={{width: '100%', height: '400px', objectFit: 'contain'}} />
+          <img src={Rolly} style={{width: '100%', height: '400px', objectFit: 'contain'}} alt='rolly ecom store' />
        
 
         </Modal.Body>
         <Modal.Footer>
         
-        <a href="https://famisonsrollyshop.com/"><button className="live">View Live Version</button></a>
+        <a href="https://famisonsrollyshop.com/" target="https://famisonsrollyshop.com/"><button className="live">View Live Version</button></a>
 
           <Button variant="secondary" onClick={handleClose6}>
             <FontAwesomeIcon icon={faTimes}></FontAwesomeIcon>
@@ -390,7 +390,7 @@ const Dashboard = () => {
 
             </div>
             <div className={html === true ? 'project-item' : 'dont-show'}>
-              <img src={Hair} />
+              <img src={Hair} alt='hair store'/>
               <motion.div className='proj-hover' whileHover={{opacity: 1}}
               >              
               <div className='proj-list-buttons'>
@@ -413,13 +413,13 @@ const Dashboard = () => {
         
                          
       
-          <img src={Hair} style={{width: '100%', height: '400px', objectFit: 'contain'}} />
+          <img src={Hair} style={{width: '100%', height: '400px', objectFit: 'contain'}} alt='hair shop'/>
        
 
         </Modal.Body>
         <Modal.Footer>
         
-        <a href="https://zaireshairsalons.com/"><button className="live">View Live Version</button></a>
+        <a href="https://zaireshairsalons.com/" target="https://zaireshairsalons.com/"><button className="live">View Live Version</button></a>
 
           <Button variant="secondary" onClick={handleClose7}>
             <FontAwesomeIcon icon={faTimes}></FontAwesomeIcon>
@@ -432,6 +432,7 @@ const Dashboard = () => {
             <div 
             className={mongo || node || back || react === true ? 'project-item' : 'dont-show'}>
               <motion.img 
+              alt='rent app'
                src={Rentlords} />
               <motion.div className='proj-hover' 
                                 whileHover={{ opacity: 1}}
@@ -466,7 +467,7 @@ const Dashboard = () => {
 
         </Modal.Body>
         <Modal.Footer>
-        <a href="https://floating-lake-21994.herokuapp.com/login"><button className="live">View Live Version</button></a>
+        <a href="https://floating-lake-21994.herokuapp.com/login" target="https://floating-lake-21994.herokuapp.com/login"><button className="live">View Live Version</button></a>
 
           <Button  variant="secondary" onClick={handleClose}>
             <FontAwesomeIcon icon={faTimes}></FontAwesomeIcon>
@@ -476,7 +477,7 @@ const Dashboard = () => {
       
             </div>
             <div className={sql  || node || back || react === true ? 'project-item' : 'dont-show'}>
-              <img src={Revtown} />
+              <img src={Revtown} alt='shirt store'/>
               <motion.div className='proj-hover' whileHover={{opacity: 1}}
               >              
               <div className='proj-list-buttons'>
@@ -504,7 +505,7 @@ const Dashboard = () => {
 
         </Modal.Body>
         <Modal.Footer>
-        <a href="https://unruffled-mclean-d98c5a.netlify.app/"><button class="live">View Lives Version</button></a>
+        <a href="https://unruffled-mclean-d98c5a.netlify.app/" target="https://unruffled-mclean-d98c5a.netlify.app/"><button class="live">View Lives Version</button></a>
 
           <Button variant="secondary" onClick={handleClose2}>
             <FontAwesomeIcon icon={faTimes}></FontAwesomeIcon>
@@ -516,6 +517,7 @@ const Dashboard = () => {
             <div className={ react === true ? 'project-item' : 'dont-show'}>
               <img src={Wowzers} />
               <motion.div className='proj-hover' whileHover={{opacity: 1}}
+              alt='food app'
               >              
               <div className='proj-list-buttons'>
               <ul>
@@ -542,7 +544,7 @@ const Dashboard = () => {
 
         </Modal.Body>
         <Modal.Footer>
-        <a href="https://pedantic-swirles-0f5272.netlify.app/home/"><button class="live">View Live Version</button></a>
+        <a href="https://pedantic-swirles-0f5272.netlify.app/home/" target="https://pedantic-swirles-0f5272.netlify.app/home/"><button class="live">View Live Version</button></a>
 
           <Button variant="secondary" onClick={handleClose3}>
             <FontAwesomeIcon icon={faTimes}></FontAwesomeIcon>
@@ -552,7 +554,7 @@ const Dashboard = () => {
 
             </div>
             <div className={html === true ? 'project-item' : 'dont-show'}>
-              <img src={Email} />
+              <img src={Email} alt='html-email' />
               <motion.div className='proj-hover' whileHover={{opacity: 1}}
               >              
               <div className='proj-list-buttons'>
@@ -575,7 +577,7 @@ const Dashboard = () => {
         
                          
       
-          <img src={Pups} style={{width: '100%', height: '400px', objectFit: 'contain'}} />
+          <img src={Pups} style={{width: '100%', height: '400px', objectFit: 'contain'}} alt='puppies' />
        
 
         </Modal.Body>
@@ -590,7 +592,7 @@ const Dashboard = () => {
 
             </div>
             <div className={html === true ? 'project-item' : 'dont-show'}>
-              <img src={Receipt} />
+              <img src={Receipt} alt='a reciept' />
               <motion.div className='proj-hover' whileHover={{opacity: 1}}
               >              
               <div className='proj-list-buttons'>
@@ -613,7 +615,7 @@ const Dashboard = () => {
         
                          
       
-          <img src={ReceiptPic} style={{width: '100%', height: '400px', objectFit: 'contain'}} />
+          <img src={ReceiptPic} style={{width: '100%', height: '400px', objectFit: 'contain'}} alt='reciept html' />
        
 
         </Modal.Body>

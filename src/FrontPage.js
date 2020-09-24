@@ -87,16 +87,16 @@ const FrontPage = () => {
       <div>
         <div className='faIcons'>
           
-          <a href='https://www.facebook.com/jamison.blackwell.3/'>{<FontAwesomeIcon className='list-icon' icon={faFacebookSquare}/> }</a>
+          <a href='https://www.facebook.com/jamison.blackwell.3/' target='https://www.facebook.com/jamison.blackwell.3/'>{<FontAwesomeIcon className='list-icon' icon={faFacebookSquare}/> }</a>
           
           
-          <a href='https://twitter.com/JamisonBlackw10'>{<FontAwesomeIcon className='list-icon' icon={faTwitterSquare}/> }</a>
+          <a href='https://twitter.com/JamisonBlackw10' target='https://twitter.com/JamisonBlackw10'>{<FontAwesomeIcon className='list-icon' icon={faTwitterSquare}/> }</a>
           
           
-          <a href='https://github.com/jblack186'>{<FontAwesomeIcon className='list-icon' icon={faGithubSquare}/> }</a>
+          <a href='https://github.com/jblack186' target='https://github.com/jblack186'>{<FontAwesomeIcon className='list-icon' icon={faGithubSquare}/> }</a>
           
           
-          <a href='https://www.linkedin.com/in/jamison-blackwell/'>{<FontAwesomeIcon className='list-icon' icon={faLinkedin}/> }</a>
+          <a href='https://www.linkedin.com/in/jamison-blackwell/' target='https://www.linkedin.com/in/jamison-blackwell/'>{<FontAwesomeIcon className='list-icon' icon={faLinkedin}/> }</a>
           
 
         </div>
