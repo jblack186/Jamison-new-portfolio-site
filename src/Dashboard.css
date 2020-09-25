@@ -26,9 +26,9 @@
  z-index: 99999;
 }
 
-@media screen and (min-width: 500px) {
+@media screen and (max-width: 500px) {
   .faIcons-dash {
-    left: 55%;
+    left: 37%;
   }
 }
 
@@ -120,6 +120,8 @@
 @media screen and (max-width: 900px) {
   .list-container {
     width: 100%;
+    z-index: 0;
+
   }
 }
 
@@ -166,10 +168,13 @@
 
 @media screen and (max-width: 1180px) {
   .project {
+    flex-wrap: nowrap;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    z-index: 0;
+
   }
 }
 
@@ -182,7 +187,19 @@
   animation-name: appear;
   animation-duration: 1s;
   position: relative;
+  z-index: -10;
+
 }
+
+@media screen and (max-width: 500px) {
+  .project-item {
+    width: 320px;
+    object-fit: contain;
+    z-index: 0;
+
+  }
+}
+
 
 @keyframes appear {
   from {
@@ -201,6 +218,17 @@
 
 }
 
+@media screen and (max-width: 500px) {
+  .project img {
+    width: 320px;
+    height: 200px;
+    box-shadow: none;
+    object-fit: contain;
+    z-index: 0;
+  }
+}
+
+
 .proj-hover {
     position: absolute;
     width: 440px;
@@ -211,6 +239,17 @@
     opacity: 0;
   
 }
+
+@media screen and (max-width: 500px) {
+  .proj-hover {
+    top: 10px;
+    width: 320px;
+    height: 180px;
+    z-index: 0;
+
+  }
+}
+
 
 
 /* @keyframes expand {
@@ -231,6 +270,8 @@
   align-items: center;
   width: 100%;
   height: 100%;
+  z-index: 0;
+
 }
 
 .proj-list-buttons ul{
@@ -242,6 +283,8 @@
   height: 150px;
   padding: 0;
   margin: 0;
+  z-index: 0;
+
 }
 
 .proj-list-buttons ul li {
