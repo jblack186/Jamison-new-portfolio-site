@@ -386,9 +386,14 @@ const Dashboard = () => {
             <FontAwesomeIcon icon={faTimes}></FontAwesomeIcon>
           </Button>
         </Modal.Footer>
-      </Modal>            
-
+      </Modal>
+        <div className='butt-out'>           
+      <Button  data-target="#myModal1" size='md' variant="info" onClick={handleShow6}>
+        CLICK HERE FOR MORE
+      </Button>
+      </div> 
             </div>
+            
             <div className={html === true ? 'project-item' : 'dont-show'}>
               <img src={Hair} alt='hair store'/>
               <motion.div className='proj-hover' whileHover={{opacity: 1}}
@@ -425,8 +430,12 @@ const Dashboard = () => {
             <FontAwesomeIcon icon={faTimes}></FontAwesomeIcon>
           </Button>
         </Modal.Footer>
-      </Modal>            
-
+      </Modal>
+        <div className='butt-out'>           
+      <Button  data-target="#myModal1" size='md' variant="info" onClick={handleShow7}>
+        CLICK HERE FOR MORE
+      </Button>
+      </div> 
             </div>
 
             <div 
@@ -473,8 +482,12 @@ const Dashboard = () => {
             <FontAwesomeIcon icon={faTimes}></FontAwesomeIcon>
           </Button>
         </Modal.Footer>
-      </Modal>            
-      
+      </Modal>
+        <div className='butt-out'>          
+      <Button  data-target="#myModal1" size='md' variant="info" onClick={handleShow}>
+        CLICK HERE FOR MORE
+      </Button>
+      </div>  
             </div>
             <div className={sql  || node || back || react === true ? 'project-item' : 'dont-show'}>
               <img src={Revtown} alt='shirt store'/>
@@ -511,8 +524,12 @@ const Dashboard = () => {
             <FontAwesomeIcon icon={faTimes}></FontAwesomeIcon>
           </Button>
         </Modal.Footer>
-      </Modal>            
-
+      </Modal>
+        <div className='butt-out'>           
+      <Button   size='md' variant="info" onClick={handleShow2}>
+        CLICK HERE FOR MORE
+      </Button>
+      </div> 
             </div>
             <div className={ react === true ? 'project-item' : 'dont-show'}>
               <img src={Wowzers} />
@@ -550,8 +567,12 @@ const Dashboard = () => {
             <FontAwesomeIcon icon={faTimes}></FontAwesomeIcon>
           </Button>
         </Modal.Footer>
-      </Modal>            
-
+      </Modal>
+        <div className='butt-out'>            
+      <Button  data-target="#myModal1" size='md' variant="info" onClick={handleShow3}>
+        CLICK HERE FOR MORE
+      </Button>
+      </div>
             </div>
             <div className={html === true ? 'project-item' : 'dont-show'}>
               <img src={Email} alt='html-email' />
@@ -588,8 +609,12 @@ const Dashboard = () => {
             <FontAwesomeIcon icon={faTimes}></FontAwesomeIcon>
           </Button>
         </Modal.Footer>
-      </Modal>            
-
+      </Modal>
+        <div className='butt-out'>            
+      <Button  data-target="#myModal1" size='md' variant="info" onClick={handleShow4}>
+        CLICK HERE FOR MORE
+      </Button>
+      </div>
             </div>
             <div className={html === true ? 'project-item' : 'dont-show'}>
               <img src={Receipt} alt='a reciept' />
@@ -626,8 +651,12 @@ const Dashboard = () => {
             <FontAwesomeIcon icon={faTimes}></FontAwesomeIcon>
           </Button>
         </Modal.Footer>
-      </Modal>            
-
+      </Modal>
+        <div className='butt-out'>           
+      <Button  data-target="#myModal1" size='md' variant="info" onClick={handleShow5}>
+        CLICK HERE FOR MORE
+      </Button>
+      </div> 
             </div>
 
 

@@ -28,7 +28,7 @@
 
 @media screen and (max-width: 500px) {
   .faIcons-dash {
-    left: 37%;
+    left: 34%;
   }
 }
 
@@ -180,6 +180,7 @@
 
 
 .project-item {
+  flex-direction: column;
   display: flex;
   padding-bottom: 50px;
   cursor: pointer;
@@ -468,5 +469,13 @@
      background-color: blue;
  
     }
+
+    @media screen and (min-width: 900px) {
+      .butt-out {
+        display: none;
+      }
+    }
+  
   
  
+    
