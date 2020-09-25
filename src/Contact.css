@@ -10,31 +10,28 @@
 
 }
 
-.contact-container h1 {
+.contact-container h2 {
   color: lightgray
 }
 
 .contact-container input {
-  border-radius: 10px;
   margin-bottom: 15px;
 
 }
 
 .contact-container textarea {
-  border-radius: 10px;
   margin-bottom: 15px;
 }
 
 .contact-container form {
+  background-color: white;
   border: white solid 1px;
   height: 60%;
   padding: 5%;
-  border-radius: 20px;
 }
 
 .contact-container p {
   width: 200px;
-  color: white;
 }
 
 .info-contain {

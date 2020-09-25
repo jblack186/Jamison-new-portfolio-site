@@ -23,10 +23,12 @@ const Contact = () => {
     
     
 <div className="contact-container">
+	
   <h2>Contact Me</h2>
         <form method="post" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSc1O_aafayH8TkV7cUR33qJAbMLueK415ZWtjKv2Ozp7TqthQ/formResponse">
+				<div>
         <p>Feel free to email me at: blackwellj1040@gmail.com or message me here!</p>
-
+				</div>
 						<div className="info-contain">
 							<div className="contact-info">
 								<input type="text" name="entry.1881916804" placeholder="Name" required/>
