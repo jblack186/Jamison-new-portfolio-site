@@ -13,7 +13,7 @@
   cursor: pointer;
   animation-name: spinaroonie;
   animation-duration: .5s;
-  /* z-index: 999; */
+  z-index: 9;
 }
 
 .closeIcon {
