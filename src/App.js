@@ -106,15 +106,15 @@ function App() {
     ></motion.div>
 
       <motion.div 
-               className={menu ? 'barSpin' : null}>
+               className='barSpin'>
       
-      {<FontAwesomeIcon onClick={clickMenu} className={menu ? 'barsIconA': 'barsIcon'} icon={faBars}/> }
+      {<FontAwesomeIcon onClick={clickMenu} className={menu ? 'drops-none': 'barsIcon'} icon={faBars}/> }
       
-      {<FontAwesomeIcon  onClick={closeMenu} className={menu === true ? 'closeIcon'  : 'barsIconA'} icon={faTimes}/> }
+      {<FontAwesomeIcon  onClick={closeMenu} className={menu  ? 'closeIcon'  : 'barsIconA'} icon={faTimes}/> }
 
       </motion.div>
 
-      <motion.div className={menu === false ? 'drop-closed' : menu === true ? 'drop-menu' : 'drop-none'}     
+      <motion.div className={menu === false ? 'drop-closed' : menu ? 'drop-menu' : 'drops-none'}     
             transition={{ delay: 1.8, duration: .5}}
       >
         <ul>

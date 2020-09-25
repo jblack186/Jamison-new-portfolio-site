@@ -26,16 +26,16 @@
    align-items: center;
    position: absolute;
    top: 50%;
-   margin-top: -110px;
+   margin-top: -30vh;
    left: 50%;
-   margin-left: -310px;
-   height: 220px;
-   width: 620px;
+   margin-left: -30vw;
+   height: 60vh;
+   width: 60vw;
    font-family: 'Raleway', sans-serif;
    text-align: center;
- 
    
  }
+
  
  .home-content h1 {
    color: white;
@@ -55,6 +55,13 @@
    font-size: 1.1rem;
    text-align: left;
  }
+
+ @media screen and (max-width: 800px) {
+  .about-me {
+    text-align: center;
+  }
+}
+
  
  .home-content h1 span.name {
    color: blue;
@@ -138,8 +145,16 @@
    color: rgb(255, 255, 255);
    text-decoration: none;
    font-family: 'Raleway', sans-serif;
+   
 
  }
+
+ @media screen and (max-width: 800px) {
+  .arrow {
+    left: 90%;
+  }
+}
+
 
  .arrow:hover {
    color: lightblue;

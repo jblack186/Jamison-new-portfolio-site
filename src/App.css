@@ -13,7 +13,7 @@
   cursor: pointer;
   animation-name: spinaroonie;
   animation-duration: .5s;
-  z-index: 999;
+  /* z-index: 999; */
 }
 
 .closeIcon {
@@ -25,7 +25,7 @@
   cursor: pointer;
   animation-name: spinaroonie;
   animation-duration: .5s;
-  z-index: 999999;
+  z-index: 99999;
 }
 
 
@@ -173,6 +173,19 @@ animation-duration: .5s;
   width: 100%;
 }
 
-.drop-none {
+.drops-none {
   display: none;
 }
+
+.null {
+  height: 0px;
+  width: 0px;
+  margin: 0;
+  padding: 0;
+  visibility: hidden;
+}
+
+.undrop {
+  position: relative;
+}
+

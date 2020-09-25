@@ -23,11 +23,12 @@
   animation-name: iconSlide;
  animation-duration: .8s;
  animation-delay: 1.4s;
+ z-index: 99999;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (min-width: 500px) {
   .faIcons-dash {
-    left: 50%;
+    left: 55%;
   }
 }
 
@@ -91,6 +92,13 @@
 
 }
 
+@media screen and (max-width: 900px) {
+  .dash h2 {
+    padding-top: 20px;
+  }
+}
+
+
 .dash p {
   padding-top: 10px;
   font-size: 1.30em;
@@ -108,6 +116,13 @@
   margin: 0 auto;
   width: 60%;
 }
+
+@media screen and (max-width: 900px) {
+  .list-container {
+    width: 100%;
+  }
+}
+
 
 .list-container li {
   width: 90px;
@@ -148,6 +163,16 @@
   flex-wrap: wrap;
   justify-content: space-between;
 }
+
+@media screen and (max-width: 1180px) {
+  .project {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
 
 .project-item {
   display: flex;
@@ -341,6 +366,18 @@
     color: rgb(255, 255, 255);
     text-decoration: none;
   }
+
+  @media screen and (max-width: 900px) {
+    .arrow-left {
+      display: none;
+    }
+  }
+  @media screen and (max-width: 900px) {
+    .arrow-right {
+      display: none;
+    }
+  }
+  
  
   .arrow-right:hover {
     color: lightblue;

@@ -11,9 +11,9 @@ import { faChevronLeft, faTimes, faChevronRight, faAngleDoubleRight } from '@for
 import { Link, useHistory } from 'react-router-dom';
 import {faFacebookSquare, faGithubSquare, faLinkedin, faTwitterSquare} from '@fortawesome/free-brands-svg-icons';
 import {Button, Modal} from 'react-bootstrap';
-import RentVid from './img/rent-recording.mov';
-import Rev from './img/rev-rec.mov';
-import Wow from './img/wow-rec.mov';
+import RentVid from './img/rent-recording.mp4';
+import Rev from './img/rev-rec.mp4';
+import Wow from './img/wow-rec.mp4';
 import Pups from './img/pups-pic.png';
 import ReceiptPic from './img/receipt-pic.png';
 import Hair from './img/hair.png';
