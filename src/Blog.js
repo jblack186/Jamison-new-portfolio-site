@@ -138,7 +138,7 @@ const Blog = () => {
         smooth={true}
         offset={-70}
         duration={500}
-        >Need help animating elements in react?</Link>
+        >Need help animating elements?</Link>
       </div>
       <div>
         <Link
