@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import ScriptTag from 'react-script-tag';
 import './FrontPage.css';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion,} from 'framer-motion';
 import {FontAwesomeIcon} from'@fortawesome/react-fontawesome';
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
 import {faFacebookSquare, faGithubSquare, faLinkedin, faTwitterSquare} from '@fortawesome/free-brands-svg-icons';
@@ -15,7 +15,6 @@ const Part1 = "https://scriptonofficial.github.io/particle-js-background/particl
 const Part2 = "https://scriptonofficial.github.io/particle-js-background/app.js";
 
 const FrontPage = () => {
-  const [hover, setHover] = useState(false);
 
   const [show, setShow] = useState(false);
 
@@ -44,13 +43,6 @@ const FrontPage = () => {
 
   }
 
-  const hovering = e => {
-    setHover(true);
-  }
-
-  const notHovering = e => {
-    setHover(false);
-  }
 
   return (
     <motion.div
@@ -107,8 +99,6 @@ const FrontPage = () => {
         <p className='about-me'>ReactJS, NodeJS, HTML5, CSS3, JavaScript, LESS/SASS, Express, MongoDB, SQLite3, Knex, Hosting, Git Version Control</p>
         <p className='about-me'>If you don't see what your looking for, there's a good chance it will be up there soon. Learning never ends.</p>
         <Link style={{ textDecoration: 'none' }}  to='dashboard' ><motion.div 
-      onMouseOver={hovering}
-      onMouseLeave={notHovering}
       whileHover={{scale: 1.1, textShadow: "0px 0px 8px rgb(255, 255, 255)", boxShadow: "0px 0px 8px rgb(255, 255, 255)"}}
       class="button-link">View my work </motion.div></Link>
     </div>

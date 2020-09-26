@@ -8,15 +8,12 @@ import Sick from './img/sick.jpg';
 import {Link} from 'react-scroll';
 import {faFacebookSquare, faGithubSquare, faLinkedin, faTwitterSquare} from '@fortawesome/free-brands-svg-icons';
 import './Blog.css';
-import { faChevronLeft, faTimes, faChevronRight } from '@fortawesome/free-solid-svg-icons';
+import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
 import {FontAwesomeIcon} from'@fortawesome/react-fontawesome';
-import { scrollToTop } from 'react-scroll/modules/mixins/animate-scroll';
-import scrollElement from 'react-scroll/modules/mixins/scroll-element';
 
 
 
 const Blog = () => {
-  const [apple] = useState(false);
 
   useEffect(() => {
     window.scrollTo({top: 0, behavior: 'smooth'});
@@ -50,22 +47,7 @@ const Blog = () => {
 
   }
 
-  const variantsContainer = {
-    hidden: {
-      height: '2px', 
-      width: '100%'
-    },
-    visible: {
-      height: '2px', 
-      width: '0%'
-    },
-    exit: {
-      opacity: .8
 
-      
-    }
-
-  }
 
   const history = useHistory();
 

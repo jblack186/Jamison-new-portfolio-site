@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './Contact.css';
 import {FontAwesomeIcon} from'@fortawesome/react-fontawesome';
 import { faChevronLeft, faTimes, faChevronRight, faAngleDoubleRight } from '@fortawesome/free-solid-svg-icons';
-import { Link, useHistory } from 'react-router-dom';
+import {useHistory } from 'react-router-dom';
 
 
 
