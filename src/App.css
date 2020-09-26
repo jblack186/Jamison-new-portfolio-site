@@ -70,7 +70,8 @@ animation-duration: .5s;
   height: 100vh;
   width: 100vw;
   z-index: 9999;
-  background-color: rgb(76, 71, 76);
+  background: url('./img/front-hero.jpg');
+  background-size: cover;
   animation-name: slideDown;
   animation-duration: .6s;
   animation-fill-mode: both;
@@ -91,8 +92,7 @@ animation-duration: .5s;
 
 
 .drop-menu ul {
-  background: #404143;
-
+  background-color: #313131;
   margin: 0 auto;
   width: 50%;
   height: 100%;
@@ -101,6 +101,7 @@ animation-duration: .5s;
   justify-content: space-evenly;
   align-items: center;
   padding: 0;
+
 }
 
 .drop-menu ul li {
@@ -115,7 +116,7 @@ animation-duration: .5s;
   width: 100%;
   cursor: pointer;
   transition: background-color .5s;
-  color: gray;
+  color: rgb(255, 255, 255);
 }
 
 .drop-menu ul li:hover {
@@ -130,8 +131,10 @@ animation-duration: .5s;
   top: 0;
   left: 0;
   width: 100vw;
-  background-color: rgb(76, 71, 76);
-  color: gray;
+  background: url('./img/front-hero.jpg');
+  background-size: cover;
+  background-position: center;
+  color: rgb(255, 255, 255);
 
 z-index: 99;
   animation-name: slideUp;
