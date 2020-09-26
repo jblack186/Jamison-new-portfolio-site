@@ -1,7 +1,7 @@
 import React from 'react';
 import './Contact.css';
 import {FontAwesomeIcon} from'@fortawesome/react-fontawesome';
-import { faChevronLeft, faTimes, faChevronRight, faAngleDoubleRight } from '@fortawesome/free-solid-svg-icons';
+import { faChevronLeft} from '@fortawesome/free-solid-svg-icons';
 import {useHistory } from 'react-router-dom';
 
 
