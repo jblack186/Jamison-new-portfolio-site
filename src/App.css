@@ -25,7 +25,7 @@
   cursor: pointer;
   animation-name: spinaroonie;
   animation-duration: .5s;
-  z-index: 99999;
+  z-index: 9999999999;
 }
 
 
@@ -69,14 +69,30 @@ animation-duration: .5s;
   left: 0;
   height: 100vh;
   width: 100vw;
-  z-index: 9999;
+  z-index: 99999999;
   background: url('./img/front-hero.jpg');
   background-size: cover;
+  background-position: center;
   animation-name: slideDown;
   animation-duration: .6s;
   animation-fill-mode: both;
 
 }
+
+@media screen and (max-width: 1025px) {
+  .drop-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: 99999999;
+    background: #252934;
+  }  
+}
+
+
+
 
 @keyframes slideDown {
   0% {
@@ -135,13 +151,20 @@ animation-duration: .5s;
   background-size: cover;
   background-position: center;
   color: rgb(255, 255, 255);
-
-z-index: 99;
   animation-name: slideUp;
 animation-duration: .5s;
-
+z-index: 99999999;
 
 }
+
+@media screen and (max-width: 1025px) {
+  .drop-closed {
+    background: #252934;
+    z-index: 99999999;
+
+  }  
+}
+
 
 @keyframes slideUp {
  from {
@@ -192,3 +215,6 @@ animation-duration: .5s;
   position: relative;
 }
 
+.btn.btn-secondary {
+  font-family: 'Raleway', sans-serif;
+}
