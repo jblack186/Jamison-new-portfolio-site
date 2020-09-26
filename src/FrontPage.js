@@ -10,6 +10,7 @@ import {Button, Modal} from 'react-bootstrap';
 import Resume from './img/resume.png';
 import Download from './img/resume.docx';
 
+
 const Part1 = "https://scriptonofficial.github.io/particle-js-background/particles.js";
 const Part2 = "https://scriptonofficial.github.io/particle-js-background/app.js";
 
