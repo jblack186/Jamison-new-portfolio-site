@@ -10,7 +10,7 @@
   
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 500px) {
   .resume {
     width: 350px;
   }

@@ -5,6 +5,7 @@ import LambdaPic from './img/new-lambda-pic.jpg';
 import Frame from './img/framemotion-pic.jpg';
 import Script from './img/script-tag.jpg';
 import Sick from './img/sick.jpg';
+import Kit from './img/toolkit.jpg';
 import {Link} from 'react-scroll';
 import {faFacebookSquare, faGithubSquare, faLinkedin, faTwitterSquare} from '@fortawesome/free-brands-svg-icons';
 import './Blog.css';
@@ -101,6 +102,17 @@ const Blog = () => {
         duration={500}
         >Is Lamba School any good?</Link>
       </div>
+      <div>
+        <Link
+        activeClass="active"
+        to="new"
+        spy={true}
+        smooth={true}
+        offset={-70}
+        duration={500}
+        >New web developer's toolkit</Link>
+      </div>
+
 
       <div>
         <Link
@@ -148,6 +160,24 @@ const Blog = () => {
 
 
       </div>
+      <div id="new" className='post-container'>
+        <h2 className='blog-header'>New web developer’s toolkit</h2>
+        <div className='medium-about'>
+          <p className='blog-about'>By Jamison Blackwell</p>
+          <a href='https://medium.com/@blackwellj1040/new-web-developers-toolkit-95289df73dad' target='https://medium.com/@blackwellj1040/new-web-developers-toolkit-95289df73dad' className='blog-medium'>Published here on Medium</a>
+        </div>
+        <img className='blog-img' src={Kit} alt='man on computer'/>
+        <p className='blog-body'>First, you will need a text editor. There are a few to choose from, but I like visual studio code. Type it into google and follow the instructions to download the application to your computer. This application is going to be your hub to create all of your coding folders and files. While you are creating a file name, you will have to declare what kind of file you want it to be. For example, if the file name is going to be (example) and you want it to be a javascript file, you will write it like so, example.js. If the file name is going to be (example) and it is a CSS file, you would type example.css. There is a lot to VS code and quite a few extensions that you may want to download to make your life easier. You will learn about these as you progress as a developer. There are a few browser extensions you will want to download. For instance, you will want to get an extension to resize your window eventually. These types of extensions will be necessary when you need to make your apps and sites responsive.
+You also will want to get used to the developer tools in your browser. Get comfortable with Chrome and Firefox. Open up your browser and go to any site. Right-click, then go to inspect. As a beginner, you will mainly focus on the element or inspector (this depends if you are using chrome or firefox) and the console. Then click either “elements” or “inspector”. This action will allow you to see the HTML of the site, which structures the elements of any website. You will also see the corresponding CSS of the site. You can go in and change the styling of these elements. The changes will only be visible on your machine and will reset when you refresh the screen. The styling to the right of the dev tools is linked to the class names and ids, which are both along with the element’s tag name referred to as CSS selectors. Elements can be given a selector, and these will allow them to be manipulated by the developer. You can also use these selectors to control these elements with javascript.</p>
+<p className='blog-body'>
+If you can, purchase an extra monitor. Not only will you feel like a pro 😎, but it will also make development easier. You want to be able to see as many lines of code as possible for many situations. Especially when styling and debugging. If you cannot get another monitor, you can use a television and get the right HDMI cables to get a dual display. There is also a helpful app that I used to connect my iPad to my laptop call DUET. You can use a cable or connect wirelessly. An application that I still use to separate windows on a single screen is called Magnet. You can find this in the apple store, and I may be mistaken, but I believe Windows has Magnet’s features built-in. You can use this app to have multiple windows open at the same time and boost your productivity substantially. You will find that numerous tools and apps that will assist you in your journey, but these are a few good ones to start this exciting path.
+
+
+
+
+</p>
+      </div>
+
       <div id="beware" className='post-container'>
         <h2 className='blog-header'>BEWARE OF THE CODE</h2>
         <div className='medium-about'>
