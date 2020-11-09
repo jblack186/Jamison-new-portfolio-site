@@ -482,6 +482,20 @@
       }
     }
   
+    .recent {
+      position: absolute;
+      top: 50%;
+      margin-top: -55px;
+      left: 50%;
+      margin-left: -100px;
+      color: white;
+      background-color: black;
+      text-align: center;
+      width: 200px;
+      box-shadow: .2px .5px .5px .2px white;
+
+    }
+
   
  
     

@@ -357,8 +357,12 @@ const Dashboard = () => {
                    animate={{y: 0 }}
                    transition={{ delay: 1.8, duration: .5}}
           >
+            
             <div className={sql  || node || back || react === true ? 'project-item' : 'dont-show'}>
+           
+            <h4 className='recent'>MOST RECENT PROJECT</h4>
               <img src={Selection} alt='book store'/>
+             
               <motion.div className='proj-hover' whileHover={{opacity: 1}}
               >              
               <div className='proj-list-buttons'>
