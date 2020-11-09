@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "2b08a0c060bf2d0228fae5200aea7f3a",
+    "revision": "5d85bd1e0c7d3bfbc57f2f1f99e08117",
     "url": "/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/css/2.d9ad5f5c.chunk.css"
   },
   {
-    "revision": "d2cd647e2d48483dadf6",
+    "revision": "6b29b81358ba63154517",
     "url": "/static/css/main.298e1b65.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/js/2.b7fe56e5.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "d2cd647e2d48483dadf6",
-    "url": "/static/js/main.472148e1.chunk.js"
+    "revision": "6b29b81358ba63154517",
+    "url": "/static/js/main.1f68488e.chunk.js"
   },
   {
     "revision": "4d8b4c10938f10b816cb",
@@ -64,12 +64,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/rent-recording.57d5be89.mp4"
   },
   {
-    "revision": "21c7df4fc848e5ab8b09ef7744b487b8",
-    "url": "/static/media/resume.21c7df4f.png"
+    "revision": "1cd89117041a0e8239b6e880d5a9e91a",
+    "url": "/static/media/resume.1cd89117.docx"
   },
   {
-    "revision": "da78b42f8ee12aa18122da912f4275e1",
-    "url": "/static/media/resume.da78b42f.docx"
+    "revision": "21c7df4fc848e5ab8b09ef7744b487b8",
+    "url": "/static/media/resume.21c7df4f.png"
   },
   {
     "revision": "1d7d1b4c54580b36eed7ec2c259568df",

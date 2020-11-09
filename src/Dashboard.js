@@ -18,7 +18,8 @@ import Pups from './img/pups-pic.png';
 import ReceiptPic from './img/receipt-pic.png';
 import Hair from './img/hair.png';
 import Rolly from './img/rolly.png';
-
+import SelectionBrowse from './img/bookBrowse.png'
+import Selection from './img/bookFront.png'
 
 
 const Dashboard = () => {
@@ -71,6 +72,12 @@ const Dashboard = () => {
 
   const handleClose7 = () => setShow7(false);
   const handleShow7 = () => setShow7(true);
+
+  const [slide8, setSlide8] = useState(false)
+  const [show8, setShow8] = useState(false);
+
+  const handleClose8 = () => setShow8(false);
+  const handleShow8 = () => setShow8(true);
 
 
   useEffect(() => {
@@ -328,7 +335,7 @@ const Dashboard = () => {
             <motion.li whileHover={{scale: 1.1, textShadow: "0px 0px 8px rgb(255, 255, 255)", transition: {yoyo: 10}}} onClick={toggleShowAll}>Show All</motion.li>
             <motion.li whileHover={{scale: 1.1, textShadow: "0px 0px 8px rgb(255, 255, 255)", transition: {yoyo: 10}}}onClick={toggleReact}>React</motion.li>
             <motion.li whileHover={{scale: 1.1, textShadow: "0px 0px 8px rgb(255, 255, 255)", transition: {yoyo: 10}}} onClick={toggleMongo}>MongoDB</motion.li>
-            <motion.li whileHover={{scale: 1.1, textShadow: "0px 0px 8px rgb(255, 255, 255)", transition: {yoyo: 10}}} onClick={toggleSql}>SQLite3</motion.li>
+            <motion.li whileHover={{scale: 1.1, textShadow: "0px 0px 8px rgb(255, 255, 255)", transition: {yoyo: 10}}} onClick={toggleSql}>SQL</motion.li>
             <motion.li whileHover={{scale: 1.1, textShadow: "0px 0px 8px rgb(255, 255, 255)", transition: {yoyo: 10}}} onClick={toggleNode}>NodeJS</motion.li>
             <motion.li whileHover={{scale: 1.1, textShadow: "0px 0px 8px rgb(255, 255, 255)", transition: {yoyo: 10}}} onClick={toggleHTML}>HTML5</motion.li>
             <motion.li whileHover={{scale: 1.1, textShadow: "0px 0px 8px rgb(255, 255, 255)", transition: {yoyo: 10} }} onClick={toggleFront}>Front-end</motion.li>
@@ -350,7 +357,48 @@ const Dashboard = () => {
                    animate={{y: 0 }}
                    transition={{ delay: 1.8, duration: .5}}
           >
-                        <div className={html === true ? 'project-item' : 'dont-show'}>
+            <div className={sql  || node || back || react === true ? 'project-item' : 'dont-show'}>
+              <img src={Selection} alt='book store'/>
+              <motion.div className='proj-hover' whileHover={{opacity: 1}}
+              >              
+              <div className='proj-list-buttons'>
+              <ul>
+                <li>React</li>
+                <li>CSS3</li>
+                <li>Sql</li>
+                <li>Node</li>
+                <Button  size='md' variant="info" onClick={handleShow8}>
+        CLICK HERE FOR MORE
+      </Button>
+
+              </ul>
+            </div>
+</motion.div>
+<Modal show={show8} onHide={handleClose8} animation={false}>
+        <Modal.Header closeButton>
+          <Modal.Title>Selection</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+        <p className='moadal-para'>An online bookstore built with a PERN stack. This application is styled with vanilla CSS and bootsrap and components from 3rd party libraries. I designed it with inspiration from the audible app. Data was retirieved through googl's book api. Authentication was set up with nodeJS, express. User information is stored on a postgresql database.</p>
+        <img className='video' src={SelectionBrowse} alt='browse section of bookstore'/>
+
+        </Modal.Body>
+        <Modal.Footer>
+        <a href="https://bookstore12.herokuapp.com/home" target="https://bookstore12.herokuapp.com/home"><button class="live">View Lives Version</button></a>
+
+          <Button variant="secondary" onClick={handleClose2}>
+            <FontAwesomeIcon icon={faTimes}></FontAwesomeIcon>
+          </Button>
+        </Modal.Footer>
+      </Modal>
+        <div className='butt-out'>           
+      <Button   size='md' variant="info" onClick={handleShow2}>
+        CLICK HERE FOR MORE
+      </Button>
+      </div> 
+            </div>
+
+          <div className={html === true ? 'project-item' : 'dont-show'}>
               <img src={Rolly} />
               <motion.div className='proj-hover' whileHover={{opacity: 1}}
               >              
@@ -497,7 +545,7 @@ const Dashboard = () => {
               <ul>
                 <li>React</li>
                 <li>CSS3</li>
-                <li>Sqlite3</li>
+                <li>Sql</li>
                 <li>Node</li>
                 <Button  size='md' variant="info" onClick={handleShow2}>
         CLICK HERE FOR MORE
