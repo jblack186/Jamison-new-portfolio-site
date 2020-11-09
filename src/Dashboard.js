@@ -390,13 +390,13 @@ const Dashboard = () => {
         <Modal.Footer>
         <a href="https://bookstore12.herokuapp.com/home" target="https://bookstore12.herokuapp.com/home"><button class="live">View Lives Version</button></a>
 
-          <Button variant="secondary" onClick={handleClose2}>
+          <Button variant="secondary" onClick={handleClose8}>
             <FontAwesomeIcon icon={faTimes}></FontAwesomeIcon>
           </Button>
         </Modal.Footer>
       </Modal>
         <div className='butt-out'>           
-      <Button   size='md' variant="info" onClick={handleShow2}>
+      <Button   size='md' variant="info" onClick={handleShow8}>
         CLICK HERE FOR MORE
       </Button>
       </div> 
