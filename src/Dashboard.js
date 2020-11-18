@@ -388,7 +388,7 @@ const Dashboard = () => {
 
         </Modal.Body>
         <Modal.Footer>
-        <a href="https://bookstore12.herokuapp.com/home" target="https://bookstore12.herokuapp.com/home"><button class="live">View Lives Version</button></a>
+        <a href="https://bookstore12.herokuapp.com/home" target="https://bookstore12.herokuapp.com/home"><button class="live">View Live Version</button></a>
 
           <Button variant="secondary" onClick={handleClose8}>
             <FontAwesomeIcon icon={faTimes}></FontAwesomeIcon>
@@ -570,7 +570,7 @@ const Dashboard = () => {
 
         </Modal.Body>
         <Modal.Footer>
-        <a href="https://unruffled-mclean-d98c5a.netlify.app/" target="https://unruffled-mclean-d98c5a.netlify.app/"><button class="live">View Lives Version</button></a>
+        <a href="https://unruffled-mclean-d98c5a.netlify.app/" target="https://unruffled-mclean-d98c5a.netlify.app/"><button class="live">View Live Version</button></a>
 
           <Button variant="secondary" onClick={handleClose2}>
             <FontAwesomeIcon icon={faTimes}></FontAwesomeIcon>
