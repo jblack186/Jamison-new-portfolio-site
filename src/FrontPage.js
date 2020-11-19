@@ -4,11 +4,13 @@ import './FrontPage.css';
 import { motion,} from 'framer-motion';
 import {FontAwesomeIcon} from'@fortawesome/react-fontawesome';
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
-import {faFacebookSquare, faGithubSquare, faLinkedin, faTwitterSquare} from '@fortawesome/free-brands-svg-icons';
+import {faFacebookSquare, faGithubSquare, faLinkedin, faTwitterSquare, faGithub} from '@fortawesome/free-brands-svg-icons';
 import { Link } from 'react-router-dom';
 import {Button, Modal} from 'react-bootstrap';
 import Resume from './img/resume.png';
 import Download from './img/resume.docx';
+import Github1 from './img/github1.png';
+import Github2 from './img/github2.png';
 
 
 const Part1 = "https://scriptonofficial.github.io/particle-js-background/particles.js";
@@ -101,6 +103,14 @@ const FrontPage = () => {
         <Link style={{ textDecoration: 'none' }}  to='dashboard' ><motion.div 
       whileHover={{scale: 1.1, textShadow: "0px 0px 8px rgb(255, 255, 255)", boxShadow: "0px 0px 8px rgb(255, 255, 255)"}}
       class="button-link">View my work </motion.div></Link>
+          <div className='github'>
+      <img src={Github1} alt='github1' />
+      <a>{<FontAwesomeIcon className='list-icon-github' icon={faGithub}/> }</a>
+
+      <img src={Github2} alt='github2' />
+
+    </div>
+
     </div>
     <div className='arrow'>
       <p>To Work</p>
