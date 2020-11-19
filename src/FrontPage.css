@@ -1,12 +1,14 @@
 
 .resume-email {
   position: absolute;
-  z-index: 999;
+   z-index: 999999;
 }
 
 
 .resume {
   width: 450px;
+  z-index: 9999999999;
+
   
 }
 
@@ -65,7 +67,7 @@
    line-height: 36pt;
    font-size: 32pt;
    font-weight: 200;
-   z-index: 999999;
+   z-index: 999;
 
  }
  
