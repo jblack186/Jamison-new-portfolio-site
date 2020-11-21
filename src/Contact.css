@@ -1,33 +1,49 @@
 .contact-container {
   height: 100vh;
-  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: #252934;
-  
+  width: 100%;
+  background: url('./img/front-hero.jpg');
+  background-size: cover;
+  background-position: center;
+
+ opacity: 1;
+
 
 }
 
 .contact-container h2 {
-  color: lightgray
+  color: white;
 }
 
 .contact-container input {
   margin-bottom: 15px;
+  border-radius: 30px;
+  background:#313131;
 
 }
 
 .contact-container textarea {
   margin-bottom: 15px;
+  border-radius: 15px;
+  background:#313131;
+
 }
 
 .contact-container form {
-  background-color: white;
-  border: white solid 1px;
+  color: white;
+  border: #313131 solid 1px;
   height: 60%;
   padding: 5%;
+  background:
+    linear-gradient(
+      rgb(37, 41, 52, .9)
+,
+rgb(37, 41, 52)
+),
+    url(https://dl.dropboxusercontent.com/u/22006283/preview/codepen/clouds-cloudy-forest-mountain.jpg) no-repeat center center;
 }
 
 .contact-container p {
@@ -41,8 +57,23 @@
   height: 45vh;
 }
 
+.button {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
 .contact-button {
+  margin: 0;
   padding: 0;
+}
+
+.contact-button input {
+  color: white;
+  margin: 0 auto;
+
 }
 
 .arrow-left {
