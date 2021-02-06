@@ -1,1 +1,1 @@
-Jamison Blackwell's portfolio. A developer from the Atlanta area. This is my portfolio site which was made with react
+Jamison Blackwell's portfolio. A developer from the Atlanta area. This is my portfolio site which was made with react.
