@@ -1,26 +1,18 @@
 import React, {useState, useEffect} from 'react';
 import './Dashboard.css';
 import Rentlords from './img/rent-frame_generic_light.png';
-import Revtown from './img/rev-frame_generic_light.png';
 import Wowzers from './img/wow-frame_generic_light.png';
-import Email from './img/rec-frame_generic_light.png';
-import Receipt from './img/wow-rec-frame_generic_light.png';
 import { motion, AnimatePresence } from 'framer-motion';
 import {FontAwesomeIcon} from'@fortawesome/react-fontawesome';
 import { faChevronLeft, faTimes, faChevronRight, faAngleDoubleRight } from '@fortawesome/free-solid-svg-icons';
 import { Link, useHistory } from 'react-router-dom';
 import {faFacebookSquare, faGithubSquare, faLinkedin, faTwitterSquare} from '@fortawesome/free-brands-svg-icons';
 import {Button, Modal} from 'react-bootstrap';
-import RentVid from './img/rent-recording.mp4';
-import Rev from './img/rev-rec.mp4';
-import Wow from './img/wow-rec.mp4';
-import Pups from './img/pups-pic.png';
-import ReceiptPic from './img/receipt-pic.png';
 import Hair from './img/hair.png';
-import Rolly from './img/rolly.png';
 import SelectionBrowse from './img/bookBrowse.png'
 import Selection from './img/bookFront.png'
-
+import Adobe from './img/adobetilde.png';
+import Budget from './img/budget.png';
 
 const Dashboard = () => {
   const [showAll, setShowAll] = useState(true);
@@ -357,104 +349,64 @@ const Dashboard = () => {
                    animate={{y: 0 }}
                    transition={{ delay: 1.8, duration: .5}}
           >
-            
-            <div className={sql  || node || back || react === true ? 'project-item' : 'dont-show'}>
-           
-            <h4 className='recent'>MOST RECENT PROJECT</h4>
-              <img src={Selection} alt='book store'/>
-             
+                        <div className={ react === true ? 'project-item' : 'dont-show'}>
+                        <h4 className='recent'>MOST RECENT </h4>
+              <img src={Adobe} />
               <motion.div className='proj-hover' whileHover={{opacity: 1}}
+              alt='food app'
               >              
               <div className='proj-list-buttons'>
               <ul>
                 <li>React</li>
                 <li>CSS3</li>
-                <li>Sql</li>
-                <li>Node</li>
-                <Button  size='md' variant="info" onClick={handleShow8}>
+                
+                <Button data-target="#myModal1" size='md' variant="info" onClick={handleShow4}>
         CLICK HERE FOR MORE
       </Button>
 
               </ul>
             </div>
 </motion.div>
-<Modal show={show8} onHide={handleClose8} animation={false}>
+<Modal show={show4} onHide={handleClose4} animation={false}>
         <Modal.Header closeButton>
-          <Modal.Title>Selection</Modal.Title>
+          <Modal.Title>Adobetilde</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-        <p className='moadal-para'>An online bookstore built with a PERN stack. This application is styled with vanilla CSS and bootsrap and components from 3rd party libraries. I designed it with inspiration from the audible app. Data was retirieved through googl's book api. Authentication was set up with nodeJS, express. User information is stored on a postgresql database.</p>
-        <img className='video' src={SelectionBrowse} alt='browse section of bookstore'/>
-
-        </Modal.Body>
-        <Modal.Footer>
-        <a href="https://bookstore12.herokuapp.com/home" target="https://bookstore12.herokuapp.com/home"><button class="live">View Live Version</button></a>
-
-          <Button variant="secondary" onClick={handleClose8}>
-            <FontAwesomeIcon icon={faTimes}></FontAwesomeIcon>
-          </Button>
-        </Modal.Footer>
-      </Modal>
-        <div className='butt-out'>           
-      <Button   size='md' variant="info" onClick={handleShow8}>
-        CLICK HERE FOR MORE
-      </Button>
-      </div> 
-            </div>
-
-          <div className={html === true ? 'project-item' : 'dont-show'}>
-              <img src={Rolly} />
-              <motion.div className='proj-hover' whileHover={{opacity: 1}}
-              >              
-              <div className='proj-list-buttons'>
-              <ul>
-                <li>HTML5</li>
-                <li>CSS3</li>
-                <Button data-target="#myModal1" size='md' variant="info" onClick={handleShow6}>
-        CLICK HERE FOR MORE
-      </Button>
-
-              </ul>
-            </div>
-</motion.div>
-<Modal show={show6} onHide={handleClose6} animation={false}>
-        <Modal.Header closeButton>
-          <Modal.Title>JRolly</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
-        <p className='moadal-para'>An ecommerce site with a sharp design. It is responsive and user friendly.</p>
+        <p className='moadal-para'>A beautifully styled real estate site built with React. Smooth animations are made possible by framer motion and CSS. The site is responsive so it is accessible on desktop and all mobile devices.</p>
         
-                         
-      
-          <img src={Rolly} style={{width: '100%', height: '400px', objectFit: 'contain'}} alt='rolly ecom store' />
+         
        
 
         </Modal.Body>
         <Modal.Footer>
-        
-        <a href="https://famisonsrollyshop.com/" target="https://famisonsrollyshop.com/"><button className="live">View Live Version</button></a>
+        <a href="https://adobetilde.netlify.app" target="https://adobetilde.netlify.app"><button class="live">View Live Version</button></a>
 
-          <Button variant="secondary" onClick={handleClose6}>
+          <Button variant="secondary" onClick={handleClose4}>
             <FontAwesomeIcon icon={faTimes}></FontAwesomeIcon>
           </Button>
         </Modal.Footer>
       </Modal>
-        <div className='butt-out'>           
-      <Button  data-target="#myModal1" size='md' variant="info" onClick={handleShow6}>
+        <div className='butt-out'>            
+      <Button  data-target="#myModal1" size='md' variant="info" onClick={handleShow4}>
         CLICK HERE FOR MORE
       </Button>
-      </div> 
+      </div>
             </div>
+
             
-            <div className={html === true ? 'project-item' : 'dont-show'}>
-              <img src={Hair} alt='hair store'/>
+            <div className={mongo || node || back || react === true ? 'project-item' : 'dont-show'}>
+            <h4 className='recent'>Video Demo</h4>
+              <img src={Budget} alt='book store'/>
+             
               <motion.div className='proj-hover' whileHover={{opacity: 1}}
               >              
               <div className='proj-list-buttons'>
               <ul>
-                <li>HTML5</li>
+                <li>Nextjs</li>
                 <li>CSS3</li>
-                <Button data-target="#myModal1" size='md' variant="info" onClick={handleShow7}>
+                <li>MongoDB</li>
+                <li>Node</li>
+                <Button  size='md' variant="info" onClick={handleShow7}>
         CLICK HERE FOR MORE
       </Button>
 
@@ -462,6 +414,87 @@ const Dashboard = () => {
             </div>
 </motion.div>
 <Modal show={show7} onHide={handleClose7} animation={false}>
+        <Modal.Header closeButton>
+          <Modal.Title>in-Hand.io</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+        <p className='moadal-para'>in-Hand.io uses Plaid's API access to nearly any major banking institution to analyze annual income, break down existing spending habits at the time of sign up, and help users correct to more a sustainable monthly breakdown to reach goals and better financial literacy..</p>
+       
+
+        </Modal.Body>
+        <Modal.Footer>
+        <a href="https://drive.google.com/file/d/1wXelEw418aGeLJSVm1VX3QZeDOqt1PGe/view?usp=sharing" target="https://drive.google.com/file/d/1wXelEw418aGeLJSVm1VX3QZeDOqt1PGe/view?usp=sharing"><button class="live">View Video Demo</button></a>
+
+          <Button variant="secondary" onClick={handleClose7}>
+            <FontAwesomeIcon icon={faTimes}></FontAwesomeIcon>
+          </Button>
+        </Modal.Footer>
+      </Modal>
+        <div className='butt-out'>           
+      <Button   size='md' variant="info" onClick={handleShow7}>
+        CLICK HERE FOR MORE
+      </Button>
+      </div> 
+            </div>
+            <div className={sql  || node || back || react === true ? 'project-item' : 'dont-show'}>
+           
+           <img src={Selection} alt='book store'/>
+          
+           <motion.div className='proj-hover' whileHover={{opacity: 1}}
+           >              
+           <div className='proj-list-buttons'>
+           <ul>
+             <li>React</li>
+             <li>CSS3</li>
+             <li>Sql</li>
+             <li>Node</li>
+             <Button  size='md' variant="info" onClick={handleShow8}>
+     CLICK HERE FOR MORE
+   </Button>
+
+           </ul>
+         </div>
+</motion.div>
+<Modal show={show8} onHide={handleClose8} animation={false}>
+     <Modal.Header closeButton>
+       <Modal.Title>Selection</Modal.Title>
+     </Modal.Header>
+     <Modal.Body>
+     <p className='moadal-para'>An online bookstore built with a PERN stack. This application is styled with vanilla CSS and bootsrap and components from 3rd party libraries. I designed it with inspiration from the audible app. Data was retirieved through googl's book api. Authentication was set up with nodeJS, express. User information is stored on a postgresql database.</p>
+     <img className='video' src={SelectionBrowse} alt='browse section of bookstore'/>
+
+     </Modal.Body>
+     <Modal.Footer>
+     <a href="https://bookstore12.herokuapp.com/home" target="https://bookstore12.herokuapp.com/home"><button class="live">View Live Version</button></a>
+
+       <Button variant="secondary" onClick={handleClose5}>
+         <FontAwesomeIcon icon={faTimes}></FontAwesomeIcon>
+       </Button>
+     </Modal.Footer>
+   </Modal>
+     <div className='butt-out'>           
+   <Button   size='md' variant="info" onClick={handleShow5}>
+     CLICK HERE FOR MORE
+   </Button>
+   </div> 
+         </div>
+
+            <div className={html === true ? 'project-item' : 'dont-show'}>
+              <img src={Hair} alt='hair store'/>
+              <motion.div className='proj-hover' whileHover={{opacity: 1}}
+              >              
+              <div className='proj-list-buttons'>
+              <ul>
+                <li>WordPress</li>
+                
+                <Button data-target="#myModal1" size='md' variant="info" onClick={handleShow5}>
+        CLICK HERE FOR MORE
+      </Button>
+
+              </ul>
+            </div>
+</motion.div>
+<Modal show={show5} onHide={handleClose5} animation={false}>
         <Modal.Header closeButton>
           <Modal.Title>Zaire's Hair Salon</Modal.Title>
         </Modal.Header>
@@ -523,7 +556,7 @@ const Dashboard = () => {
         <Modal.Body>
         <p className='moadal-para'>In this application, I used React on the frontend and Node on the backend. I used MongoDB to manage users and their issues. Google authentication was used for registering and logging in users. Landlords and tenants connect to discuss any issues with the property. Landlords can easily stay on top of problems and notify their tenants once they recieved the complaint and when it is completed.</p>
         <video autoPlay loop muted  className="video">
-          <source src={RentVid} type="video/mp4" />
+          <img src='' alt=''  />
         </video>
 
         </Modal.Body>
@@ -540,48 +573,6 @@ const Dashboard = () => {
         CLICK HERE FOR MORE
       </Button>
       </div>  
-            </div>
-            <div className={sql  || node || back || react === true ? 'project-item' : 'dont-show'}>
-              <img src={Revtown} alt='shirt store'/>
-              <motion.div className='proj-hover' whileHover={{opacity: 1}}
-              >              
-              <div className='proj-list-buttons'>
-              <ul>
-                <li>React</li>
-                <li>CSS3</li>
-                <li>Sql</li>
-                <li>Node</li>
-                <Button  size='md' variant="info" onClick={handleShow2}>
-        CLICK HERE FOR MORE
-      </Button>
-
-              </ul>
-            </div>
-</motion.div>
-<Modal show={show2} onHide={handleClose2} animation={false}>
-        <Modal.Header closeButton>
-          <Modal.Title>RevTown</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
-        <p className='moadal-para'>This eccommerce site was built with React on the front end and Node on the backend. I used an SQL database to manage the items in the store.</p>
-        <video autoPlay loop muted className="video">
-          <source src={Rev} type="video/mp4" />
-        </video>
-
-        </Modal.Body>
-        <Modal.Footer>
-        <a href="https://unruffled-mclean-d98c5a.netlify.app/" target="https://unruffled-mclean-d98c5a.netlify.app/"><button class="live">View Live Version</button></a>
-
-          <Button variant="secondary" onClick={handleClose2}>
-            <FontAwesomeIcon icon={faTimes}></FontAwesomeIcon>
-          </Button>
-        </Modal.Footer>
-      </Modal>
-        <div className='butt-out'>           
-      <Button   size='md' variant="info" onClick={handleShow2}>
-        CLICK HERE FOR MORE
-      </Button>
-      </div> 
             </div>
             <div className={ react === true ? 'project-item' : 'dont-show'}>
               <img src={Wowzers} />
@@ -608,7 +599,7 @@ const Dashboard = () => {
         <p className='moadal-para'>This site is still under construction. I am building it with React. I am using a 3rd party api to allow users to obtain recipes for their chosen diets.</p>
         <video autoPlay loop muted className="video"
         >
-          <source src={Wow} type="video/mp4" />
+          <img src='' alt='' />
         </video>
 
         </Modal.Body>
@@ -625,90 +616,6 @@ const Dashboard = () => {
         CLICK HERE FOR MORE
       </Button>
       </div>
-            </div>
-            <div className={html === true ? 'project-item' : 'dont-show'}>
-              <img src={Email} alt='html-email' />
-              <motion.div className='proj-hover' whileHover={{opacity: 1}}
-              >              
-              <div className='proj-list-buttons'>
-              <ul>
-                <li>HTML5</li>
-                <li>CSS3</li>
-                <Button data-target="#myModal1" size='md' variant="info" onClick={handleShow4}>
-        CLICK HERE FOR MORE
-      </Button>
-
-              </ul>
-            </div>
-</motion.div>
-<Modal show={show4} onHide={handleClose4} animation={false}>
-        <Modal.Header closeButton>
-          <Modal.Title>HTML Email</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
-        <p className='moadal-para'>An HTML email that I made that shows off a clean design.</p>
-        
-                         
-      
-          <img src={Pups} style={{width: '100%', height: '400px', objectFit: 'contain'}} alt='puppies' />
-       
-
-        </Modal.Body>
-        <Modal.Footer>
-        
-
-          <Button variant="secondary" onClick={handleClose4}>
-            <FontAwesomeIcon icon={faTimes}></FontAwesomeIcon>
-          </Button>
-        </Modal.Footer>
-      </Modal>
-        <div className='butt-out'>            
-      <Button  data-target="#myModal1" size='md' variant="info" onClick={handleShow4}>
-        CLICK HERE FOR MORE
-      </Button>
-      </div>
-            </div>
-            <div className={html === true ? 'project-item' : 'dont-show'}>
-              <img src={Receipt} alt='a reciept' />
-              <motion.div className='proj-hover' whileHover={{opacity: 1}}
-              >              
-              <div className='proj-list-buttons'>
-              <ul>
-              <li>HTML5</li>
-                <li>CSS3</li>
-                <Button data-target="#myModal1" size='md' variant="info" onClick={handleShow5}>
-        CLICK HERE FOR MORE
-      </Button>
-
-              </ul>
-            </div>
-</motion.div>
-<Modal show={show5} onHide={handleClose5} animation={false}>
-        <Modal.Header closeButton>
-          <Modal.Title>HTML Email</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
-        <p className='moadal-para'>An HTML email receipt that I made that shows off a clean design.</p>
-        
-                         
-      
-          <img src={ReceiptPic} style={{width: '100%', height: '400px', objectFit: 'contain'}} alt='reciept html' />
-       
-
-        </Modal.Body>
-        <Modal.Footer>
-        
-
-          <Button variant="secondary" onClick={handleClose5}>
-            <FontAwesomeIcon icon={faTimes}></FontAwesomeIcon>
-          </Button>
-        </Modal.Footer>
-      </Modal>
-        <div className='butt-out'>           
-      <Button  data-target="#myModal1" size='md' variant="info" onClick={handleShow5}>
-        CLICK HERE FOR MORE
-      </Button>
-      </div> 
             </div>
 
 
