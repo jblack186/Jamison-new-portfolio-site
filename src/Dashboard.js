@@ -350,7 +350,7 @@ const Dashboard = () => {
                    transition={{ delay: 1.8, duration: .5}}
           >
                         <div className={ react === true ? 'project-item' : 'dont-show'}>
-                        <h4 className='recent'>MOST RECENT </h4>
+                        <h4 className='recent'>Most Recent </h4>
               <img src={Adobe} />
               <motion.div className='proj-hover' whileHover={{opacity: 1}}
               alt='food app'
