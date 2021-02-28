@@ -98,8 +98,8 @@ const FrontPage = () => {
       </div>
       <div className='home-content'>
         <h1>Hello, I'm <span class="name">Jamison Blackwell.</span> <p>I am a full-stack web developer.</p></h1>
-        <p className='about-me'>ReactJS, NodeJS, HTML5, CSS3, JavaScript, LESS/SASS, Express, MongoDB, SQLite3, Knex, Hosting, Git Version Control</p>
-        <p className='about-me'>If you don't see what your looking for, there's a good chance it will be up there soon. Learning never ends.</p>
+        <p className='about-me'>ReactJS, NextJS, NodeJS, Python, HTML5, CSS3, JavaScript, LESS/SASS, Express, SQL, noSQL</p>
+        
         <Link style={{ textDecoration: 'none' }}  to='dashboard' ><motion.div 
       whileHover={{scale: 1.1, textShadow: "0px 0px 8px rgb(255, 255, 255)", boxShadow: "0px 0px 8px rgb(255, 255, 255)"}}
       class="button-link">View my work </motion.div></Link>

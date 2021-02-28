@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 import DashBoard from './Dashboard';
 import { Route, Switch, useLocation } from 'react-router-dom';
@@ -13,8 +13,12 @@ import Contact from './Contact';
 
 function App() {
   const location = useLocation();
-  const [menu, setMenu] = useState('');
+  const [menu, setMenu] = useState(false);
   const history = useHistory();
+
+  // useEffect(() => {
+  //   setMenu(false)
+  // }, [])
 
   const handleHistory = (e) => {
     history.push('/')
@@ -41,12 +45,13 @@ function App() {
 
   const clickMenu = e => {
     setMenu(true);
+    console.log('up', menu)
     
   }
 
   const closeMenu = e => {
     setMenu(false);
-    console.log('up')
+    console.log('down', menu)
    }
 
    const variantsContainerFirst = {
@@ -108,14 +113,14 @@ function App() {
       <motion.div 
                className='barSpin'>
       
-      {<FontAwesomeIcon onClick={clickMenu} className={menu ? 'drops-none': 'barsIcon'} icon={faBars}/> }
+      {!menu ? <FontAwesomeIcon onClick={clickMenu} className='barsIcon' icon={faBars}/> : null}
       
-      {<FontAwesomeIcon  onClick={closeMenu} className={menu  ? 'closeIcon'  : 'barsIconA'} icon={faTimes}/> }
+      {menu === true ? <FontAwesomeIcon  onClick={closeMenu} className='barsIconA' icon={faTimes}/> : null }
 
       </motion.div>
 
       <motion.div className={menu === false ? 'drop-closed' : menu ? 'drop-menu' : 'drops-none'}     
-            transition={{ delay: 1.8, duration: .5}}
+           
       >
         <ul>
          

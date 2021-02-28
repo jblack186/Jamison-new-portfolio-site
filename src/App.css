@@ -199,6 +199,7 @@ z-index: 99999999;
 
 .drops-none {
   display: none;
+  z-index: -9999999999999;
 }
 
 .null {

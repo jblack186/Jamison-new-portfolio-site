@@ -351,7 +351,7 @@ const Dashboard = () => {
           >
                         <div className={ react === true ? 'project-item' : 'dont-show'}>
                         <h4 className='recent'>Most Recent </h4>
-              <img src={Adobe} />
+              <img src={Adobe} alt='real estate site' />
               <motion.div className='proj-hover' whileHover={{opacity: 1}}
               alt='food app'
               >              
@@ -555,10 +555,6 @@ const Dashboard = () => {
         </Modal.Header>
         <Modal.Body>
         <p className='moadal-para'>In this application, I used React on the frontend and Node on the backend. I used MongoDB to manage users and their issues. Google authentication was used for registering and logging in users. Landlords and tenants connect to discuss any issues with the property. Landlords can easily stay on top of problems and notify their tenants once they recieved the complaint and when it is completed.</p>
-        <video autoPlay loop muted  className="video">
-          <img src='' alt=''  />
-        </video>
-
         </Modal.Body>
         <Modal.Footer>
         <a href="https://floating-lake-21994.herokuapp.com/login" target="https://floating-lake-21994.herokuapp.com/login"><button className="live">View Live Version</button></a>
@@ -575,7 +571,7 @@ const Dashboard = () => {
       </div>  
             </div>
             <div className={ react === true ? 'project-item' : 'dont-show'}>
-              <img src={Wowzers} />
+              <img src={Wowzers} alt='food app' />
               <motion.div className='proj-hover' whileHover={{opacity: 1}}
               alt='food app'
               >              
@@ -597,10 +593,6 @@ const Dashboard = () => {
         </Modal.Header>
         <Modal.Body>
         <p className='moadal-para'>This site is still under construction. I am building it with React. I am using a 3rd party api to allow users to obtain recipes for their chosen diets.</p>
-        <video autoPlay loop muted className="video"
-        >
-          <img src='' alt='' />
-        </video>
 
         </Modal.Body>
         <Modal.Footer>
