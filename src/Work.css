@@ -12,6 +12,7 @@
       -ms-flex-align: start;
           align-items: flex-start;
   font-size: 1.3rem;
+  padding-bottom: 80px;
 }
 
 @media (max-width: 1000px) {
@@ -23,10 +24,9 @@
   }
 }
 
-@media (max-width: 1000px) {
-  .work_container {
-    padding-bottom: 80px;
-  }
+.work_container h3 {
+  padding-top: 40px;
+  font-size: 2.5rem;
 }
 
 .work_container .work_left {
@@ -312,10 +312,6 @@
   cursor: pointer;
 }
 
-.work_container .work_right .project.first {
-  margin-top: 10px;
-}
-
 .work_container .work_right .projectTwo {
   width: 80%;
   height: 400px;
@@ -388,7 +384,11 @@
   cursor: pointer;
 }
 
-.tab {
+.links a {
+  color: white;
+}
+
+.links a.tab {
   color: #17ce4b;
 }
 
@@ -416,5 +416,9 @@
   .tech_list span {
     background: #222629;
   }
+}
+
+#first {
+  margin-top: 40px;
 }
 /*# sourceMappingURL=Work.css.map */

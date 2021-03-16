@@ -83,6 +83,7 @@ z-index: 100;
     align-items: center;
     @include respond(md) {
       display: none;
+
     }
 
   }
@@ -173,3 +174,15 @@ text-align: center;
     color: black;
 
 }
+
+.right_header a {
+  color: white;
+  text-decoration: none;
+}
+.right_header a:hover {
+  color: $secondaryColor;
+  text-decoration: none;
+}
+
+
+

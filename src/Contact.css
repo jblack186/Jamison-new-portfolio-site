@@ -1,1 +1,83 @@
-/* No CSS *//*# sourceMappingURL=Contact.css.map */
+.contact-container {
+  font-family: 'Abel', sans-serif;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  background: #222629;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contact-container h3 {
+  color: white;
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .contact-container h3 {
+    padding-bottom: 20px;
+  }
+}
+
+form {
+  width: 40%;
+}
+
+.name-email {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.contact-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+input {
+  width: 100%;
+  background: none;
+  border: none;
+  border-bottom: 1px solid #33393e;
+  outline: none;
+}
+
+textarea {
+  background: none;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #33393e;
+  width: 100%;
+}
+
+.button {
+  background: #33393e;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 5px;
+}
+
+.button input {
+  color: white;
+}
+/*# sourceMappingURL=Contact.css.map */

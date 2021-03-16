@@ -146,4 +146,14 @@
   margin-left: 30px;
   color: black;
 }
+
+.right_header a {
+  color: white;
+  text-decoration: none;
+}
+
+.right_header a:hover {
+  color: #17ce4b;
+  text-decoration: none;
+}
 /*# sourceMappingURL=Header.css.map */
