@@ -1,0 +1,149 @@
+$primaryColor:#33393e;
+$primaryColorHover:#383f45;
+$secondaryColor: rgb(23, 206, 75);
+$thirdColor: #222629;
+
+$sm: 600px; //breakpoint for smaller devices
+$smMd: 800px;
+$md: 1000px;
+$mdLg: 1200px;
+$lg: 1800px; //desktop
+
+
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == sm {
+    @media (max-width: $sm) {
+      @content;
+    }
+  } @else if $breakpoint == smMd {
+    @media (max-width: $smMd) {
+      @content;
+    }
+  } @else if $breakpoint == md {
+    @media (max-width: $md) {
+      @content;
+    }
+  } @else if $breakpoint == mdLg {
+    @media (max-width: $mdLg) {
+      @content;
+    }
+    
+  } @else if $breakpoint == lg {
+    @media (max-width: $lg) {
+      @content;
+    }
+  }
+}
+
+.about_container {
+  font-family: 'Abel', sans-serif;
+
+  height: 70vh;
+  background: $thirdColor;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: white;
+
+.about_left {
+  width: 40%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 1.3rem;
+
+  @include respond(md) {
+    width: 90%;
+  }
+
+
+
+
+  .about_left_text {
+
+    h3 {
+      color: $secondaryColor;
+      font-weight: 300;
+    }
+
+    .view {
+      font-size: .9rem;
+      text-decoration: underline;
+
+    }
+
+  }
+
+  .list_icon {
+    color: $secondaryColor;
+    font-size: .9rem;
+
+  }
+
+
+  h3 {
+    margin: 0
+  }
+
+  .category {
+    background: $primaryColor;
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+    align-items: flex-start;
+    margin-top: 15px;
+    padding-top: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition-duration: .5s;
+
+    @include respond(md) {
+      width: 100%;
+    }
+  }
+
+  .category:hover {
+    transform: scale(1.1);
+    background: $primaryColorHover;
+
+  }
+}
+
+.about_right {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  text-align: left;
+  
+
+  @include respond(md) {
+    display: none;
+  }
+
+  h3 {
+    font-size: 2.5rem;
+   span {
+     color: $secondaryColor;
+   }
+  }
+
+
+  .story {
+    font-style: italic;
+    font-weight: bold;
+  }
+
+  p {
+    padding-top: 10px;
+    width: 100%;
+    line-height: 29px;
+    font-size: 1.3rem;
+  }
+}
+
+}
