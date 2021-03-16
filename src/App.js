@@ -10,6 +10,7 @@ import Hero from "./Hero";
 import Header from "./Header";
 import About from "./About";
 import Work from "./Work";
+import Contact from "./Contact";
 
 function App() {
   const location = useLocation();
@@ -22,6 +23,7 @@ function App() {
       <Hero />
       <About />
       <Work />
+      <Contact />
     </div>
   );
 }

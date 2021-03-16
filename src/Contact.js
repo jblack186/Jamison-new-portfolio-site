@@ -1,5 +1,5 @@
 import React from 'react';
-import './Contact.css';
+import './Contact.scss';
 import {FontAwesomeIcon} from'@fortawesome/react-fontawesome';
 import { faChevronLeft} from '@fortawesome/free-solid-svg-icons';
 import {useHistory } from 'react-router-dom';
@@ -22,7 +22,7 @@ const Contact = () => {
   return (
     
     
-<div className="contact-container">
+<div id='contact' className="contact-container">
 	
   <h2>Contact Me</h2>
         <form method="post" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSc1O_aafayH8TkV7cUR33qJAbMLueK415ZWtjKv2Ozp7TqthQ/formResponse">

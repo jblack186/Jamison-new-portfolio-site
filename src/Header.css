@@ -4,7 +4,7 @@
   color: white;
   top: 0;
   left: 0;
-  height: 120px;
+  height: 90px;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -15,7 +15,7 @@
       -ms-flex-align: center;
           align-items: center;
   margin: 0 auto;
-  z-index: 999999;
+  z-index: 100;
 }
 
 @media (max-width: 1000px) {
@@ -65,10 +65,17 @@
 .header li {
   list-style: none;
   padding-left: 30px;
+  cursor: pointer;
+  -webkit-transition-duration: .4s;
+          transition-duration: .4s;
 }
 
 .header li .list_icon {
   padding-right: 5px;
+}
+
+.header li:hover {
+  color: #17ce4b;
 }
 
 .mail_container {
@@ -109,5 +116,34 @@
     right: 50px;
     font-size: 2rem;
   }
+}
+
+.resume {
+  width: 450px;
+  z-index: 999999999999999999;
+}
+
+@media screen and (max-width: 500px) {
+  .resume {
+    width: 350px;
+  }
+}
+
+.btn.btn-secondary {
+  background: #17ce4b;
+  border-radius: 2em;
+  height: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  margin-left: 30px;
+  color: black;
 }
 /*# sourceMappingURL=Header.css.map */

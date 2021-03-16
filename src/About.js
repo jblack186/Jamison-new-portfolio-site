@@ -4,7 +4,7 @@ import {FontAwesomeIcon} from'@fortawesome/react-fontawesome';
 import { faPaintBrush, faDoorOpen, faHammer } from '@fortawesome/free-solid-svg-icons';
 const About = () => {
   return (
-    <section className="about_container">
+    <section id='about' className="about_container">
       <div className="about_left">
         <div className="category fronend">
           <div className='about_left_text'>

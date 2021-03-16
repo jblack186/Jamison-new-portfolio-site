@@ -47,7 +47,14 @@ $lg: 1800px; //desktop
 
   @include respond(md) {
     flex-direction: column;
+    
   }
+
+  @include respond(md) {
+    padding-bottom: 80px;
+    
+  }
+
 
   .work_left {
     width: 50%;
@@ -86,6 +93,11 @@ $lg: 1800px; //desktop
         width: 40%;
         margin-right: 20px;
 
+        span {
+          color: $secondaryColor;
+        }
+
+
         @include respond(sm) {
           width: 80%;
          
@@ -95,6 +107,7 @@ $lg: 1800px; //desktop
       }
 
        img{ 
+         object-fit: contain;
         width: 50%;
         height: 300px;
         bottom: 0;
@@ -146,12 +159,15 @@ $lg: 1800px; //desktop
       }
 
       p {
+        
         align-self: center;
         width: 40%;
         margin-right: 20px;
 
+
         @include respond(sm) {
           width: 80%;
+          
          
         }
   
@@ -234,6 +250,8 @@ $lg: 1800px; //desktop
         width: 40%;
         margin-right: 20px;
 
+        
+
         @include respond(sm) {
           width: 80%;
          
@@ -301,6 +319,8 @@ $lg: 1800px; //desktop
         align-self: center;
         width: 40%;
         margin-right: 20px;
+
+        
         
         @include respond(sm) {
           width: 80%;
@@ -366,12 +386,22 @@ $lg: 1800px; //desktop
   position: absolute;
   bottom: 20px;
   right: 10px;
+  @include respond(sm) {
+    bottom: -40px;
+
+  }
+
 
   span {
     background: $primaryColor;
     margin-right: 10px;
     padding: .3em;
     border-radius: 5px;
-
+    color: black;
+    @include respond(sm) {
+      background: $thirdColor;
+  
+    }
+  
   }
 }

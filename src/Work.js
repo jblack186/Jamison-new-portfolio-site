@@ -7,6 +7,9 @@ import Rent from './img/rent.png';
 import Books from './img/books.png';
 import Organic from './img/organic.png';
 import Model from './img/model.png';
+import Budget from './img/budget.png';
+import {Link} from 'react-scroll';
+
 
 
 import {
@@ -16,14 +19,14 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 const Work = () => {
   return (
-    <section className="work_container">
-      <div className="work_left">
+    <section id='work' className="work_container">
+      <div id='git' className="work_left">
         <div className="work_header">
           <h3>Latest Works</h3>
           <p>Perfect solutions for digital experiences</p>
         </div>
-        <div className="project">
-          <img src={Real} alt="real-estate-project" />
+        <div id='react' className="project">
+          <img id='javascript' src={Real} alt="real-estate-project" />
           <p>A beautifully styled real estate site built with React. Smooth animations are made possible by framer motion and CSS. </p>
           <div className='tech_list'>
           <span>React</span>
@@ -56,7 +59,7 @@ const Work = () => {
             </div>
             </div>
         </div>
-        <div className="project">
+        <div id='nosql'  className="project">
                   <img src={Rent} alt="real-estate-project" />
                   <p>In this application, I used React on the frontend and Node on the backend. I used MongoDB to manage users and their issues.</p>
                   <div className='tech_list'>
@@ -80,7 +83,7 @@ const Work = () => {
           <p>
         This is a landing page built with React. This application is styled with vanilla CSS.
         </p>
-        <div className='tech_list'>
+        <div id='react css' className='tech_list'>
           <span>React</span>
           <span>CSS3</span>
           <span>PHP</span>
@@ -95,9 +98,31 @@ const Work = () => {
             </div>
         </div>
         <div className="project">
+        <img src={Budget} alt="real-estate-project" />
+        <p>
+        <span>Coming soon: </span>A budget app that will be available for download on both the Apple store and Google Play store.
+        </p>
+        <div className='tech_list'>
+          <span>Next</span>
+          <span>Node</span>
+          <span>SQL</span>
+
+          </div>
+
+          <div id='next'   className='links'>
+            <h4 id='node'>In-hand.IO</h4>
+            <div id='express'>
+            <a className='tab'>Video Demo</a><a>Github</a>
+
+            </div>
+            </div>
+            
+        </div>
+
+        <div id='sql'  className="project">
         <img src={Books} alt="real-estate-project" />
         <p>
-        An online bookstore built with a PERN stack. This application is styled with vanilla CSS and bootsrap and components from 3rd party libraries.
+        An online bookstore built with a PERN stack. This application is styled with vanilla CSS and Bootsrap.
         </p>
         <div className='tech_list'>
           <span>React</span>
@@ -118,7 +143,7 @@ const Work = () => {
         <div className="project">
                   <img src={Model} alt="real-estate-project" />
 <p>This was a design challenge. I built it with just HTML and vanilla CSS.</p>
-<div className='tech_list'>
+<div id='html' className='tech_list'>
           <span>HTML</span>
           <span>CSS3</span>
 

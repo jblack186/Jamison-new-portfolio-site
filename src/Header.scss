@@ -42,13 +42,13 @@ $thirdColor: #222629;
   color: white;
   top: 0;
   left: 0;
-  height: 120px;
+  height: 90px;
   width: 100%;
   display: flex;
   justify-content: space-around;
   align-items: center;
   margin: 0 auto;
-z-index: 999999;
+z-index: 100;
 
   .header {
     @include respond(md) {
@@ -90,6 +90,8 @@ z-index: 999999;
   li {
     list-style: none;
     padding-left: 30px;
+    cursor: pointer;
+    transition-duration: .4s;
     
     .list_icon {
       padding-right: 5px;
@@ -99,8 +101,14 @@ z-index: 999999;
     }
 
 
+
   
 }
+li:hover {
+  color: $secondaryColor;
+  
+}
+
 
 }
 
@@ -137,5 +145,31 @@ text-align: center;
     font-size: 2rem;
   }
 
+
+}
+
+.resume {
+  width: 450px;
+  z-index: 999999999999999999;
+  
+  
+}
+
+@media screen and (max-width: 500px) {
+  .resume {
+    width: 350px;
+  }
+}
+
+.btn.btn-secondary {
+  background: $secondaryColor;
+  border-radius: 2em;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+align-items: center;
+text-align: center;
+    margin-left: 30px;
+    color: black;
 
 }
