@@ -421,4 +421,10 @@
 #first {
   margin-top: 40px;
 }
+
+@media (max-width: 600px) {
+  #first {
+    margin-top: 80px;
+  }
+}
 /*# sourceMappingURL=Work.css.map */

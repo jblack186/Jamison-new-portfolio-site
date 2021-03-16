@@ -409,4 +409,10 @@ $lg: 1800px; //desktop
 
 #first {
   margin-top: 40px;
+
+  @include respond(sm) {
+    margin-top: 80px;
+  }
 }
+
+

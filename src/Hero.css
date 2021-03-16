@@ -46,6 +46,13 @@
   }
 }
 
+@media (max-width: 1000px) {
+  .hero_container .hero_container_left {
+    margin: 0px;
+    width: 100vw;
+  }
+}
+
 .hero_container h2 {
   font-size: 1rem;
   background: #17ce4b;
@@ -203,6 +210,7 @@
   border-radius: 5px;
   -webkit-transition-duration: .5s;
           transition-duration: .5s;
+  z-index: 9999999;
 }
 
 .down_arrow:hover {
@@ -210,5 +218,10 @@
   background: #252a2d;
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
+}
+
+span {
+  color: #17ce4b;
+  font-weight: bold;
 }
 /*# sourceMappingURL=Hero.css.map */

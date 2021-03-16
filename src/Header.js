@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import './Header.scss';
 import { faLinkedin,  faGithub} from '@fortawesome/free-brands-svg-icons';
 import {FontAwesomeIcon} from'@fortawesome/react-fontawesome';
-import { faBars } from '@fortawesome/free-solid-svg-icons';
+import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 import {Link} from 'react-scroll';
 import {Button, Modal} from 'react-bootstrap';
 import Resume from './img/resume.png';
@@ -11,9 +11,19 @@ import Download from './img/resume.docx';
 
 const Header = () => {
   const [show, setShow] = useState(false);
+  const [open, setOpen] = useState(false);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+
+  const navOpen = () => {
+    setOpen(true)
+  }
+
+  const navClose = () => {
+    setOpen(false)
+  }
+
 
   return (
     <header className='header'>
@@ -70,8 +80,39 @@ const Header = () => {
 
       </ul>
       <div className='mobile'>
-      <FontAwesomeIcon className='list_icon' icon={faBars}/> 
+      <FontAwesomeIcon onClick={navOpen} className='list_icon' icon={faBars}/> 
       </div>
+      <div className={!open ? 'hide' : 'mobile_list'}>
+      <FontAwesomeIcon onClick={navClose} className='list_icon' icon={faTimes}/> 
+ 
+          <ul>
+          <Link
+        activeClass="active"
+        to="about"
+        spy={true}
+        smooth={true}
+        offset={-70}
+        duration={500}
+        ><li onClick={navClose}>About</li></Link>
+            <Link
+        activeClass="active"
+        to="work"
+        spy={true}
+        smooth={true}
+        offset={-70}
+        duration={500}
+        ><li onClick={navClose}>Work</li></Link>
+            <Link
+        activeClass="active"
+        to="contact"
+        spy={true}
+        smooth={true}
+        offset={-70}
+        duration={500}
+        ><li onClick={navClose}>Contact</li></Link>
+
+          </ul>
+        </div>
 
     </header>
   )

@@ -48,11 +48,13 @@ $thirdColor: #222629;
   justify-content: space-around;
   align-items: center;
   margin: 0 auto;
-z-index: 100;
+z-index: 9999999999999999;
 
   .header {
     @include respond(md) {
-      display: none;
+      height: 50px;
+      flex-direction: row;
+      justify-content: center;
     }
 
   }
@@ -141,12 +143,71 @@ text-align: center;
   @include respond(md) {
     display: block;
     position: fixed;
-    top: 50px;
-    right: 50px;
+    top: 20px;
+    right: 20px;
     font-size: 2rem;
+    cursor: pointer;
+
+
   }
 
 
+}
+.mobile:hover {
+  color: $secondaryColor;
+}
+
+.mobile_list {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: $thirdColor;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999999;
+
+  ul {
+    display: flex;
+    height: 50vh;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+
+    li {
+      width: 100vw;
+      text-align: center;
+      background: $primaryColor;
+      font-size: 2rem;
+      padding: 10px;
+  
+    }
+
+  }
+
+
+  .list_icon {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 99999999999999999;
+
+  }
+  .mobile_list:hover {
+    color: $secondaryColor;
+  }
+  
+
+}
+
+.hide {
+  display: none;
 }
 
 .resume {
