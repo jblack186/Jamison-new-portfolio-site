@@ -1,0 +1,141 @@
+$sm: 600px; //breakpoint for smaller devices
+$smMd: 800px;
+$md: 1000px;
+$mdLg: 1200px;
+$lg: 1800px; //desktop
+
+$primaryColor:#33393e;
+$primaryColorHover:#383f45;
+$secondaryColor: rgb(23, 206, 75);
+$thirdColor: #222629;
+
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == sm {
+    @media (max-width: $sm) {
+      @content;
+    }
+  } @else if $breakpoint == smMd {
+    @media (max-width: $smMd) {
+      @content;
+    }
+  } @else if $breakpoint == md {
+    @media (max-width: $md) {
+      @content;
+    }
+  } @else if $breakpoint == mdLg {
+    @media (max-width: $mdLg) {
+      @content;
+    }
+    
+  } @else if $breakpoint == lg {
+    @media (max-width: $lg) {
+      @content;
+    }
+  }
+}
+
+
+.header {
+  position: fixed;
+  background: $primaryColor;
+  color: white;
+  top: 0;
+  left: 0;
+  height: 120px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 auto;
+z-index: 999999;
+
+  .header {
+    @include respond(md) {
+      display: none;
+    }
+
+  }
+
+  .right_header {
+    @include respond(md) {
+      display: none;
+    }
+
+  }
+
+  h1 {
+    font-size: 2rem;
+
+    span {
+      color: lightgray;
+    }
+
+    @include respond(md) {
+      display: none;
+    }
+
+  }
+
+  ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include respond(md) {
+      display: none;
+    }
+
+  }
+
+  li {
+    list-style: none;
+    padding-left: 30px;
+    
+    .list_icon {
+      padding-right: 5px;
+
+      
+ 
+    }
+
+
+  
+}
+
+}
+
+
+.mail_container {
+  background: rgba(51, 170, 51, .1);
+  border-radius: 2em;
+  width: 35px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+align-items: center;
+text-align: center;
+    margin-left: 30px;
+
+  li {
+    padding: 0px;
+  }
+
+}
+
+.svg-inline--fa.fa-envelope.fa-w-16.list_icon {
+  padding: 0px;
+
+}
+
+.mobile {
+  display: none;
+  @include respond(md) {
+    display: block;
+    position: fixed;
+    top: 50px;
+    right: 50px;
+    font-size: 2rem;
+  }
+
+
+}

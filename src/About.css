@@ -1,0 +1,133 @@
+.about_container {
+  font-family: 'Abel', sans-serif;
+  height: 70vh;
+  background: #222629;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+}
+
+.about_container .about_left {
+  width: 40%;
+  height: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.3rem;
+}
+
+@media (max-width: 1000px) {
+  .about_container .about_left {
+    width: 90%;
+  }
+}
+
+.about_container .about_left .about_left_text h3 {
+  color: #17ce4b;
+  font-weight: 300;
+}
+
+.about_container .about_left .about_left_text .view {
+  font-size: .9rem;
+  text-decoration: underline;
+}
+
+.about_container .about_left .list_icon {
+  color: #17ce4b;
+  font-size: .9rem;
+}
+
+.about_container .about_left h3 {
+  margin: 0;
+}
+
+.about_container .about_left .category {
+  background: #33393e;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 80%;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin-top: 15px;
+  padding-top: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  -webkit-transition-duration: .5s;
+          transition-duration: .5s;
+}
+
+@media (max-width: 1000px) {
+  .about_container .about_left .category {
+    width: 100%;
+  }
+}
+
+.about_container .about_left .category:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  background: #383f45;
+}
+
+.about_container .about_right {
+  width: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  text-align: left;
+}
+
+@media (max-width: 1000px) {
+  .about_container .about_right {
+    display: none;
+  }
+}
+
+.about_container .about_right h3 {
+  font-size: 2.5rem;
+}
+
+.about_container .about_right h3 span {
+  color: #17ce4b;
+}
+
+.about_container .about_right .story {
+  font-style: italic;
+  font-weight: bold;
+}
+
+.about_container .about_right p {
+  padding-top: 10px;
+  width: 100%;
+  line-height: 29px;
+  font-size: 1.3rem;
+}
+/*# sourceMappingURL=About.css.map */
