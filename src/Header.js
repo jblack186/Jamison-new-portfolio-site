@@ -80,6 +80,7 @@ const Header = () => {
 
       </ul>
       <div className='mobile'>
+      <h4 className='mobile_header'>Jamison <span>Blackwell</span></h4>
       <FontAwesomeIcon onClick={navOpen} className='list_icon' icon={faBars}/> 
       </div>
       <div className={!open ? 'hide' : 'mobile_list'}>

@@ -53,8 +53,7 @@ z-index: 9999999999999999;
   .header {
     @include respond(md) {
       height: 50px;
-      flex-direction: row;
-      justify-content: center;
+      justify-content: space-between;
     }
 
   }
@@ -140,15 +139,17 @@ text-align: center;
 
 .mobile {
   display: none;
+
   @include respond(md) {
-    display: block;
-    position: fixed;
-    top: 20px;
-    right: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     font-size: 2rem;
     cursor: pointer;
+    width: 90%;
 
-
+  
+  
   }
 
 
@@ -163,12 +164,12 @@ text-align: center;
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: $thirdColor;
+  background: $primaryColor;
   color: white;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  z-index: 9999999;
+z-index: 9999999;
 
   ul {
     display: flex;
@@ -179,16 +180,24 @@ text-align: center;
     padding: 0;
 
     li {
+      border-top: 1px solid $primaryColorHover;
       width: 100vw;
       text-align: center;
-      background: $primaryColor;
+      background: $thirdColor;
       font-size: 2rem;
-      padding: 10px;
+      padding: 50px;
   
     }
+  
+    }
+    li:first-child {
+      border-top: 1px solid $primaryColorHover;
 
-  }
+    }
 
+
+
+  
 
   .list_icon {
     position: absolute;
@@ -197,6 +206,7 @@ text-align: center;
     font-size: 2rem;
     cursor: pointer;
     z-index: 99999999999999999;
+    
 
   }
   .mobile_list:hover {
@@ -247,3 +257,6 @@ text-align: center;
 
 
 
+h4 {
+  
+}

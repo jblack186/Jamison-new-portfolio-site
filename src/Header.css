@@ -21,13 +21,9 @@
 @media (max-width: 1000px) {
   .header .header {
     height: 50px;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
 }
 
@@ -117,12 +113,18 @@
 
 @media (max-width: 1000px) {
   .mobile {
-    display: block;
-    position: fixed;
-    top: 20px;
-    right: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     font-size: 2rem;
     cursor: pointer;
+    width: 90%;
   }
 }
 
@@ -136,14 +138,14 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: #222629;
+  background: #33393e;
   color: white;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -168,11 +170,16 @@
 }
 
 .mobile_list ul li {
+  border-top: 1px solid #383f45;
   width: 100vw;
   text-align: center;
-  background: #33393e;
+  background: #222629;
   font-size: 2rem;
-  padding: 10px;
+  padding: 50px;
+}
+
+.mobile_list li:first-child {
+  border-top: 1px solid #383f45;
 }
 
 .mobile_list .list_icon {
