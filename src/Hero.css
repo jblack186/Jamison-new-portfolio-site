@@ -189,4 +189,8 @@
     display: none;
   }
 }
+
+.active {
+  color: #17ce4b;
+}
 /*# sourceMappingURL=Hero.css.map */
