@@ -61,14 +61,15 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   width: 80%;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
   margin-top: 15px;
-  padding-top: 10px;
+  padding: 15px;
   border-radius: 5px;
   cursor: pointer;
   -webkit-transition-duration: .5s;
@@ -78,6 +79,7 @@
 @media (max-width: 1000px) {
   .about_container .about_left .category {
     width: 100%;
+    padding: 0;
   }
 }
 

@@ -44,15 +44,17 @@ $lg: 1800px; //desktop
   justify-content: space-between;
   align-items: flex-start;
   font-size: 1.3rem;
+  padding-bottom: 80px;
+
 
   @include respond(md) {
     flex-direction: column;
     
   }
 
-  @include respond(md) {
-    padding-bottom: 80px;
-    
+  h3 {
+    padding-top: 40px;
+    font-size: 2.5rem;
   }
 
 
@@ -297,9 +299,6 @@ $lg: 1800px; //desktop
       }
     }
 
-    .project.first {
-      margin-top: 10px;
-    }
 
     .projectTwo {
       width: 80%;
@@ -377,8 +376,10 @@ $lg: 1800px; //desktop
   }
 
 }
-
-.tab {
+.links a {
+  color: white;
+}
+.links a.tab {
   color: $secondaryColor;
 }
 
@@ -404,4 +405,8 @@ $lg: 1800px; //desktop
     }
   
   }
+}
+
+#first {
+  margin-top: 40px;
 }

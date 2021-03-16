@@ -1,3 +1,106 @@
 
+$primaryColor:#33393e;
+$primaryColorHover:#383f45;
+$secondaryColor: rgb(23, 206, 75);
+$thirdColor: #222629;
 
+$sm: 600px; //breakpoint for smaller devices
+$smMd: 800px;
+$md: 1000px;
+$mdLg: 1200px;
+$lg: 1800px; //desktop
+
+
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == sm {
+    @media (max-width: $sm) {
+      @content;
+    }
+  } @else if $breakpoint == smMd {
+    @media (max-width: $smMd) {
+      @content;
+    }
+  } @else if $breakpoint == md {
+    @media (max-width: $md) {
+      @content;
+    }
+  } @else if $breakpoint == mdLg {
+    @media (max-width: $mdLg) {
+      @content;
+    }
+    
+  } @else if $breakpoint == lg {
+    @media (max-width: $lg) {
+      @content;
+    }
+  }
+}
+
+.contact-container {
+  font-family: 'Abel', sans-serif;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  background: $thirdColor;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+
+  h3 {
+    color: white;
+    font-size: 2.5rem;
+    text-align: center;
+
+    @include respond(sm) {
+      padding-bottom: 20px;
+    }
+
+  }
+}
+
+form {
+  width: 40%;
+}
+
+.name-email {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.contact-info {
+  display: flex;
+}
+
+input {
+  width: 100%;
+  background: none;
+  border: none;
+  border-bottom: 1px solid $primaryColor;
+  outline: none;
+
+
+}
+
+textarea {
+  background: none;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid $primaryColor;
+  width: 100%;
+
+}
+
+.button {
+  background: $primaryColor;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+
+  input {
+    color: white;
+  }
+}
 

@@ -1,8 +1,8 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import './Header.scss';
-import {faFacebookSquare, faGithubSquare, faLinkedin, faTwitterSquare, faGithub} from '@fortawesome/free-brands-svg-icons';
+import { faLinkedin,  faGithub} from '@fortawesome/free-brands-svg-icons';
 import {FontAwesomeIcon} from'@fortawesome/react-fontawesome';
-import { faEnvelope, faBars } from '@fortawesome/free-solid-svg-icons';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
 import {Link} from 'react-scroll';
 import {Button, Modal} from 'react-bootstrap';
 import Resume from './img/resume.png';
@@ -46,8 +46,8 @@ const Header = () => {
         ><li>Contact</li></Link>
       </ul>
       <ul className='right_header'>
-        <li className='font_aw'><FontAwesomeIcon className='list_icon' icon={faLinkedin}/>Linkedin</li>
-        <li><FontAwesomeIcon className='list_icon' icon={faGithub}/>Github</li>
+        <a href='https://www.linkedin.com/in/jamison-blackwell/' target='https://www.linkedin.com/in/jamison-blackwell/'><li className='font_aw'><FontAwesomeIcon className='list_icon' icon={faLinkedin}/>Linkedin</li></a>
+        <a href='https://github.com/jblack186' target='https://github.com/jblack186'><li><FontAwesomeIcon className='list_icon' icon={faGithub}/>Github</li></a>
         <div className='resume-email'>
         <Button variant="secondary" onClick={handleShow}>
           Click for resume and email
@@ -57,7 +57,7 @@ const Header = () => {
           <Modal.Header closeButton>
             <Modal.Title>My Email: blackwellj1040@gmail.com</Modal.Title>
           </Modal.Header>
-          <Modal.Body><img className='resume' src={Resume} /></Modal.Body>
+          <Modal.Body><img className='resume' src={Resume} alt='resume' /></Modal.Body>
           <Modal.Footer>
             <a href={Download} download>Click to download</a>
             <Button variant="secondary" onClick={handleClose}>
