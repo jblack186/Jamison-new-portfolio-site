@@ -83,6 +83,8 @@ input {
   border: none;
   border-bottom: 1px solid $primaryColor;
   outline: none;
+  color: white;
+
 
 
 }
@@ -93,7 +95,7 @@ textarea {
   outline: none;
   border-bottom: 1px solid $primaryColor;
   width: 100%;
-
+  color: white;
 }
 
 .button {
