@@ -85,7 +85,7 @@ $lg: 1800px; //desktop
       @include respond(sm) {
         width: 90%;
         flex-direction: column;
-        height: 350px;
+        height: 100%;
       }
 
       p {

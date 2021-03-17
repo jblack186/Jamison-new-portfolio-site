@@ -18,7 +18,7 @@ const Work = () => {
         </div>
         <div id="react" className="project">
           <img id="javascript" src={Real} alt="real-estate-project" />
-          <p>
+          <p className='proj_text'>
             A beautifully styled real estate site built with React. Smooth
             animations are made possible by framer motion and CSS.{" "}
           </p>
@@ -50,7 +50,7 @@ const Work = () => {
         <div className="project">
           <img src={Hair} alt="real-estate-project" />
 
-          <p>
+          <p className='proj_text'>
             An hair store with a smooth design. It is responsive and user
             friendly.
           </p>
@@ -73,7 +73,7 @@ const Work = () => {
         </div>
         <div id="nosql" className="project">
           <img src={Rent} alt="real-estate-project" />
-          <p>
+          <p className='proj_text'>
             In this application, I used React on the frontend and Node on the
             backend. I used MongoDB to manage users and their issues.
           </p>
@@ -106,7 +106,7 @@ const Work = () => {
       <div className="work_left">
         <div id="first" className="project first">
           <img src={Organic} alt="real-estate-project" />
-          <p>
+          <p className='proj_text'>
             This is a landing page built with React. This application is styled
             with vanilla CSS.
           </p>
@@ -137,7 +137,7 @@ const Work = () => {
         </div>
         <div className="project">
           <img src={Budget} alt="real-estate-project" />
-          <p>
+          <p className='proj_text'>
             <span>Coming soon: </span>A budget app that will be available for
             download on both the Apple store and Google Play store.
           </p>
@@ -169,7 +169,7 @@ const Work = () => {
 
         <div id="sql" className="project">
           <img src={Books} alt="real-estate-project" />
-          <p>
+          <p className='proj_text'>
             An online bookstore built with a PERN stack. This application is
             styled with vanilla CSS and Bootsrap.
           </p>
@@ -200,7 +200,7 @@ const Work = () => {
         </div>
         <div className="project">
           <img src={Model} alt="real-estate-project" />
-          <p>
+          <p className='proj_text'>
             This was a design challenge. I built it with just HTML and vanilla
             CSS.
           </p>

@@ -78,7 +78,7 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    height: 350px;
+    height: 100%;
   }
 }
 
