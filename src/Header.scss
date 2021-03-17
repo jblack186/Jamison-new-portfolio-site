@@ -48,11 +48,12 @@ $thirdColor: #222629;
   justify-content: space-around;
   align-items: center;
   margin: 0 auto;
-z-index: 100;
+z-index: 9999999999999999;
 
   .header {
     @include respond(md) {
-      display: none;
+      height: 50px;
+      justify-content: space-between;
     }
 
   }
@@ -138,15 +139,85 @@ text-align: center;
 
 .mobile {
   display: none;
+
   @include respond(md) {
-    display: block;
-    position: fixed;
-    top: 50px;
-    right: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     font-size: 2rem;
+    cursor: pointer;
+    width: 90%;
+
+  
+  
   }
 
 
+}
+.mobile:hover {
+  color: $secondaryColor;
+}
+
+.mobile_list {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: $primaryColor;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+z-index: 9999999;
+
+  ul {
+    display: flex;
+    height: 50vh;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+
+    li {
+      border-top: 1px solid $primaryColorHover;
+      width: 100vw;
+      text-align: center;
+      background: $thirdColor;
+      font-size: 2rem;
+      padding: 50px;
+  
+    }
+  
+    }
+    li:first-child {
+      border-top: 1px solid $primaryColorHover;
+
+    }
+
+
+
+  
+
+  .list_icon {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 99999999999999999;
+    
+
+  }
+  .mobile_list:hover {
+    color: $secondaryColor;
+  }
+  
+
+}
+
+.hide {
+  display: none;
 }
 
 .resume {
@@ -186,3 +257,6 @@ text-align: center;
 
 
 
+h4 {
+  
+}

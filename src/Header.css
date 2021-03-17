@@ -15,12 +15,15 @@
       -ms-flex-align: center;
           align-items: center;
   margin: 0 auto;
-  z-index: 100;
+  z-index: 9999999999999999;
 }
 
 @media (max-width: 1000px) {
   .header .header {
-    display: none;
+    height: 50px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
 }
 
@@ -110,12 +113,90 @@
 
 @media (max-width: 1000px) {
   .mobile {
-    display: block;
-    position: fixed;
-    top: 50px;
-    right: 50px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     font-size: 2rem;
+    cursor: pointer;
+    width: 90%;
   }
+}
+
+.mobile:hover {
+  color: #17ce4b;
+}
+
+.mobile_list {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #33393e;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 9999999;
+}
+
+.mobile_list ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 50vh;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0;
+}
+
+.mobile_list ul li {
+  border-top: 1px solid #383f45;
+  width: 100vw;
+  text-align: center;
+  background: #222629;
+  font-size: 2rem;
+  padding: 50px;
+}
+
+.mobile_list li:first-child {
+  border-top: 1px solid #383f45;
+}
+
+.mobile_list .list_icon {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 99999999999999999;
+}
+
+.mobile_list .mobile_list:hover {
+  color: #17ce4b;
+}
+
+.hide {
+  display: none;
 }
 
 .resume {

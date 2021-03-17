@@ -13,12 +13,12 @@ const Hero = () => {
         <h3>
           Greetings!
           <br />
-          Let's build something.
+          <span>Let's build</span> something.
         </h3>
         <p className="para_head">
           I have a genuine passion for 
           <br />
-          building with code.
+          building <span>with code</span>.
         </p>
 
         <Link
