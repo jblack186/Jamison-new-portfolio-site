@@ -143,6 +143,11 @@ $lg: 1800px; //desktop
   .story {
     font-style: italic;
     font-weight: bold;
+
+    span {
+      font-style: normal;
+
+    }
   }
 
   p {
@@ -150,9 +155,12 @@ $lg: 1800px; //desktop
     width: 100%;
     line-height: 29px;
     font-size: 1.3rem;
+
     
   }
+
 }
+
 
 }
 

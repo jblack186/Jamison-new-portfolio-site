@@ -133,6 +133,10 @@
   font-weight: bold;
 }
 
+.about_container .about_right .story span {
+  font-style: normal;
+}
+
 .about_container .about_right p {
   padding-top: 10px;
   width: 100%;

@@ -69,15 +69,12 @@ const About = () => {
           Hello! I'm <span>Jamison Blackwell</span>
         </h3>
         <p className="story">
-          Every great design begin with an even better story
+          How I fell in love with code <span>😍 </span>
         </p>
         <p>
-          In general, I love creating things. Whether that is with a hammer or
-          with code. Another love I have is for problem solving. I’ve always
-          loved games like chess and sudoku since I was a kid. These combined
-          gives me a passion for coding because it allows me to build things by
-          using my problem solving skills and this is where your company will
-          benefit from hiring me on.
+        In general, I love creating things. Whether that is with a hammer or with code. Another love I have is for problem-solving. Since my childhood, I’ve loved games like chess and sudoku. Coding allows me to use my problem-solving capabilities to create beautiful things. <br />
+Also, I never stop learning. I spend a lot of time either learning new technologies or mastering my knowledge of those I currently use.<br /> <span className='span'>Now check out my work!</span>
+
         </p>
       </div>
     </section>
