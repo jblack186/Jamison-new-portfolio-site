@@ -54,6 +54,7 @@
 }
 
 .hero_container h2 {
+  padding: 10px;
   font-size: 1rem;
   background: #17ce4b;
   display: -webkit-box;
